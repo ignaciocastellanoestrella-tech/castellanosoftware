@@ -35,6 +35,21 @@ main { max-width: 860px; margin: 0 auto; padding: 36px 24px 80px; }
   color: #F4F7F5;
   font-size: .95rem;
 }
+.app {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+.app img {
+  width: 84px;
+  height: 84px;
+  border-radius: 20px;
+  flex: none;
+}
+.app p:last-child { margin-bottom: 0; }
+@media (max-width: 520px) {
+  .app { flex-direction: column; }
+}
 nav {
   background: #173044;
   border: 1px solid rgba(61, 220, 151, 0.15);
