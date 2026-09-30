@@ -135,6 +135,15 @@ article p, .product p { color: #3d4754; }
   border-bottom: 1px solid #1c2430;
 }
 
+.stores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.stores .more { margin-top: 0; }
+
 footer {
   max-width: 980px;
   margin: 0 auto;
