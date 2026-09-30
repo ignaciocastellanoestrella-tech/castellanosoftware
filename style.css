@@ -1,109 +1,190 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
 body {
-  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;
-  background: #0E1A24;
-  color: #9BB0BC;
-  line-height: 1.7;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  background: #f3f1ec;
+  color: #1c2430;
+  line-height: 1.55;
+  min-height: 100vh;
 }
-header {
-  background: linear-gradient(160deg, #06210E 0%, #0E1A24 45%, #173044 100%);
-  border-bottom: 1px solid rgba(61, 220, 151, 0.28);
-  padding: 36px 24px 28px;
-  text-align: center;
-}
-header img {
-  width: 84px;
-  height: 84px;
-  border-radius: 20px;
-  display: block;
-  margin: 0 auto 14px;
-}
-header h1 {
-  font-size: clamp(1.3rem, 4vw, 1.9rem);
-  color: #F4F7F5;
-  font-weight: 700;
-}
-header .subtitle { margin-top: 6px; color: #9BB0BC; font-size: .9rem; }
-main { max-width: 860px; margin: 0 auto; padding: 36px 24px 80px; }
-.card {
-  background: #173044;
-  border: 1px solid rgba(61, 220, 151, 0.25);
-  border-left: 4px solid #3DDC97;
-  border-radius: 10px;
-  padding: 18px 22px;
-  margin-bottom: 32px;
-  color: #F4F7F5;
-  font-size: .95rem;
-}
-.app {
+
+html[lang="es"] [lang="en"] { display: none; }
+html[lang="en"] [lang="es"] { display: none; }
+
+a { color: inherit; }
+
+.bar {
   display: flex;
-  gap: 18px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 22px 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.brand img,
+.portrait,
+.product img {
+  border-radius: 22%;
+  object-fit: cover;
+  display: block;
+}
+
+.lang {
+  display: flex;
+  border: 1px solid #d5d0c6;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.lang button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: #5c6570;
+  font: inherit;
+  font-size: 0.92rem;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+html[lang="es"] [data-set-lang="es"],
+html[lang="en"] [data-set-lang="en"] {
+  background: #1c2430;
+  color: #f7f4ee;
+}
+
+main {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 12px 24px 72px;
+}
+
+.hero { padding: 28px 0 12px; max-width: 640px; }
+
+.portrait { margin-bottom: 22px; }
+
+.kicker {
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6a5a3a;
+  margin-bottom: 8px;
+}
+
+h1 {
+  font-family: Palatino, "Palatino Linotype", "Iowan Old Style", Georgia, serif;
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.lead {
+  margin-top: 16px;
+  font-size: 1.25rem;
+  color: #243041;
+}
+
+.prose {
+  margin-top: 14px;
+  color: #3d4754;
+  max-width: 62ch;
+}
+
+section { margin-top: 56px; }
+
+h2 {
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6a5a3a;
+  margin-bottom: 16px;
+}
+
+.split, .products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+article, .product {
+  background: #fff;
+  border: 1px solid #e4dfd6;
+  border-radius: 16px;
+  padding: 22px;
+}
+
+h3 { font-size: 1.15rem; margin-bottom: 8px; }
+
+article p, .product p { color: #3d4754; }
+
+.product {
+  display: flex;
+  gap: 16px;
+  text-decoration: none;
   align-items: flex-start;
 }
-.app img {
-  width: 84px;
-  height: 84px;
-  border-radius: 20px;
-  flex: none;
+
+.product:hover { border-color: #1c2430; }
+
+.more {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  border-bottom: 1px solid #1c2430;
 }
-.app p:last-child { margin-bottom: 0; }
-@media (max-width: 520px) {
-  .app { flex-direction: column; }
+
+.langs {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 8px;
+  margin-top: 18px;
 }
-nav {
-  background: #173044;
-  border: 1px solid rgba(61, 220, 151, 0.15);
-  border-radius: 10px;
-  padding: 16px 20px;
-  margin-bottom: 36px;
+
+.langs a {
+  display: block;
+  background: #fff;
+  border: 1px solid #e4dfd6;
+  border-radius: 12px;
+  padding: 12px 14px;
+  text-decoration: none;
+}
+
+.langs a:hover { border-color: #1c2430; }
+
+footer {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 8px 24px 40px;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 8px 18px;
+  align-items: center;
+  color: #5c6570;
+  font-size: 0.92rem;
 }
-nav a {
-  background: rgba(61, 220, 151, 0.1);
-  border: 1px solid rgba(61, 220, 151, 0.28);
-  color: #3DDC97;
-  text-decoration: none;
-  padding: 5px 12px;
-  border-radius: 20px;
-  font-size: .85rem;
-  white-space: nowrap;
+
+footer a { color: #1c2430; }
+
+footer p { margin-left: auto; }
+
+@media (max-width: 720px) {
+  .split, .products { grid-template-columns: 1fr; }
+  footer p { margin-left: 0; }
 }
-nav a:hover { background: rgba(61, 220, 151, 0.22); }
-h2 {
-  margin-top: 40px;
-  margin-bottom: 16px;
-  padding-left: 12px;
-  border-left: 4px solid #FFC857;
-  color: #F4F7F5;
-  font-size: 1.15rem;
-}
-h3 { margin-top: 20px; margin-bottom: 8px; color: #3DDC97; font-size: .97rem; font-weight: 600; }
-p { margin-bottom: 12px; font-size: .95rem; }
-ul { padding-left: 20px; margin-bottom: 12px; }
-ul li { margin-bottom: 4px; font-size: .95rem; }
-.small { color: #6d8490; font-size: .82rem; margin-bottom: 24px; display: block; }
-a { color: #FFC857; text-decoration: none; }
-a:hover { text-decoration: underline; }
-.support-block {
-  background: #173044;
-  border: 1px solid rgba(255, 200, 87, 0.25);
-  border-left: 4px solid #FFC857;
-  border-radius: 10px;
-  padding: 18px 22px;
-  margin-top: 28px;
-  text-align: center;
-}
-.support-block p { margin: 0; font-size: .95rem; color: #F4F7F5; }
-.support-block a { color: #FFC857; font-weight: 600; }
-footer {
-  text-align: center;
-  padding: 24px;
-  font-size: .8rem;
-  color: #6d8490;
-  background: #0E1A24;
-  border-top: 1px solid rgba(61, 220, 151, 0.15);
-}
-footer a { color: #9BB0BC; margin: 0 8px; }
-[dir="rtl"] ul { padding-left: 0; padding-right: 20px; }

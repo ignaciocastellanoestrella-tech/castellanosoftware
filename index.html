@@ -1,33 +1,130 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Castellano Software</title>
-  <meta name="description" content="Castellano Software publishes Android apps. Hop Out is an animal puzzle." />
+  <meta name="description" content="Estudio independiente de juegos y aplicaciones de meteorología para Android y iOS." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Castellano Software</h1>
-    <p class="subtitle">Android developer</p>
+  <header class="bar">
+    <a class="brand" href="./">
+      <img src="logo.jpg" alt="" width="44" height="44" />
+      <span>Castellano Software</span>
+    </a>
+    <div class="lang" role="group" aria-label="Idioma">
+      <button type="button" data-set-lang="es">Español</button>
+      <button type="button" data-set-lang="en">English</button>
+    </div>
   </header>
-  <main>
-    <div class="card">
-      <p>Castellano Software publica aplicaciones para Android. En esta web está Hop Out.</p>
-      <p>Castellano Software publishes Android apps. Hop Out is the game on this site.</p>
-      <p><a href="https://play.google.com/store/apps/dev?id=8781572297369936236">Google Play</a></p>
-    </div>
 
-    <h2>Hop Out</h2>
-    <div class="card app">
-      <img src="icon.png" alt="Hop Out" />
-      <div>
-        <p>Toca y vacía el tablero. El grande salta al pequeño. 2000 niveles, 100 mundos.</p>
-        <p>Tap and clear the board. Bigger ones hop smaller ones. 2000 levels, 100 worlds.</p>
-        <p><a href="hop-out/">Hop Out</a></p>
+  <main>
+    <section class="hero">
+      <img class="portrait" src="logo.jpg" alt="Castellano Software" width="112" height="112" />
+      <p class="kicker" lang="es">Estudio de software móvil</p>
+      <p class="kicker" lang="en">Mobile software studio</p>
+      <h1>Castellano Software</h1>
+      <p class="lead" lang="es">Juegos y aplicaciones de meteorología para Android y iOS.</p>
+      <p class="lead" lang="en">Games and weather applications for Android and iOS.</p>
+      <p class="prose" lang="es">Estudio independiente. Publicamos en Google Play y desarrollamos para las dos plataformas. Un producto tiene que entenderse en el primer minuto y seguir siendo claro mucho después.</p>
+      <p class="prose" lang="en">An independent studio. We publish on Google Play and we build for both platforms. A product has to be clear in the first minute, and still clear long after that.</p>
+    </section>
+
+    <section>
+      <h2 lang="es">Trabajo</h2>
+      <h2 lang="en">Work</h2>
+      <div class="split">
+        <article>
+          <h3 lang="es">Juegos</h3>
+          <h3 lang="en">Games</h3>
+          <p lang="es">Puzzles de tablero y campañas largas. La regla cabe en una frase. El nivel se recuerda.</p>
+          <p lang="en">Board puzzles and long campaigns. The rule fits in one sentence. The level stays with you.</p>
+        </article>
+        <article>
+          <h3 lang="es">Meteorología</h3>
+          <h3 lang="en">Weather</h3>
+          <p lang="es">Aplicaciones para quien tiene una estación en casa: los datos de la estación, widgets y una lectura que se consulta de un vistazo.</p>
+          <p lang="en">Applications for a home weather station: the station’s own data, widgets, and a reading you can take in at a glance.</p>
+        </article>
       </div>
-    </div>
+    </section>
+
+    <section>
+      <h2 lang="es">Productos</h2>
+      <h2 lang="en">Products</h2>
+      <div class="products">
+        <a class="product" href="hop-out/">
+          <img src="icon.png" alt="" width="72" height="72" />
+          <div>
+            <h3>Hop Out</h3>
+            <p lang="es">Puzzle de animales. El grande salta al pequeño. 2.000 niveles en 100 mundos.</p>
+            <p lang="en">An animal puzzle. Bigger ones hop smaller ones. 2,000 levels in 100 worlds.</p>
+            <span class="more" lang="es">Ver el juego</span>
+            <span class="more" lang="en">See the game</span>
+          </div>
+        </a>
+        <a class="product" href="https://play.google.com/store/apps/details?id=com.ignaciocastellano.estacionmeteorologica">
+          <img src="wxstation.png" alt="" width="72" height="72" />
+          <div>
+            <h3>WXStation Connect</h3>
+            <p lang="es">La estación meteorológica personal, en el teléfono. Datos en tiempo real y widgets.</p>
+            <p lang="en">Your personal weather station, on the phone. Live data and widgets.</p>
+            <span class="more">Google Play</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2 lang="es">Idiomas</h2>
+      <h2 lang="en">Languages</h2>
+      <p class="prose" lang="es">Hop Out está escrito en trece idiomas. En el juego se elige uno. Aquí está el mismo texto, separado por idioma.</p>
+      <p class="prose" lang="en">Hop Out is written in thirteen languages. The game uses one of them. The same text is here, one language at a time.</p>
+      <ul class="langs">
+        <li><a href="hop-out/#es">Español</a></li>
+        <li><a href="hop-out/#en">English</a></li>
+        <li><a href="hop-out/#fr">Français</a></li>
+        <li><a href="hop-out/#de">Deutsch</a></li>
+        <li><a href="hop-out/#pt">Português</a></li>
+        <li><a href="hop-out/#it">Italiano</a></li>
+        <li><a href="hop-out/#ru">Русский</a></li>
+        <li><a href="hop-out/#ja">日本語</a></li>
+        <li><a href="hop-out/#ko">한국어</a></li>
+        <li><a href="hop-out/#zh">中文</a></li>
+        <li><a href="hop-out/#id">Bahasa Indonesia</a></li>
+        <li><a href="hop-out/#tr">Türkçe</a></li>
+        <li><a href="hop-out/#ar">العربية</a></li>
+      </ul>
+    </section>
   </main>
+
+  <footer>
+    <a href="https://play.google.com/store/apps/dev?id=8781572297369936236">Google Play</a>
+    <a href="hop-out/privacy/">
+      <span lang="es">Privacidad</span>
+      <span lang="en">Privacy</span>
+    </a>
+    <a href="hop-out/terms/">
+      <span lang="es">Condiciones</span>
+      <span lang="en">Terms</span>
+    </a>
+    <p>© Castellano Software</p>
+  </footer>
+
+  <script>
+    (function () {
+      var key = 'cs-lang';
+      var saved = localStorage.getItem(key);
+      if (saved === 'en' || saved === 'es') document.documentElement.lang = saved;
+      document.querySelectorAll('[data-set-lang]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var lang = btn.getAttribute('data-set-lang');
+          document.documentElement.lang = lang;
+          localStorage.setItem(key, lang);
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
