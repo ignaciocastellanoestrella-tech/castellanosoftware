@@ -3,6 +3,7 @@ google.com, pub-4465691249285577, DIRECT, f08c47fec0942fa0
 unity.com, 6872901706336, DIRECT, 96cabb5fbdde37a7
 ironsrc.com, 697089, DIRECT
 vungle.com, 6ae743ea93f426c33e7a08e3, DIRECT, c107d686becd2d77
+facebook.com, 1121886527402214, DIRECT, c3e20eee3f780d68
 33across.com,001Pg0000197KcKIAU,RESELLER,bbea06d9c4d2853c
 contextweb.com,562852,RESELLER,89ff185a4c4e857c
 media.net,8CU12AQ1Y,RESELLER
