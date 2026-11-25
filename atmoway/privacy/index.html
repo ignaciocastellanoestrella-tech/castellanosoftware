@@ -1,40 +1,669 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AtmoWay Privacy Policy / Política de Privacidad | Castellano Software</title>
-  <style>
-    :root { --bg: #081226; --card: #0e1d38; --text: #f8fafc; --muted: #cbd5e1; --accent: #38bdf8; --border: rgba(148,163,184,0.2); }
-    * { box-sizing: border-box; }
-    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; }
-    main { max-width: 820px; margin: 0 auto; padding: 40px 20px 64px; }
-    .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 24px; margin-bottom: 20px; }
-    a { color: var(--accent); }
-    h1, h2 { margin-top: 0; }
-  </style>
+  <meta name="robots" content="index,follow" />
+  <title>Privacy Policy | AtmoWay — Castellano Software</title>
+  <link rel="stylesheet" href="./style.css" />
 </head>
-<body>
+<body id="top">
+  <header>
+    <img src="./icon.png" alt="AtmoWay" />
+    <h1>AtmoWay — Privacy Policy</h1>
+    <p class="subtitle">Zero accounts, zero ads, optional GPS &amp; ~5 km grid privacy · Castellano Software</p>
+    <nav class="top-links" aria-label="Site navigation">
+      <a href="../">Overview / Inicio</a>
+      <a href="../privacy/" class="active">Privacy / Privacidad</a>
+      <a href="../terms/">Terms / Términos</a>
+      <a href="../support/">Support / Soporte</a>
+    </nav>
+  </header>
+
   <main>
-    <p><a href="../">&larr; AtmoWay</a></p>
-    <section class="card">
-      <h1>Política de Privacidad / Privacy Policy</h1>
-      <p><strong>Responsable / Controller:</strong> Castellano Software (<a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a>)</p>
-      <h2>Español</h2>
+    <span class="meta-line">Last updated: 2026-11-25 · 13 Languages</span>
+    <div class="hero-card">
+      <strong>Important:</strong> AtmoWay requires no account, contains no ad or tracking SDKs (zero IDFA, AAID, Firebase, or Mixpanel), works globally without GPS permission via offline GeoNames <code>cities5000</code>, activates background location strictly during user-started Active Trips, and quantizes optional gateway requests to ~5 km (<code>0.05°</code>) cells.
+    </div>
+
+    <h3>Languages / Idiomas (13)</h3>
+    <nav class="lang-nav" aria-label="Languages">
+      <a href="#es">Español</a>
+      <a href="#en">English</a>
+      <a href="#de">Deutsch</a>
+      <a href="#fr">Français</a>
+      <a href="#it">Italiano</a>
+      <a href="#pt">Português</a>
+      <a href="#nl">Nederlands</a>
+      <a href="#pl">Polski</a>
+      <a href="#sv">Svenska</a>
+      <a href="#da">Dansk</a>
+      <a href="#nb">Norsk bokmål</a>
+      <a href="#cs">Čeština</a>
+      <a href="#tr">Türkçe</a>
+    </nav>
+
+    <section class="lang-section" id="es" lang="es">
+      <h2>Política de privacidad (Español)</h2>
+      <div class="card"><strong>Resumen clave:</strong> AtmoWay no tiene cuentas de usuario, no muestra publicidad, no integra SDKs de rastreo (ni IDFA, ni AAID, ni Firebase/Mixpanel) y funciona en todo el mundo sin permiso de GPS gracias al índice offline GeoNames.</div>
+      <h3>1. Responsable y ausencia de cuentas o rastreadores</h3>
+      <p><strong>Responsable:</strong> Castellano Software (<a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a>). AtmoWay (<code>com.castellanosoftware.atmoway</code>) no exige registro ni solicita nombre, correo electrónico o teléfono. No mostramos anuncios ni incluimos SDKs publicitarios, de atribución o de analítica comportamental (cero IDFA, cero AAID, cero Firebase Analytics o Mixpanel). Tampoco vendemos ni cedemos datos personales.</p>
+      <h3>2. Ubicación GPS opcional y Viaje Activo</h3>
       <ul>
-        <li><strong>Sin SDKs de rastreo ni publicidad:</strong> AtmoWay no incluye SDKs publicitarios, huella de dispositivo ni venta de datos personales.</li>
-        <li><strong>Ubicación GPS opcional:</strong> Puedes buscar ciudades sin conexión (base GeoNames integrada) sin conceder permiso de ubicación. El seguimiento en ruta (<code>FOREGROUND_SERVICE_LOCATION</code> / <code>allowsBackgroundLocationUpdates</code>) se activa únicamente mientras un viaje iniciado por ti está activo y se detiene automáticamente al llegar o tras inactividad.</li>
-        <li><strong>Consultas meteorológicas anonimizadas:</strong> Nuestro gateway opcional (<code>api-atmoway.castellanosoftware.com</code>) cuantifica las coordenadas a celdas de ~5 km antes de almacenar caché y nunca registra coordenadas exactas ni direcciones IP sin anonimizar.</li>
-        <li><strong>Suscripciones:</strong> Verificadas de forma nativa mediante Apple StoreKit 2 y Google Play Billing con almacenamiento seguro en el dispositivo.</li>
+        <li><strong>100 % utilizable sin GPS:</strong> Puedes buscar cualquier ciudad del mundo sin conexión usando la base de datos integrada GeoNames <code>cities5000</code> (SQLite FTS5) sin conceder permiso de ubicación.</li>
+        <li><strong>Solo en primer plano por defecto:</strong> En iOS solicitamos únicamente <code>NSLocationWhenInUseUsageDescription</code>; en Android <code>ACCESS_COARSE_LOCATION</code> / <code>ACCESS_FINE_LOCATION</code>.</li>
+        <li><strong>Seguimiento estricto durante Viaje Activo:</strong> Solo cuando inicias manualmente un viaje en el Copiloto de Ruta se activa en Android <code>FOREGROUND_SERVICE_LOCATION</code> (sin <code>ACCESS_BACKGROUND_LOCATION</code> permanente) y en iOS <code>allowsBackgroundLocationUpdates</code> con indicador visible en pantalla (sin <code>UIBackgroundModes: audio</code>). El seguimiento se detiene automáticamente al llegar al destino (&lt; 150 m sostenidos), tras inactividad prolongada (&ge; 30 min) o al pulsar «Detener viaje».</li>
       </ul>
-      <h2>English</h2>
+      <h3>3. Almacenamiento local y espejo para Widgets</h3>
       <ul>
-        <li><strong>Zero tracking or ad SDKs:</strong> AtmoWay contains no third-party advertising networks, cross-app trackers, or behavioral profiling.</li>
-        <li><strong>Optional GPS:</strong> Offline GeoNames city search works cleanly with zero location permission. Active Trip location updates run strictly while a user-initiated Route Copilot trip is active and stop automatically on arrival, inactivity, or manual stop.</li>
-        <li><strong>~5 km Grid Privacy:</strong> Our gateway quantizes latitude/longitude to ~5 km cells and never persists precise user coordinates or raw IP PII.</li>
-        <li><strong>In-App Purchases:</strong> Handled strictly through Apple StoreKit 2 and Google Play Billing with hardware-backed local storage.</li>
+        <li><strong>Base de datos Drift (SQLite WAL):</strong> Guarda caché meteorológica, polígonos CAP, ubicaciones guardadas y la caché offline del viaje activo (polilínea, nodos meteorológicos &plusmn;2 h y avisos CAP).</li>
+        <li><strong>Preferencias y espejo de Widgets:</strong> <code>SharedPreferences</code> / <code>UserDefaults</code> almacenan idioma, unidades y alertas. El espejo compartido con los widgets (<code>group.com.castellanosoftware.atmoway</code> en iOS y <code>SharedPreferences</code> en Android) contiene exclusivamente las <strong>6 métricas SI sin redondear</strong> (<code>_tempC</code>, <code>_feelsLikeC</code>, <code>_windSpeedKmh</code>, <code>_windGustKmh</code>, <code>_precipMmh</code>, <code>_pressureHpa</code>), preferencias de unidad y el nombre aproximado de la ciudad, con <strong>cero coordenadas GPS y cero indicadores de suscripción</strong>.</li>
+        <li><strong>Seguridad de compras:</strong> Los recibos se protegen en el Llavero de iOS (Keychain) y en <code>EncryptedSharedPreferences</code> / Keystore en Android (con gracia offline de 3 días y <code>android:allowBackup="false"</code>).</li>
       </ul>
+      <h3>4. Fuentes meteorológicas, mapas, geocodificación y gateway</h3>
+      <ul>
+        <li><strong>MET Norway</strong> (Locationforecast 2.0, Nowcast 2.0, MetAlerts 2.0, Airqualityforecast) — <a href="https://www.met.no/en/About-us/Copyright-and-use-of-data" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>NOAA / NWS &amp; NOAA AWC</strong> (observaciones METAR, radar NEXRAD/AWS NODD y CAP EE. UU.) — <a href="https://www.weather.gov/documentation/services-web-api" target="_blank" rel="noopener">Dominio público</a>.</li>
+        <li><strong>Bright Sky / DWD</strong> (Deutscher Wetterdienst y radar RADOLAN) — <a href="https://brightsky.dev/" target="_blank" rel="noopener">MIT / DL-DE-&gt;BY-2.0</a>.</li>
+        <li><strong>ECCC GeoMet</strong> (Environment and Climate Change Canada: WMS, CAP y AQHI) — <a href="https://eccc-msc.github.io/open-data/readme_en/" target="_blank" rel="noopener">Open Government Licence - Canada</a>.</li>
+        <li><strong>MeteoAlarm</strong> (avisos oficiales europeos Atom/CAP) — <a href="https://feeds.meteoalarm.org/" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>NASA POWER</strong> (climatología 1991–2020) — <a href="https://power.larc.nasa.gov/" target="_blank" rel="noopener">Dominio público</a>.</li>
+        <li><strong>OpenFreeMap &amp; © OpenStreetMap</strong> (teselas y red viaria) — <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">ODbL</a> / <a href="https://openfreemap.org/" target="_blank" rel="noopener">OpenFreeMap</a>; motor de rutas <strong>Valhalla</strong> (MIT).</li>
+        <li><strong>GeoNames (<code>cities5000</code>)</strong> — <a href="https://www.geonames.org/" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>Geocodificadores nativos del sistema:</strong> En iOS puede usarse Apple <code>CLGeocoder</code> / <code>MKDirections</code> (<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Privacidad de Apple</a>); en Android, Android <code>Geocoder</code> (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacidad de Google</a>).</li>
+        <li><strong>Caché perimetral opcional (<code>https://api-atmoway.castellanosoftware.com</code>):</strong> Alojado en Cloudflare Workers, cuantifica las coordenadas a celdas de <strong>~5 km (<code>0,05°</code>)</strong> antes de consultar o almacenar caché, no registra PII ni coordenadas exactas y dispone de un disyuntor automático hacia los orígenes oficiales sin clave.</li>
+      </ul>
+      <h3>5. Alertas en segundo plano, notificaciones y voz TTS</h3>
+      <p>Mediante <code>BGAppRefreshTask</code> / <code>BGProcessingTask</code> (iOS) y <code>WorkManager</code> (Android), AtmoWay evalúa localmente cuatro familias de avisos: Alertas CAP oficiales, Lluvia/tormenta inminente, Biometeo (helada o caída barométrica) y TTS de Ruta Activa. El horario silencioso se respeta salvo en avisos CAP de nivel Naranja o Rojo. La síntesis de voz (<code>AVAudioSession</code> con <code>.duckOthers</code> en iOS y <code>AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK</code> en Android) se genera localmente y nunca graba ni transmite audio.</p>
+      <h3>6. Compras integradas (AtmoWay Pro)</h3>
+      <p>Las suscripciones y compra vitalicia (<code>atmoway_pro_monthly</code>, <code>atmoway_pro_annual</code>, <code>atmoway_pro_lifetime</code>) se procesan exclusivamente mediante <strong>Apple StoreKit 2</strong> y <strong>Google Play Billing</strong>. Castellano Software nunca accede a datos bancarios ni de tarjetas. Puedes usar «Restaurar compras» en Ajustes o en la pantalla Pro.</p>
+      <h3>7. Menores, derechos (RGPD/CCPA) y borrado de datos</h3>
+      <p>AtmoWay no está dirigido a menores de 13 años. Al no mantener cuentas ni bases de datos personales en servidor, puedes ejercer el borrado eliminando los datos de la aplicación, desinstalándola o revocando los permisos en los ajustes del sistema. Consultas RGPD/CCPA: <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a>. Última actualización: 2026-11-25.</p>
+      <nav class="section-links">
+        <a href="../">Inicio</a> <a href="../terms/">Términos de servicio</a> <a href="../support/">Soporte y FAQ</a>
+      </nav>
+      <div class="support-block">
+        <p>¿Necesitas ayuda con AtmoWay? Escribe a <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a></p>
+      </div>
+      <div class="back-top-wrap">
+        <a class="back-top-pill" href="#top">↑ Arriba / Idiomas</a>
+      </div>
     </section>
+
+    <section class="lang-section" id="en" lang="en">
+      <h2>Privacy Policy (English)</h2>
+      <div class="card"><strong>Key summary:</strong> AtmoWay has no user accounts, displays zero ads, embeds zero tracking or attribution SDKs (no IDFA, AAID, Firebase, or Mixpanel), and works worldwide without GPS permission using its bundled offline GeoNames database.</div>
+      <h3>1. Controller &amp; Zero Accounts or Trackers</h3>
+      <p><strong>Data Controller:</strong> Castellano Software (<a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a>). AtmoWay (<code>com.castellanosoftware.atmoway</code>) requires no account, email, phone number, or password. The app contains no advertising networks, cross-app trackers, or behavioral analytics SDKs (zero IDFA, zero AAID, zero Firebase/Mixpanel), and never sells personal data.</p>
+      <h3>2. Optional Foreground Location &amp; Active Trip GPS</h3>
+      <ul>
+        <li><strong>100% functional without GPS:</strong> You can search any city globally offline via the bundled GeoNames <code>cities5000</code> SQLite FTS5 index without granting location permission.</li>
+        <li><strong>Foreground-only by default:</strong> On iOS we request only <code>NSLocationWhenInUseUsageDescription</code>; on Android, <code>ACCESS_COARSE_LOCATION</code> / <code>ACCESS_FINE_LOCATION</code>.</li>
+        <li><strong>Strictly scoped Active Trip location:</strong> Only when you explicitly start a Route Copilot trip does Android enable <code>FOREGROUND_SERVICE_LOCATION</code> (no permanent <code>ACCESS_BACKGROUND_LOCATION</code>) and iOS enable <code>allowsBackgroundLocationUpdates</code> with the system status indicator visible (and no <code>UIBackgroundModes: audio</code>). Location updates stop automatically upon arrival (&lt; 150 m sustained), prolonged inactivity (&ge; 30 min), or tapping “Stop trip”.</li>
+      </ul>
+      <h3>3. On-Device Storage &amp; Widget Mirror</h3>
+      <ul>
+        <li><strong>Drift (SQLite WAL):</strong> Stores local forecast caches, CAP alert polygons, saved places, and the offline Active Trip pre-cache (route polyline, interpolated weather nodes with a &plusmn;2 h margin, and CAP polygons).</li>
+        <li><strong>Settings &amp; Widget Mirror:</strong> <code>SharedPreferences</code> / <code>UserDefaults</code> store unit, language, and alert settings. The widget mirror (<code>group.com.castellanosoftware.atmoway</code> on iOS; <code>SharedPreferences</code> on Android) stores strictly the <strong>6 unrounded SI numbers</strong> (<code>_tempC</code>, <code>_feelsLikeC</code>, <code>_windSpeedKmh</code>, <code>_windGustKmh</code>, <code>_precipMmh</code>, <code>_pressureHpa</code>), unit settings, and coarse city name — with <strong>zero GPS coordinates and zero entitlement flags</strong>.</li>
+        <li><strong>Entitlement Security:</strong> Purchase state is persisted in the iOS Keychain and Android <code>EncryptedSharedPreferences</code> / Keystore with a 3-day offline grace period and <code>android:allowBackup="false"</code>.</li>
+      </ul>
+      <h3>4. Weather, Mapping, Geocoding &amp; Edge Gateway Sources</h3>
+      <ul>
+        <li><strong>MET Norway</strong> (Locationforecast 2.0, Nowcast 2.0, MetAlerts 2.0, Airqualityforecast) — <a href="https://www.met.no/en/About-us/Copyright-and-use-of-data" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>NOAA / NWS &amp; NOAA AWC</strong> (METAR observations, IEM NEXRAD / AWS NODD radar, US CAP) — <a href="https://www.weather.gov/documentation/services-web-api" target="_blank" rel="noopener">Public Domain</a>.</li>
+        <li><strong>Bright Sky / DWD</strong> (Deutscher Wetterdienst &amp; RADOLAN radar) — <a href="https://brightsky.dev/" target="_blank" rel="noopener">MIT / DL-DE-&gt;BY-2.0</a>.</li>
+        <li><strong>ECCC GeoMet</strong> (Environment and Climate Change Canada: WMS radar, CAP, AQHI) — <a href="https://eccc-msc.github.io/open-data/readme_en/" target="_blank" rel="noopener">Open Government Licence - Canada</a>.</li>
+        <li><strong>MeteoAlarm</strong> (European official Atom/CAP warnings) — <a href="https://feeds.meteoalarm.org/" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>NASA POWER</strong> (1991–2020 climatology) — <a href="https://power.larc.nasa.gov/" target="_blank" rel="noopener">Public Domain</a>.</li>
+        <li><strong>OpenFreeMap &amp; © OpenStreetMap</strong> (vector tiles &amp; road network) — <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">ODbL</a> / <a href="https://openfreemap.org/" target="_blank" rel="noopener">OpenFreeMap</a>; <strong>Valhalla</strong> routing engine (MIT).</li>
+        <li><strong>GeoNames (<code>cities5000</code>)</strong> — <a href="https://www.geonames.org/" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>Native OS Geocoders:</strong> On iOS, Apple <code>CLGeocoder</code> / <code>MKDirections</code> (<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a>); on Android, Android <code>Geocoder</code> (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>).</li>
+        <li><strong>Optional Edge Cache (<code>https://api-atmoway.castellanosoftware.com</code>):</strong> Powered by Cloudflare Workers, quantizes coordinates to <strong>~5 km (<code>0.05°</code>)</strong> grid cells before caching or forwarding, writes zero PII or exact-coordinate logs, and falls back automatically via circuit breaker directly to official keyless origins.</li>
+      </ul>
+      <h3>5. Background Alerts, Notifications &amp; Transient TTS</h3>
+      <p>Using <code>BGAppRefreshTask</code> / <code>BGProcessingTask</code> (iOS) and <code>WorkManager</code> (Android), AtmoWay evaluates four notification families locally: Official CAP Warnings, Imminent Rain/Storm, Bio-Meteo Frost &amp; Barometric Drop, and Active Route TTS. Quiet Hours are honored with an optional safety bypass for Orange/Red CAP alerts. Spoken TTS alerts (<code>AVAudioSession</code> <code>.playback</code> with <code>.duckOthers</code> on iOS; <code>AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK</code> on Android) are synthesized locally on-device and never record or transmit audio.</p>
+      <h3>6. In-App Purchases (AtmoWay Pro)</h3>
+      <p>Subscriptions and lifetime unlocks (<code>atmoway_pro_monthly</code>, <code>atmoway_pro_annual</code>, <code>atmoway_pro_lifetime</code>) are processed exclusively by <strong>Apple StoreKit 2</strong> and <strong>Google Play Billing</strong>. Castellano Software never collects or stores payment card or banking details. Restore Purchases is available in Settings and the Paywall.</p>
+      <h3>7. Children, GDPR/CCPA Rights &amp; Data Deletion</h3>
+      <p>AtmoWay is not directed at children under 13. Because Castellano Software holds no user accounts or server-side personal profiles, you can delete all local data anytime by clearing app storage, uninstalling the app, or revoking permissions in OS settings. Privacy inquiries: <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a>. Last updated: 2026-11-25.</p>
+      <nav class="section-links">
+        <a href="../">Overview</a> <a href="../terms/">Terms of Service</a> <a href="../support/">Support &amp; FAQ</a>
+      </nav>
+      <div class="support-block">
+        <p>Need help with AtmoWay? Email <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a></p>
+      </div>
+      <div class="back-top-wrap">
+        <a class="back-top-pill" href="#top">↑ Top / Languages</a>
+      </div>
+    </section>
+
+    <section class="lang-section" id="de" lang="de">
+      <h2>Datenschutzerklärung (Deutsch)</h2>
+      <div class="card"><strong>Wichtigste Punkte:</strong> AtmoWay benötigt kein Benutzerkonto, zeigt keine Werbung, enthält keine Tracking- oder Werbe-SDKs (kein IDFA, keine AAID, kein Firebase/Mixpanel) und funktioniert weltweit ohne GPS-Berechtigung über die integrierte Offline-GeoNames-Datenbank.</div>
+      <h3>1. Verantwortlicher &amp; Verzicht auf Konten und Tracker</h3>
+      <p><strong>Verantwortlicher:</strong> Castellano Software (<a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a>). AtmoWay (<code>com.castellanosoftware.atmoway</code>) erfordert keine Registrierung und erhebt weder Namen, E-Mail-Adressen noch Telefonnummern. Es gibt keine Werbung, keine Werbenetzwerke, keine Tracking-SDKs und keinen Verkauf personenbezogener Daten.</p>
+      <h3>2. Optionaler Vordergrund-Standort &amp; Aktive Fahrt</h3>
+      <ul>
+        <li><strong>100 % nutzbar ohne GPS:</strong> Über den eingebetteten GeoNames-Index <code>cities5000</code> (SQLite FTS5) lassen sich Städte weltweit offline ohne Standortfreigabe suchen.</li>
+        <li><strong>Standardmäßig nur im Vordergrund:</strong> Unter iOS wird ausschließlich <code>NSLocationWhenInUseUsageDescription</code> angefordert; unter Android <code>ACCESS_COARSE_LOCATION</code> / <code>ACCESS_FINE_LOCATION</code>.</li>
+        <li><strong>Streng begrenzter Routen-Modus:</strong> Erst wenn du aktiv eine Fahrt im Routen-Copiloten startest, nutzt Android <code>FOREGROUND_SERVICE_LOCATION</code> (kein dauerhaftes <code>ACCESS_BACKGROUND_LOCATION</code>) und iOS <code>allowsBackgroundLocationUpdates</code> mit sichtbarer Statusanzeige (ohne <code>UIBackgroundModes: audio</code>). Bei Ankunft (&lt; 150 m anhaltend), Inaktivität (&ge; 30 Min.) oder manuellem Stopp endet die Ortung sofort.</li>
+      </ul>
+      <h3>3. Lokale Speicherung &amp; Widget-Spiegel</h3>
+      <ul>
+        <li><strong>Drift (SQLite WAL):</strong> Speichert Wetter-Caches, CAP-Polygone, gespeicherte Orte sowie den Offline-Fahrtencache (Polylinie, Wetterknoten &plusmn;2 h und CAP-Warnungen).</li>
+        <li><strong>Einstellungen &amp; Widget-Spiegel:</strong> <code>SharedPreferences</code> / <code>UserDefaults</code> speichern Einheiten und Sprache. Der Widget-Spiegel (<code>group.com.castellanosoftware.atmoway</code> bzw. Android <code>SharedPreferences</code>) enthält strikt nur die <strong>6 ungerundeten SI-Werte</strong> (<code>_tempC</code>, <code>_feelsLikeC</code>, <code>_windSpeedKmh</code>, <code>_windGustKmh</code>, <code>_precipMmh</code>, <code>_pressureHpa</code>), Einheiten und den groben Ortsnamen — <strong>ohne GPS-Koordinaten und ohne Abo-Status</strong>.</li>
+        <li><strong>Kaufsicherheit:</strong> Kaufbelege liegen geschützt in der iOS Keychain bzw. in Android <code>EncryptedSharedPreferences</code> / Keystore (mit 3 Tagen Offline-Kulanzzeit und <code>android:allowBackup="false"</code>).</li>
+      </ul>
+      <h3>4. Wetter-, Karten-, Geocoding- und Gateway-Quellen</h3>
+      <ul>
+        <li><strong>MET Norway</strong> (Locationforecast 2.0, Nowcast 2.0, MetAlerts 2.0, Airqualityforecast) — <a href="https://www.met.no/en/About-us/Copyright-and-use-of-data" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>NOAA / NWS &amp; NOAA AWC</strong> (METAR, IEM NEXRAD / AWS NODD, US-CAP) — <a href="https://www.weather.gov/documentation/services-web-api" target="_blank" rel="noopener">Public Domain</a>.</li>
+        <li><strong>Bright Sky / DWD</strong> (Deutscher Wetterdienst &amp; RADOLAN) — <a href="https://brightsky.dev/" target="_blank" rel="noopener">MIT / DL-DE-&gt;BY-2.0</a>.</li>
+        <li><strong>ECCC GeoMet</strong> (Environment and Climate Change Canada: WMS, CAP, AQHI) — <a href="https://eccc-msc.github.io/open-data/readme_en/" target="_blank" rel="noopener">Open Government Licence - Canada</a>.</li>
+        <li><strong>MeteoAlarm</strong> (Europäische Atom/CAP-Warnungen) — <a href="https://feeds.meteoalarm.org/" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>NASA POWER</strong> (Klimatologie 1991–2020) — <a href="https://power.larc.nasa.gov/" target="_blank" rel="noopener">Public Domain</a>.</li>
+        <li><strong>OpenFreeMap &amp; © OpenStreetMap</strong> — <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">ODbL</a> / <a href="https://openfreemap.org/" target="_blank" rel="noopener">OpenFreeMap</a>; Routing-Engine <strong>Valhalla</strong> (MIT).</li>
+        <li><strong>GeoNames (<code>cities5000</code>)</strong> — <a href="https://www.geonames.org/" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>System-Geocoder:</strong> Unter iOS Apple <code>CLGeocoder</code> / <code>MKDirections</code> (<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Datenschutz</a>); unter Android Android <code>Geocoder</code> (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Datenschutz</a>).</li>
+        <li><strong>Optionales Edge-Gateway (<code>https://api-atmoway.castellanosoftware.com</code>):</strong> Betrieben auf Cloudflare Workers, rundet Koordinaten vor Caching/Weiterleitung auf <strong>~5 km (<code>0,05°</code>)</strong> Rasterzellen, protokolliert weder PII noch exakte Koordinaten und schaltet bei Bedarf direkt auf offizielle schlüssellose Quellen zurück.</li>
+      </ul>
+      <h3>5. Hintergrundwarnungen, Benachrichtigungen &amp; TTS</h3>
+      <p>Über <code>BGAppRefreshTask</code> / <code>BGProcessingTask</code> (iOS) und <code>WorkManager</code> (Android) prüft AtmoWay lokal vier Warnfamilien: Offizielle CAP-Warnungen, Bevorstehender Regen/Sturm, Biometeo-Frost/Luftdruckabfall und Aktive Route TTS. Ruhezeiten werden berücksichtigt (mit optionaler Sicherheitsausnahme für Orange/Rot-CAP-Warnungen). TTS-Sprachausgaben (<code>AVAudioSession</code> <code>.duckOthers</code> / <code>AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK</code>) entstehen rein lokal ohne Audioaufzeichnung.</p>
+      <h3>6. In-App-Käufe (AtmoWay Pro)</h3>
+      <p>Abonnements und Einmalkauf (<code>atmoway_pro_monthly</code>, <code>atmoway_pro_annual</code>, <code>atmoway_pro_lifetime</code>) werden ausschließlich über <strong>Apple StoreKit 2</strong> und <strong>Google Play Billing</strong> abgewickelt. Castellano Software speichert keine Zahlungsdaten. „Käufe wiederherstellen“ steht in den Einstellungen und im Paywall-Dialog bereit.</p>
+      <h3>7. Kinder, DSGVO/CCPA &amp; Datenlöschung</h3>
+      <p>AtmoWay richtet sich nicht an Kinder unter 13 Jahren. Da keine Benutzerkonten oder Serverprofile existieren, löschst du alle lokalen Daten direkt durch Leeren der App-Daten, Deinstallation oder Entzug der Systemberechtigungen. Kontakt: <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a>. Stand: 2026-11-25.</p>
+      <nav class="section-links">
+        <a href="../">Übersicht</a> <a href="../terms/">Nutzungsbedingungen</a> <a href="../support/">Support &amp; FAQ</a>
+      </nav>
+      <div class="support-block">
+        <p>Hilfe zu AtmoWay benötigt? Schreib an <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a></p>
+      </div>
+      <div class="back-top-wrap">
+        <a class="back-top-pill" href="#top">↑ Nach oben / Sprachen</a>
+      </div>
+    </section>
+
+    <section class="lang-section" id="fr" lang="fr">
+      <h2>Politique de confidentialité (Français)</h2>
+      <div class="card"><strong>En bref :</strong> AtmoWay fonctionne sans compte utilisateur, sans publicité, sans SDK de suivi ou d’attribution (ni IDFA, ni AAID, ni Firebase/Mixpanel) et reste utilisable partout dans le monde sans autorisation GPS grâce à la base hors ligne GeoNames.</div>
+      <h3>1. Responsable et absence de compte ou de traceurs</h3>
+      <p><strong>Responsable :</strong> Castellano Software (<a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a>). AtmoWay (<code>com.castellanosoftware.atmoway</code>) n’exige aucune inscription et ne demande ni e-mail, ni téléphone, ni mot de passe. L’application n’intègre aucun SDK publicitaire ou analytique comportemental et ne vend aucune donnée personnelle.</p>
+      <h3>2. Géolocalisation optionnelle et Trajet Actif</h3>
+      <ul>
+        <li><strong>100 % utilisable sans GPS :</strong> La recherche mondiale hors ligne GeoNames <code>cities5000</code> (SQLite FTS5) fonctionne sans aucune autorisation de localisation.</li>
+        <li><strong>Premier plan uniquement par défaut :</strong> Sur iOS, seule <code>NSLocationWhenInUseUsageDescription</code> est demandée ; sur Android, <code>ACCESS_COARSE_LOCATION</code> / <code>ACCESS_FINE_LOCATION</code>.</li>
+        <li><strong>Suivi strictement limité au Trajet Actif :</strong> Uniquement lorsque vous lancez un trajet avec le Copilote de Route, Android active <code>FOREGROUND_SERVICE_LOCATION</code> (sans <code>ACCESS_BACKGROUND_LOCATION</code> permanent) et iOS active <code>allowsBackgroundLocationUpdates</code> avec indicateur système visible (sans <code>UIBackgroundModes: audio</code>). L’arrêt est automatique à l’arrivée (&lt; 150 m soutenus), après inactivité (&ge; 30 min) ou via « Arrêter le trajet ».</li>
+      </ul>
+      <h3>3. Stockage local et miroir des Widgets</h3>
+      <ul>
+        <li><strong>Base Drift (SQLite WAL) :</strong> Stocke le cache météo, les polygones CAP, les lieux enregistrés et le pré-cache hors ligne du trajet actif (polyligne, nœuds météo &plusmn;2 h et alertes CAP).</li>
+        <li><strong>Réglages et miroir des Widgets :</strong> <code>SharedPreferences</code> / <code>UserDefaults</code> conservent unités et langue. Le miroir partagé avec les widgets (<code>group.com.castellanosoftware.atmoway</code> sur iOS et <code>SharedPreferences</code> sur Android) se limite strictement aux <strong>6 valeurs SI non arrondies</strong> (<code>_tempC</code>, <code>_feelsLikeC</code>, <code>_windSpeedKmh</code>, <code>_windGustKmh</code>, <code>_precipMmh</code>, <code>_pressureHpa</code>), aux préférences d’unités et au nom approximatif de la ville — <strong>zéro coordonnée GPS et zéro indicateur d’abonnement</strong>.</li>
+        <li><strong>Sécurité des achats :</strong> Les droits Pro sont protégés par le Trousseau iOS (Keychain) et Android <code>EncryptedSharedPreferences</code> / Keystore (délai de grâce hors ligne de 3 jours, <code>android:allowBackup="false"</code>).</li>
+      </ul>
+      <h3>4. Sources météo, cartographie, géocodage et passerelle</h3>
+      <ul>
+        <li><strong>MET Norway</strong> (Locationforecast 2.0, Nowcast 2.0, MetAlerts 2.0, Airqualityforecast) — <a href="https://www.met.no/en/About-us/Copyright-and-use-of-data" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>NOAA / NWS &amp; NOAA AWC</strong> (METAR, IEM NEXRAD / AWS NODD, CAP États-Unis) — <a href="https://www.weather.gov/documentation/services-web-api" target="_blank" rel="noopener">Domaine public</a>.</li>
+        <li><strong>Bright Sky / DWD</strong> (Deutscher Wetterdienst et radar RADOLAN) — <a href="https://brightsky.dev/" target="_blank" rel="noopener">MIT / DL-DE-&gt;BY-2.0</a>.</li>
+        <li><strong>ECCC GeoMet</strong> (Environment and Climate Change Canada : WMS, CAP, AQHI) — <a href="https://eccc-msc.github.io/open-data/readme_en/" target="_blank" rel="noopener">Licence du gouvernement ouvert - Canada</a>.</li>
+        <li><strong>MeteoAlarm</strong> (vigilances européennes Atom/CAP) — <a href="https://feeds.meteoalarm.org/" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>NASA POWER</strong> (climatologie 1991–2020) — <a href="https://power.larc.nasa.gov/" target="_blank" rel="noopener">Domaine public</a>.</li>
+        <li><strong>OpenFreeMap &amp; © OpenStreetMap</strong> — <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">ODbL</a> / <a href="https://openfreemap.org/" target="_blank" rel="noopener">OpenFreeMap</a> ; moteur d’itinéraire <strong>Valhalla</strong> (MIT).</li>
+        <li><strong>GeoNames (<code>cities5000</code>)</strong> — <a href="https://www.geonames.org/" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>Géocodeurs natifs du système :</strong> Apple <code>CLGeocoder</code> / <code>MKDirections</code> sur iOS (<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Confidentialité Apple</a>) et Android <code>Geocoder</code> sur Android (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Confidentialité Google</a>).</li>
+        <li><strong>Cache périphérique optionnel (<code>https://api-atmoway.castellanosoftware.com</code>) :</strong> Sur Cloudflare Workers, quantifie les coordonnées sur une grille de <strong>~5 km (<code>0,05°</code>)</strong> avant mise en cache, ne journalise aucune donnée personnelle ni coordonnée exacte et bascule automatiquement vers les sources officielles sans clé en cas d’indisponibilité.</li>
+      </ul>
+      <h3>5. Alertes en arrière-plan, notifications et synthèse vocale TTS</h3>
+      <p>Via <code>BGAppRefreshTask</code> / <code>BGProcessingTask</code> (iOS) et <code>WorkManager</code> (Android), AtmoWay évalue localement quatre familles de notifications : Alertes CAP officielles, Pluie/orage imminent, Biométéo (gel ou chute barométrique) et TTS de Trajet Actif. Les heures silencieuses sont respectées (contournement de sécurité optionnel pour les alertes CAP Orange/Rouge). L’audio TTS (<code>AVAudioSession</code> <code>.duckOthers</code> / <code>AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK</code>) est synthétisé localement sans aucun enregistrement.</p>
+      <h3>6. Achats intégrés (AtmoWay Pro)</h3>
+      <p>Les offres (<code>atmoway_pro_monthly</code>, <code>atmoway_pro_annual</code>, <code>atmoway_pro_lifetime</code>) sont gérées exclusivement par <strong>Apple StoreKit 2</strong> et <strong>Google Play Billing</strong>. Castellano Software n’a accès à aucune donnée bancaire. L’option « Restaurer les achats » est disponible dans les réglages et l’écran Pro.</p>
+      <h3>7. Mineurs, droits RGPD/CCPA et suppression des données</h3>
+      <p>AtmoWay ne s’adresse pas aux enfants de moins de 13 ans. Sans compte ni base serveur personnelle, vous supprimez vos données à tout moment en effaçant les données de l’app, en la désinstallant ou en révoquant les autorisations système. Contact : <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a>. Dernière mise à jour : 2026-11-25.</p>
+      <nav class="section-links">
+        <a href="../">Présentation</a> <a href="../terms/">Conditions d’utilisation</a> <a href="../support/">Assistance &amp; FAQ</a>
+      </nav>
+      <div class="support-block">
+        <p>Besoin d’aide avec AtmoWay ? Écrivez à <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a></p>
+      </div>
+      <div class="back-top-wrap">
+        <a class="back-top-pill" href="#top">↑ Haut / Langues</a>
+      </div>
+    </section>
+
+    <section class="lang-section" id="it" lang="it">
+      <h2>Informativa sulla privacy (Italiano)</h2>
+      <div class="card"><strong>In sintesi:</strong> AtmoWay non richiede account, non mostra pubblicità, non integra SDK di tracciamento (niente IDFA, AAID, Firebase o Mixpanel) e funziona in tutto il mondo senza permesso GPS grazie al database offline GeoNames.</div>
+      <h3>1. Titolare e assenza di account o tracker</h3>
+      <p><strong>Titolare del trattamento:</strong> Castellano Software (<a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a>). AtmoWay (<code>com.castellanosoftware.atmoway</code>) non prevede registrazione né richiede email, telefono o password. Non contiene reti pubblicitarie né SDK di profilazione e non vende dati personali.</p>
+      <h3>2. Posizione GPS facoltativa e Viaggio Attivo</h3>
+      <ul>
+        <li><strong>Utilizzabile al 100 % senza GPS:</strong> La ricerca offline globale GeoNames <code>cities5000</code> (SQLite FTS5) consente di scegliere qualsiasi città senza concedere l’accesso alla posizione.</li>
+        <li><strong>Solo in primo piano per impostazione predefinita:</strong> Su iOS richiediamo solo <code>NSLocationWhenInUseUsageDescription</code>; su Android <code>ACCESS_COARSE_LOCATION</code> / <code>ACCESS_FINE_LOCATION</code>.</li>
+        <li><strong>Tracciamento limitato al solo Viaggio Attivo:</strong> Solo all’avvio manuale di un viaggio nel Copilota di Percorso, Android attiva <code>FOREGROUND_SERVICE_LOCATION</code> (senza <code>ACCESS_BACKGROUND_LOCATION</code> permanente) e iOS attiva <code>allowsBackgroundLocationUpdates</code> con indicatore di stato visibile (senza <code>UIBackgroundModes: audio</code>). Si arresta automaticamente all’arrivo (&lt; 150 m sostenuti), dopo inattività (&ge; 30 min) o toccando «Termina viaggio».</li>
+      </ul>
+      <h3>3. Archiviazione locale e mirror per Widget</h3>
+      <ul>
+        <li><strong>Database Drift (SQLite WAL):</strong> Conserva la cache meteo, i poligoni CAP, i luoghi salvati e la pre-cache offline del viaggio (tracciato, nodi meteo &plusmn;2 h e allerte CAP).</li>
+        <li><strong>Impostazioni e mirror Widget:</strong> <code>SharedPreferences</code> / <code>UserDefaults</code> salvano unità e lingua. Il mirror condiviso con i widget (<code>group.com.castellanosoftware.atmoway</code> su iOS e <code>SharedPreferences</code> su Android) contiene unicamente i <strong>6 valori SI non arrotondati</strong> (<code>_tempC</code>, <code>_feelsLikeC</code>, <code>_windSpeedKmh</code>, <code>_windGustKmh</code>, <code>_precipMmh</code>, <code>_pressureHpa</code>), le preferenze di unità e il nome approssimativo della città — <strong>zero coordinate GPS e zero flag di abbonamento</strong>.</li>
+        <li><strong>Sicurezza degli acquisti:</strong> I titoli Pro risiedono nel Portachiavi iOS (Keychain) e in Android <code>EncryptedSharedPreferences</code> / Keystore (con 3 giorni di tolleranza offline e <code>android:allowBackup="false"</code>).</li>
+      </ul>
+      <h3>4. Fonti meteo, mappe, geocodifica e gateway edge</h3>
+      <ul>
+        <li><strong>MET Norway</strong> (Locationforecast 2.0, Nowcast 2.0, MetAlerts 2.0, Airqualityforecast) — <a href="https://www.met.no/en/About-us/Copyright-and-use-of-data" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>NOAA / NWS &amp; NOAA AWC</strong> (METAR, IEM NEXRAD / AWS NODD, CAP USA) — <a href="https://www.weather.gov/documentation/services-web-api" target="_blank" rel="noopener">Dominio pubblico</a>.</li>
+        <li><strong>Bright Sky / DWD</strong> (Deutscher Wetterdienst e radar RADOLAN) — <a href="https://brightsky.dev/" target="_blank" rel="noopener">MIT / DL-DE-&gt;BY-2.0</a>.</li>
+        <li><strong>ECCC GeoMet</strong> (Environment and Climate Change Canada: WMS, CAP, AQHI) — <a href="https://eccc-msc.github.io/open-data/readme_en/" target="_blank" rel="noopener">Open Government Licence - Canada</a>.</li>
+        <li><strong>MeteoAlarm</strong> (allerte europee Atom/CAP) — <a href="https://feeds.meteoalarm.org/" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>NASA POWER</strong> (climatologia 1991–2020) — <a href="https://power.larc.nasa.gov/" target="_blank" rel="noopener">Dominio pubblico</a>.</li>
+        <li><strong>OpenFreeMap &amp; © OpenStreetMap</strong> — <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">ODbL</a> / <a href="https://openfreemap.org/" target="_blank" rel="noopener">OpenFreeMap</a>; motore di routing <strong>Valhalla</strong> (MIT).</li>
+        <li><strong>GeoNames (<code>cities5000</code>)</strong> — <a href="https://www.geonames.org/" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>Geocoder nativi del sistema:</strong> Apple <code>CLGeocoder</code> / <code>MKDirections</code> su iOS (<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Privacy Apple</a>) e Android <code>Geocoder</code> su Android (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Google</a>).</li>
+        <li><strong>Cache edge opzionale (<code>https://api-atmoway.castellanosoftware.com</code>):</strong> Su Cloudflare Workers, quantizza le coordinate in celle da <strong>~5 km (<code>0,05°</code>)</strong> prima della cache, non registra PII né coordinate esatte e dispone di fallback automatico diretto verso le fonti ufficiali senza chiave.</li>
+      </ul>
+      <h3>5. Valutazione in background, notifiche e sintesi vocale TTS</h3>
+      <p>Tramite <code>BGAppRefreshTask</code> / <code>BGProcessingTask</code> (iOS) e <code>WorkManager</code> (Android), AtmoWay valuta localmente quattro famiglie di notifiche: Allerte CAP ufficiali, Pioggia/temporale imminente, Biometeo (gelo/calo barometrico) e TTS Viaggio Attivo. Le ore silenziose vengono rispettate (con eccezione di sicurezza opzionale per allerte CAP Arancioni/Rosse). L’audio TTS (<code>AVAudioSession</code> <code>.duckOthers</code> / <code>AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK</code>) viene sintetizzato localmente senza alcuna registrazione.</p>
+      <h3>6. Acquisti in-app (AtmoWay Pro)</h3>
+      <p>Abbonamenti e sblocco a vita (<code>atmoway_pro_monthly</code>, <code>atmoway_pro_annual</code>, <code>atmoway_pro_lifetime</code>) sono gestiti esclusivamente da <strong>Apple StoreKit 2</strong> e <strong>Google Play Billing</strong>. Castellano Software non raccoglie dati di pagamento. «Ripristina acquisti» è presente nelle Impostazioni e nel Paywall.</p>
+      <h3>7. Minori, diritti GDPR/CCPA e cancellazione</h3>
+      <p>AtmoWay non è destinato a minori di 13 anni. Poiché non esistono account né archivi personali su server, puoi cancellare ogni dato locale in qualsiasi momento eliminando i dati dell’app, disinstallandola o revocando i permessi di sistema. Contatto: <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a>. Ultimo aggiornamento: 2026-11-25.</p>
+      <nav class="section-links">
+        <a href="../">Panoramica</a> <a href="../terms/">Termini di servizio</a> <a href="../support/">Supporto &amp; FAQ</a>
+      </nav>
+      <div class="support-block">
+        <p>Serve aiuto con AtmoWay? Scrivi a <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a></p>
+      </div>
+      <div class="back-top-wrap">
+        <a class="back-top-pill" href="#top">↑ Su / Lingue</a>
+      </div>
+    </section>
+
+    <section class="lang-section" id="pt" lang="pt">
+      <h2>Política de privacidade (Português)</h2>
+      <div class="card"><strong>Resumo essencial:</strong> O AtmoWay não tem contas de utilizador, não exibe anúncios, não inclui SDKs de rastreio (sem IDFA, AAID, Firebase ou Mixpanel) e funciona em todo o mundo sem permissão de GPS através da base offline GeoNames.</div>
+      <h3>1. Responsável e ausência de contas ou rastreadores</h3>
+      <p><strong>Responsável:</strong> Castellano Software (<a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a>). O AtmoWay (<code>com.castellanosoftware.atmoway</code>) não exige registo nem pede e-mail, telefone ou palavra-passe. Não mostramos publicidade, não usamos SDKs de atribuição ou analítica comportamental e não vendemos dados pessoais.</p>
+      <h3>2. Localização GPS opcional e Viagem Ativa</h3>
+      <ul>
+        <li><strong>100 % funcional sem GPS:</strong> A pesquisa offline mundial GeoNames <code>cities5000</code> (SQLite FTS5) permite consultar qualquer cidade sem conceder permissão de localização.</li>
+        <li><strong>Apenas em primeiro plano por predefinição:</strong> No iOS pedimos apenas <code>NSLocationWhenInUseUsageDescription</code>; no Android <code>ACCESS_COARSE_LOCATION</code> / <code>ACCESS_FINE_LOCATION</code>.</li>
+        <li><strong>Localização restrita à Viagem Ativa:</strong> Apenas quando inicia uma viagem no Copiloto de Rota, o Android ativa <code>FOREGROUND_SERVICE_LOCATION</code> (sem <code>ACCESS_BACKGROUND_LOCATION</code> permanente) e o iOS ativa <code>allowsBackgroundLocationUpdates</code> com indicador visível no sistema (sem <code>UIBackgroundModes: audio</code>). O registo para automaticamente à chegada (&lt; 150 m contínuos), após inatividade (&ge; 30 min) ou ao tocar em «Parar viagem».</li>
+      </ul>
+      <h3>3. Armazenamento local e espelho para Widgets</h3>
+      <ul>
+        <li><strong>Base Drift (SQLite WAL):</strong> Guarda cache meteorológica, polígonos CAP, locais guardados e a pré-cache offline da viagem ativa (polilinha, nós meteorológicos &plusmn;2 h e alertas CAP).</li>
+        <li><strong>Definições e espelho de Widgets:</strong> <code>SharedPreferences</code> / <code>UserDefaults</code> guardam unidades e idioma. O espelho partilhado com os widgets (<code>group.com.castellanosoftware.atmoway</code> no iOS e <code>SharedPreferences</code> no Android) contém exclusivamente os <strong>6 valores SI não arredondados</strong> (<code>_tempC</code>, <code>_feelsLikeC</code>, <code>_windSpeedKmh</code>, <code>_windGustKmh</code>, <code>_precipMmh</code>, <code>_pressureHpa</code>), preferências de unidade e o nome aproximado da cidade — <strong>sem coordenadas GPS e sem estados de subscrição</strong>.</li>
+        <li><strong>Segurança de compras:</strong> Os recibos ficam protegidos no Porta-chaves do iOS (Keychain) e em Android <code>EncryptedSharedPreferences</code> / Keystore (período de graça offline de 3 dias e <code>android:allowBackup="false"</code>).</li>
+      </ul>
+      <h3>4. Fontes meteorológicas, mapas, geocodificação e gateway</h3>
+      <ul>
+        <li><strong>MET Norway</strong> (Locationforecast 2.0, Nowcast 2.0, MetAlerts 2.0, Airqualityforecast) — <a href="https://www.met.no/en/About-us/Copyright-and-use-of-data" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>NOAA / NWS &amp; NOAA AWC</strong> (METAR, IEM NEXRAD / AWS NODD, CAP EUA) — <a href="https://www.weather.gov/documentation/services-web-api" target="_blank" rel="noopener">Domínio público</a>.</li>
+        <li><strong>Bright Sky / DWD</strong> (Deutscher Wetterdienst e radar RADOLAN) — <a href="https://brightsky.dev/" target="_blank" rel="noopener">MIT / DL-DE-&gt;BY-2.0</a>.</li>
+        <li><strong>ECCC GeoMet</strong> (Environment and Climate Change Canada: WMS, CAP, AQHI) — <a href="https://eccc-msc.github.io/open-data/readme_en/" target="_blank" rel="noopener">Open Government Licence - Canada</a>.</li>
+        <li><strong>MeteoAlarm</strong> (avisos oficiais europeus Atom/CAP) — <a href="https://feeds.meteoalarm.org/" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>NASA POWER</strong> (climatologia 1991–2020) — <a href="https://power.larc.nasa.gov/" target="_blank" rel="noopener">Domínio público</a>.</li>
+        <li><strong>OpenFreeMap &amp; © OpenStreetMap</strong> — <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">ODbL</a> / <a href="https://openfreemap.org/" target="_blank" rel="noopener">OpenFreeMap</a>; motor de rotas <strong>Valhalla</strong> (MIT).</li>
+        <li><strong>GeoNames (<code>cities5000</code>)</strong> — <a href="https://www.geonames.org/" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>Geocodificadores nativos do sistema:</strong> Apple <code>CLGeocoder</code> / <code>MKDirections</code> no iOS (<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Privacidade Apple</a>) e Android <code>Geocoder</code> no Android (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacidade Google</a>).</li>
+        <li><strong>Cache periférica opcional (<code>https://api-atmoway.castellanosoftware.com</code>):</strong> Em Cloudflare Workers, quantifica coordenadas para células de <strong>~5 km (<code>0,05°</code>)</strong> antes da cache, nunca regista PII nem coordenadas exatas e comuta automaticamente para as fontes oficiais sem chave em caso de falha.</li>
+      </ul>
+      <h3>5. Alertas em segundo plano, notificações e voz TTS</h3>
+      <p>Através de <code>BGAppRefreshTask</code> / <code>BGProcessingTask</code> (iOS) e <code>WorkManager</code> (Android), o AtmoWay avalia localmente quatro famílias de alertas: CAP Oficiais, Chuva/trovoada iminente, Biometeo (geada/queda barométrica) e TTS de Rota Ativa. As horas de silêncio são respeitadas (com exceção opcional de segurança para avisos CAP Laranja/Vermelho). A síntese de voz (<code>AVAudioSession</code> <code>.duckOthers</code> / <code>AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK</code>) ocorre localmente sem gravação de áudio.</p>
+      <h3>6. Compras integradas (AtmoWay Pro)</h3>
+      <p>Subscrições e compra vitalícia (<code>atmoway_pro_monthly</code>, <code>atmoway_pro_annual</code>, <code>atmoway_pro_lifetime</code>) são processadas exclusivamente via <strong>Apple StoreKit 2</strong> e <strong>Google Play Billing</strong>. A Castellano Software nunca recolhe dados bancários. «Restaurar compras» está disponível nas Definições e no Paywall.</p>
+      <h3>7. Menores, direitos RGPD/CCPA e eliminação</h3>
+      <p>O AtmoWay não se destina a menores de 13 anos. Como não mantemos contas nem perfis pessoais em servidor, pode apagar todos os dados locais limpando os dados da app, desinstalando-a ou revogando permissões no sistema. Contacto: <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a>. Última atualização: 2026-11-25.</p>
+      <nav class="section-links">
+        <a href="../">Visão geral</a> <a href="../terms/">Termos de serviço</a> <a href="../support/">Suporte &amp; FAQ</a>
+      </nav>
+      <div class="support-block">
+        <p>Precisa de ajuda com o AtmoWay? Escreva para <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a></p>
+      </div>
+      <div class="back-top-wrap">
+        <a class="back-top-pill" href="#top">↑ Topo / Idiomas</a>
+      </div>
+    </section>
+
+    <section class="lang-section" id="nl" lang="nl">
+      <h2>Privacybeleid (Nederlands)</h2>
+      <div class="card"><strong>Kernoverzicht:</strong> AtmoWay heeft geen gebruikersaccounts, toont geen advertenties, bevat geen tracking- of attributie-SDK’s (geen IDFA, AAID, Firebase of Mixpanel) en werkt wereldwijd zonder GPS-toestemming dankzij de offline GeoNames-database.</div>
+      <h3>1. Verwerkingsverantwoordelijke &amp; geen accounts of trackers</h3>
+      <p><strong>Verantwoordelijke:</strong> Castellano Software (<a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a>). AtmoWay (<code>com.castellanosoftware.atmoway</code>) vereist geen registratie en vraagt geen e-mailadres, telefoonnummer of wachtwoord. De app bevat geen advertentienetwerken of gedragsanalyse-SDK’s en verkoopt nooit persoonsgegevens.</p>
+      <h3>2. Optionele voorgrondlocatie &amp; Actieve Rit</h3>
+      <ul>
+        <li><strong>100 % bruikbaar zonder GPS:</strong> Met de ingebouwde GeoNames <code>cities5000</code> SQLite FTS5-index zoek je elke stad ter wereld offline zonder locatietoegang te verlenen.</li>
+        <li><strong>Standaard alleen op de voorgrond:</strong> Op iOS vragen we alleen <code>NSLocationWhenInUseUsageDescription</code>; op Android <code>ACCESS_COARSE_LOCATION</code> / <code>ACCESS_FINE_LOCATION</code>.</li>
+        <li><strong>Strikt afgebakend tijdens Actieve Rit:</strong> Alleen zodra je zelf een rit start in de Routecopiloot activeert Android <code>FOREGROUND_SERVICE_LOCATION</code> (geen permanente <code>ACCESS_BACKGROUND_LOCATION</code>) en iOS <code>allowsBackgroundLocationUpdates</code> met zichtbare statusindicator (geen <code>UIBackgroundModes: audio</code>). Locatie-updates stoppen automatisch bij aankomst (&lt; 150 m aanhoudend), na inactiviteit (&ge; 30 min) of via ‘Stop rit’.</li>
+      </ul>
+      <h3>3. Lokale opslag &amp; Widget-spiegel</h3>
+      <ul>
+        <li><strong>Drift (SQLite WAL):</strong> Slaat weercaches, CAP-polygonen, opgeslagen locaties en de offline pre-cache voor Actieve Rit (polylijn, weerknooppunten &plusmn;2 u en CAP-polygonen) op.</li>
+        <li><strong>Instellingen &amp; Widget-spiegel:</strong> <code>SharedPreferences</code> / <code>UserDefaults</code> bewaren eenheden en taal. De widget-spiegel (<code>group.com.castellanosoftware.atmoway</code> op iOS; <code>SharedPreferences</code> op Android) bevat uitsluitend de <strong>6 niet-afgeronde SI-waarden</strong> (<code>_tempC</code>, <code>_feelsLikeC</code>, <code>_windSpeedKmh</code>, <code>_windGustKmh</code>, <code>_precipMmh</code>, <code>_pressureHpa</code>), eenheidsvoorkeuren en de globale plaatsnaam — <strong>nul GPS-coördinaten en nul abonnementsvlaggen</strong>.</li>
+        <li><strong>Aankoopbeveiliging:</strong> Rechten staan in de iOS Keychain en Android <code>EncryptedSharedPreferences</code> / Keystore (3 dagen offline respijt en <code>android:allowBackup="false"</code>).</li>
+      </ul>
+      <h3>4. Weer-, kaart-, geocodeer- en gatewaybronnen</h3>
+      <ul>
+        <li><strong>MET Norway</strong> (Locationforecast 2.0, Nowcast 2.0, MetAlerts 2.0, Airqualityforecast) — <a href="https://www.met.no/en/About-us/Copyright-and-use-of-data" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>NOAA / NWS &amp; NOAA AWC</strong> (METAR, IEM NEXRAD / AWS NODD, VS CAP) — <a href="https://www.weather.gov/documentation/services-web-api" target="_blank" rel="noopener">Publiek domein</a>.</li>
+        <li><strong>Bright Sky / DWD</strong> (Deutscher Wetterdienst &amp; RADOLAN-radar) — <a href="https://brightsky.dev/" target="_blank" rel="noopener">MIT / DL-DE-&gt;BY-2.0</a>.</li>
+        <li><strong>ECCC GeoMet</strong> (Environment and Climate Change Canada: WMS, CAP, AQHI) — <a href="https://eccc-msc.github.io/open-data/readme_en/" target="_blank" rel="noopener">Open Government Licence - Canada</a>.</li>
+        <li><strong>MeteoAlarm</strong> (Europese Atom/CAP-waarschuwingen) — <a href="https://feeds.meteoalarm.org/" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>NASA POWER</strong> (klimatologie 1991–2020) — <a href="https://power.larc.nasa.gov/" target="_blank" rel="noopener">Publiek domein</a>.</li>
+        <li><strong>OpenFreeMap &amp; © OpenStreetMap</strong> — <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">ODbL</a> / <a href="https://openfreemap.org/" target="_blank" rel="noopener">OpenFreeMap</a>; route-engine <strong>Valhalla</strong> (MIT).</li>
+        <li><strong>GeoNames (<code>cities5000</code>)</strong> — <a href="https://www.geonames.org/" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>Systeem-geocoders:</strong> Op iOS Apple <code>CLGeocoder</code> / <code>MKDirections</code> (<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy</a>); op Android Android <code>Geocoder</code> (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy</a>).</li>
+        <li><strong>Optionele edge-cache (<code>https://api-atmoway.castellanosoftware.com</code>):</strong> Draait op Cloudflare Workers, kwantiseert coördinaten naar <strong>~5 km (<code>0,05°</code>)</strong> rastercellen, logt geen PII of exacte coördinaten en schakelt via circuit breaker automatisch terug naar officiële sleutelvrije bronnen.</li>
+      </ul>
+      <h3>5. Achtergrondmeldingen &amp; lokale TTS</h3>
+      <p>Via <code>BGAppRefreshTask</code> / <code>BGProcessingTask</code> (iOS) en <code>WorkManager</code> (Android) beoordeelt AtmoWay lokaal vier meldingsfamilies: Officiële CAP-waarschuwingen, Naderende regen/storm, Biometeo (vorst/luchtdrukdaling) en Actieve Rit TTS. Stille uren worden gerespecteerd (met optionele veiligheidsdoorbraak voor Oranje/Rode CAP-meldingen). Spraaksynthese (<code>AVAudioSession</code> <code>.duckOthers</code> / <code>AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK</code>) vindt lokaal plaats zonder audio-opname.</p>
+      <h3>6. In-app aankopen (AtmoWay Pro)</h3>
+      <p>Abonnementen en levenslange toegang (<code>atmoway_pro_monthly</code>, <code>atmoway_pro_annual</code>, <code>atmoway_pro_lifetime</code>) lopen uitsluitend via <strong>Apple StoreKit 2</strong> en <strong>Google Play Billing</strong>. Castellano Software verzamelt geen betaalgegevens. ‘Aankopen herstellen’ staat in Instellingen en de Pro-weergave.</p>
+      <h3>7. Kinderen, AVG/CCPA &amp; gegevens verwijderen</h3>
+      <p>AtmoWay richt zich niet op kinderen onder de 13 jaar. Omdat wij geen accounts of serverprofielen bijhouden, verwijder je alle lokale gegevens door de app-opslag te wissen, de app te verwijderen of toestemmingen in te trekken. Contact: <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a>. Laatst bijgewerkt: 2026-11-25.</p>
+      <nav class="section-links">
+        <a href="../">Overzicht</a> <a href="../terms/">Servicevoorwaarden</a> <a href="../support/">Ondersteuning &amp; FAQ</a>
+      </nav>
+      <div class="support-block">
+        <p>Hulp nodig bij AtmoWay? Mail naar <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a></p>
+      </div>
+      <div class="back-top-wrap">
+        <a class="back-top-pill" href="#top">↑ Omhoog / Talen</a>
+      </div>
+    </section>
+
+    <section class="lang-section" id="pl" lang="pl">
+      <h2>Polityka prywatności (Polski)</h2>
+      <div class="card"><strong>Najważniejsze informacje:</strong> AtmoWay nie wymaga konta, nie wyświetla reklam, nie zawiera SDK śledzących (brak IDFA, AAID, Firebase i Mixpanel) i działa na całym świecie bez dostępu do GPS dzięki wbudowanej bazie offline GeoNames.</div>
+      <h3>1. Administrator oraz brak kont i trackerów</h3>
+      <p><strong>Administrator:</strong> Castellano Software (<a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a>). AtmoWay (<code>com.castellanosoftware.atmoway</code>) nie wymaga rejestracji ani podawania e-maila czy numeru telefonu. Aplikacja nie ma sieci reklamowych ani analityki behawioralnej i nigdy nie sprzedaje danych osobowych.</p>
+      <h3>2. Opcjonalny GPS na pierwszym planie i Aktywna Trasa</h3>
+      <ul>
+        <li><strong>100 % działania bez GPS:</strong> Wbudowana baza GeoNames <code>cities5000</code> (SQLite FTS5) pozwala wyszukać dowolne miasto na świecie offline bez zgody na lokalizację.</li>
+        <li><strong>Domyślnie tylko na pierwszym planie:</strong> W iOS prosimy wyłącznie o <code>NSLocationWhenInUseUsageDescription</code>; na Androidzie o <code>ACCESS_COARSE_LOCATION</code> / <code>ACCESS_FINE_LOCATION</code>.</li>
+        <li><strong>Ścisły tryb Aktywnej Trasy:</strong> Dopiero gdy ręcznie rozpoczniesz podróż w Pilocie Trasy, Android uruchamia <code>FOREGROUND_SERVICE_LOCATION</code> (bez stałego <code>ACCESS_BACKGROUND_LOCATION</code>), a iOS włącza <code>allowsBackgroundLocationUpdates</code> z widocznym wskaźnikiem systemowym (bez <code>UIBackgroundModes: audio</code>). Śledzenie wyłącza się automatycznie po dotarciu do celu (&lt; 150 m), po dłuższej bezczynności (&ge; 30 min) lub po naciśnięciu „Zatrzymaj podróż”.</li>
+      </ul>
+      <h3>3. Pamięć lokalna i lustro Widżetów</h3>
+      <ul>
+        <li><strong>Baza Drift (SQLite WAL):</strong> Przechowuje pamięć podręczną pogody, poligony CAP, zapisane miejsca oraz bufor offline trasy (polilinia, węzły pogodowe &plusmn;2 h i ostrzeżenia CAP).</li>
+        <li><strong>Ustawienia i lustro Widżetów:</strong> <code>SharedPreferences</code> / <code>UserDefaults</code> zapisują jednostki i język. Lustro widżetów (<code>group.com.castellanosoftware.atmoway</code> na iOS; <code>SharedPreferences</code> na Androidzie) zawiera wyłącznie <strong>6 niezaokrąglonych wartości SI</strong> (<code>_tempC</code>, <code>_feelsLikeC</code>, <code>_windSpeedKmh</code>, <code>_windGustKmh</code>, <code>_precipMmh</code>, <code>_pressureHpa</code>), ustawienia jednostek i ogólną nazwę miasta — <strong>zero współrzędnych GPS i zero flag subskrypcji</strong>.</li>
+        <li><strong>Ochrona zakupów:</strong> Uprawnienia Pro chronione są przez pęk kluczy iOS Keychain oraz Android <code>EncryptedSharedPreferences</code> / Keystore (3-dniowy okres karencji offline i <code>android:allowBackup="false"</code>).</li>
+      </ul>
+      <h3>4. Źródła pogodowe, mapy, geokodowanie i bramka brzegowa</h3>
+      <ul>
+        <li><strong>MET Norway</strong> (Locationforecast 2.0, Nowcast 2.0, MetAlerts 2.0, Airqualityforecast) — <a href="https://www.met.no/en/About-us/Copyright-and-use-of-data" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>NOAA / NWS &amp; NOAA AWC</strong> (METAR, IEM NEXRAD / AWS NODD, CAP USA) — <a href="https://www.weather.gov/documentation/services-web-api" target="_blank" rel="noopener">Domena publiczna</a>.</li>
+        <li><strong>Bright Sky / DWD</strong> (Deutscher Wetterdienst i radar RADOLAN) — <a href="https://brightsky.dev/" target="_blank" rel="noopener">MIT / DL-DE-&gt;BY-2.0</a>.</li>
+        <li><strong>ECCC GeoMet</strong> (Environment and Climate Change Canada: WMS, CAP, AQHI) — <a href="https://eccc-msc.github.io/open-data/readme_en/" target="_blank" rel="noopener">Open Government Licence - Canada</a>.</li>
+        <li><strong>MeteoAlarm</strong> (europejskie alerty Atom/CAP) — <a href="https://feeds.meteoalarm.org/" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>NASA POWER</strong> (klimatologia 1991–2020) — <a href="https://power.larc.nasa.gov/" target="_blank" rel="noopener">Domena publiczna</a>.</li>
+        <li><strong>OpenFreeMap &amp; © OpenStreetMap</strong> — <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">ODbL</a> / <a href="https://openfreemap.org/" target="_blank" rel="noopener">OpenFreeMap</a>; silnik tras <strong>Valhalla</strong> (MIT).</li>
+        <li><strong>GeoNames (<code>cities5000</code>)</strong> — <a href="https://www.geonames.org/" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>Natywne geokodery systemu:</strong> Apple <code>CLGeocoder</code> / <code>MKDirections</code> na iOS (<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Prywatność Apple</a>) oraz Android <code>Geocoder</code> na Androidzie (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Prywatność Google</a>).</li>
+        <li><strong>Opcjonalny bufor brzegowy (<code>https://api-atmoway.castellanosoftware.com</code>):</strong> W Cloudflare Workers zaokrągla współrzędne do oczek siatki <strong>~5 km (<code>0,05°</code>)</strong> przed zapisem w pamięci podręcznej, nie loguje danych osobowych ani dokładnych współrzędnych i posiada automatyczne przełączanie na oficjalne źródła bez klucza.</li>
+      </ul>
+      <h3>5. Powiadomienia w tle i głosowe komunikaty TTS</h3>
+      <p>Za pomocą <code>BGAppRefreshTask</code> / <code>BGProcessingTask</code> (iOS) i <code>WorkManager</code> (Android) AtmoWay lokalnie ocenia cztery rodziny alertów: Oficjalne ostrzeżenia CAP, Nadciągający deszcz/burzę, Biometeo (mróz/spadek ciśnienia) oraz TTS Aktywnej Trasy. Godziny ciszy są respektowane (z opcjonalnym wyjątkiem bezpieczeństwa dla alertów CAP Pomarańczowych/Czerwonych). Synteza mowy (<code>AVAudioSession</code> <code>.duckOthers</code> / <code>AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK</code>) odbywa się lokalnie bez nagrywania dźwięku.</p>
+      <h3>6. Zakupy w aplikacji (AtmoWay Pro)</h3>
+      <p>Subskrypcje i licencja wieczysta (<code>atmoway_pro_monthly</code>, <code>atmoway_pro_annual</code>, <code>atmoway_pro_lifetime</code>) obsługiwane są wyłącznie przez <strong>Apple StoreKit 2</strong> i <strong>Google Play Billing</strong>. Castellano Software nie zbiera danych kart płatniczych. Funkcja „Przywróć zakupy” znajduje się w Ustawieniach i oknie Pro.</p>
+      <h3>7. Dzieci, prawa RODO/CCPA i usuwanie danych</h3>
+      <p>AtmoWay nie jest przeznaczony dla dzieci poniżej 13 roku życia. Ponieważ nie prowadzimy kont ani baz użytkowników na serwerze, wszystkie dane lokalne usuniesz w każdej chwili, czyszcząc dane aplikacji, odinstalowując ją lub cofając uprawnienia systemowe. Kontakt: <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a>. Ostatnia aktualizacja: 2026-11-25.</p>
+      <nav class="section-links">
+        <a href="../">Przegląd</a> <a href="../terms/">Warunki korzystania</a> <a href="../support/">Wsparcie i FAQ</a>
+      </nav>
+      <div class="support-block">
+        <p>Potrzebujesz pomocy z AtmoWay? Napisz na <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a></p>
+      </div>
+      <div class="back-top-wrap">
+        <a class="back-top-pill" href="#top">↑ Góra / Języki</a>
+      </div>
+    </section>
+
+    <section class="lang-section" id="sv" lang="sv">
+      <h2>Integritetspolicy (Svenska)</h2>
+      <div class="card"><strong>Snabb sammanfattning:</strong> AtmoWay har inga användarkonton, visar inga annonser, innehåller inga spårnings-SDK:er (inget IDFA, AAID, Firebase eller Mixpanel) och fungerar globalt utan GPS-behörighet via den inbyggda GeoNames-databasen.</div>
+      <h3>1. Personuppgiftsansvarig &amp; inga konton eller spårare</h3>
+      <p><strong>Ansvarig:</strong> Castellano Software (<a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a>). AtmoWay (<code>com.castellanosoftware.atmoway</code>) kräver ingen registrering, e-post eller telefonnummer. Appen saknar annonsnätverk och beteendeanalys och säljer aldrig personuppgifter.</p>
+      <h3>2. Valfri förgrundsplats &amp; Aktiv Resa</h3>
+      <ul>
+        <li><strong>100 % användbar utan GPS:</strong> Sök städer världen över offline med inbyggda GeoNames <code>cities5000</code> (SQLite FTS5) utan att ge platstillstånd.</li>
+        <li><strong>Endast i förgrunden som standard:</strong> På iOS begärs endast <code>NSLocationWhenInUseUsageDescription</code>; på Android <code>ACCESS_COARSE_LOCATION</code> / <code>ACCESS_FINE_LOCATION</code>.</li>
+        <li><strong>Strikt avgränsad Aktiv Resa:</strong> Först när du startar en rutt i Rutt-copiloten aktiverar Android <code>FOREGROUND_SERVICE_LOCATION</code> (ingen permanent <code>ACCESS_BACKGROUND_LOCATION</code>) och iOS <code>allowsBackgroundLocationUpdates</code> med synlig systemindikator (inget <code>UIBackgroundModes: audio</code>). Platsuppdateringar avslutas automatiskt vid ankomst (&lt; 150 m ihållande), inaktivitet (&ge; 30 min) eller tryck på ”Avsluta resa”.</li>
+      </ul>
+      <h3>3. Lokal lagring &amp; Widget-spegel</h3>
+      <ul>
+        <li><strong>Drift (SQLite WAL):</strong> Lagrar vädercache, CAP-polygoner, sparade platser samt offline-cache för aktiv resa (polylinje, vädernoder &plusmn;2 h och CAP-varningar).</li>
+        <li><strong>Inställningar &amp; Widget-spegel:</strong> <code>SharedPreferences</code> / <code>UserDefaults</code> sparar enheter och språk. Widget-spegeln (<code>group.com.castellanosoftware.atmoway</code> på iOS; <code>SharedPreferences</code> på Android) rymmer enbart de <strong>6 oavrundade SI-värdena</strong> (<code>_tempC</code>, <code>_feelsLikeC</code>, <code>_windSpeedKmh</code>, <code>_windGustKmh</code>, <code>_precipMmh</code>, <code>_pressureHpa</code>), enhetsval och ungefärligt ortnamn — <strong>noll GPS-koordinater och noll prenumerationsflaggor</strong>.</li>
+        <li><strong>Köpsäkerhet:</strong> Behörigheter lagras i iOS Keychain och Android <code>EncryptedSharedPreferences</code> / Keystore (3 dagars offline-frist och <code>android:allowBackup="false"</code>).</li>
+      </ul>
+      <h3>4. Väder-, kart-, geokodnings- och gatewaykällor</h3>
+      <ul>
+        <li><strong>MET Norway</strong> (Locationforecast 2.0, Nowcast 2.0, MetAlerts 2.0, Airqualityforecast) — <a href="https://www.met.no/en/About-us/Copyright-and-use-of-data" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>NOAA / NWS &amp; NOAA AWC</strong> (METAR, IEM NEXRAD / AWS NODD, USA CAP) — <a href="https://www.weather.gov/documentation/services-web-api" target="_blank" rel="noopener">Allmän egendom</a>.</li>
+        <li><strong>Bright Sky / DWD</strong> (Deutscher Wetterdienst &amp; RADOLAN-radar) — <a href="https://brightsky.dev/" target="_blank" rel="noopener">MIT / DL-DE-&gt;BY-2.0</a>.</li>
+        <li><strong>ECCC GeoMet</strong> (Environment and Climate Change Canada: WMS, CAP, AQHI) — <a href="https://eccc-msc.github.io/open-data/readme_en/" target="_blank" rel="noopener">Open Government Licence - Canada</a>.</li>
+        <li><strong>MeteoAlarm</strong> (Europeiska Atom/CAP-varningar) — <a href="https://feeds.meteoalarm.org/" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>NASA POWER</strong> (klimatologi 1991–2020) — <a href="https://power.larc.nasa.gov/" target="_blank" rel="noopener">Allmän egendom</a>.</li>
+        <li><strong>OpenFreeMap &amp; © OpenStreetMap</strong> — <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">ODbL</a> / <a href="https://openfreemap.org/" target="_blank" rel="noopener">OpenFreeMap</a>; ruttmotorn <strong>Valhalla</strong> (MIT).</li>
+        <li><strong>GeoNames (<code>cities5000</code>)</strong> — <a href="https://www.geonames.org/" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>Inbyggda systemgeokodare:</strong> Apple <code>CLGeocoder</code> / <code>MKDirections</code> på iOS (<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apples integritetspolicy</a>) och Android <code>Geocoder</code> på Android (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Googles integritetspolicy</a>).</li>
+        <li><strong>Valfri edge-cache (<code>https://api-atmoway.castellanosoftware.com</code>):</strong> Via Cloudflare Workers avrundas koordinater till <strong>~5 km (<code>0,05°</code>)</strong> rutnätsceller före cachelagring, loggar inga personuppgifter eller exakta koordinater och faller vid behov automatiskt tillbaka direkt till officiella nyckelfria källor.</li>
+      </ul>
+      <h3>5. Bakgrundsnotiser &amp; lokal TTS</h3>
+      <p>Med <code>BGAppRefreshTask</code> / <code>BGProcessingTask</code> (iOS) och <code>WorkManager</code> (Android) utvärderar AtmoWay lokalt fyra aviseringsfamiljer: Officiella CAP-varningar, Snart regn/oväder, Biometeo (frost/tryckfall) och Aktiv Resa TTS. Tysta timmar respekteras (med valfritt säkerhetsundantag för Orange/Röda CAP-varningar). Talsyntes (<code>AVAudioSession</code> <code>.duckOthers</code> / <code>AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK</code>) sker lokalt utan röstinspelning.</p>
+      <h3>6. Köp i appen (AtmoWay Pro)</h3>
+      <p>Prenumerationer och livstidsköp (<code>atmoway_pro_monthly</code>, <code>atmoway_pro_annual</code>, <code>atmoway_pro_lifetime</code>) hanteras uteslutande av <strong>Apple StoreKit 2</strong> och <strong>Google Play Billing</strong>. Castellano Software hanterar inga kortuppgifter. ”Återställ köp” finns i Inställningar och betalvyn.</p>
+      <h3>7. Barn, GDPR/CCPA &amp; radering</h3>
+      <p>AtmoWay riktar sig inte till barn under 13 år. Eftersom inga konton eller serverprofiler finns raderar du all lokal data genom att rensa appdata, avinstallera appen eller återkalla systembehörigheter. Kontakt: <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a>. Senast uppdaterad: 2026-11-25.</p>
+      <nav class="section-links">
+        <a href="../">Översikt</a> <a href="../terms/">Användarvillkor</a> <a href="../support/">Support &amp; FAQ</a>
+      </nav>
+      <div class="support-block">
+        <p>Behöver du hjälp med AtmoWay? Mejla <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a></p>
+      </div>
+      <div class="back-top-wrap">
+        <a class="back-top-pill" href="#top">↑ Upp / Språk</a>
+      </div>
+    </section>
+
+    <section class="lang-section" id="da" lang="da">
+      <h2>Privatlivspolitik (Dansk)</h2>
+      <div class="card"><strong>Kort oversigt:</strong> AtmoWay har ingen brugerkonti, viser ingen reklamer, indeholder ingen sporings-SDK’er (intet IDFA, AAID, Firebase eller Mixpanel) og fungerer globalt uden GPS-tilladelse via den indbyggede offline GeoNames-database.</div>
+      <h3>1. Dataansvarlig &amp; ingen konti eller trackere</h3>
+      <p><strong>Dataansvarlig:</strong> Castellano Software (<a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a>). AtmoWay (<code>com.castellanosoftware.atmoway</code>) kræver ingen oprettelse og indsamler hverken e-mail, telefon eller adgangskode. Appen indeholder ingen reklamenetværk eller adfærdssporing og sælger aldrig persondata.</p>
+      <h3>2. Valgfri forgrundslokation &amp; Aktiv Tur</h3>
+      <ul>
+        <li><strong>100 % brugbar uden GPS:</strong> Søg efter byer over hele verden offline via det indbyggede GeoNames <code>cities5000</code>-indeks (SQLite FTS5) uden at give lokalitetstilladelse.</li>
+        <li><strong>Som standard kun i forgrunden:</strong> På iOS anmodes kun om <code>NSLocationWhenInUseUsageDescription</code>; på Android <code>ACCESS_COARSE_LOCATION</code> / <code>ACCESS_FINE_LOCATION</code>.</li>
+        <li><strong>Strengt afgrænset Aktiv Tur:</strong> Først når du manuelt starter en tur i Rute-copiloten, aktiverer Android <code>FOREGROUND_SERVICE_LOCATION</code> (ingen permanent <code>ACCESS_BACKGROUND_LOCATION</code>) og iOS <code>allowsBackgroundLocationUpdates</code> med synlig systemindikator (intet <code>UIBackgroundModes: audio</code>). Sporing stopper automatisk ved ankomst (&lt; 150 m vedvarende), inaktivitet (&ge; 30 min) eller tryk på ”Stop tur”.</li>
+      </ul>
+      <h3>3. Lokal lagring &amp; Widget-spejl</h3>
+      <ul>
+        <li><strong>Drift (SQLite WAL):</strong> Gemmer vejrcache, CAP-polygoner, gemte steder og offline-cache til aktiv tur (polylinje, vejrnoder &plusmn;2 t og CAP-varsler).</li>
+        <li><strong>Indstillinger &amp; Widget-spejl:</strong> <code>SharedPreferences</code> / <code>UserDefaults</code> gemmer enheder og sprog. Widget-spejlet (<code>group.com.castellanosoftware.atmoway</code> på iOS; <code>SharedPreferences</code> på Android) indeholder udelukkende de <strong>6 uafrundede SI-værdier</strong> (<code>_tempC</code>, <code>_feelsLikeC</code>, <code>_windSpeedKmh</code>, <code>_windGustKmh</code>, <code>_precipMmh</code>, <code>_pressureHpa</code>), enhedsindstillinger og groft bynavn — <strong>nul GPS-koordinater og nul abonnementsflag</strong>.</li>
+        <li><strong>Købssikkerhed:</strong> Rettigheder beskyttes i iOS Keychain og Android <code>EncryptedSharedPreferences</code> / Keystore (3 dages offline-henstand og <code>android:allowBackup="false"</code>).</li>
+      </ul>
+      <h3>4. Vejr-, kort-, geokodnings- og gatewaykilder</h3>
+      <ul>
+        <li><strong>MET Norway</strong> (Locationforecast 2.0, Nowcast 2.0, MetAlerts 2.0, Airqualityforecast) — <a href="https://www.met.no/en/About-us/Copyright-and-use-of-data" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>NOAA / NWS &amp; NOAA AWC</strong> (METAR, IEM NEXRAD / AWS NODD, USA CAP) — <a href="https://www.weather.gov/documentation/services-web-api" target="_blank" rel="noopener">Public Domain</a>.</li>
+        <li><strong>Bright Sky / DWD</strong> (Deutscher Wetterdienst &amp; RADOLAN-radar) — <a href="https://brightsky.dev/" target="_blank" rel="noopener">MIT / DL-DE-&gt;BY-2.0</a>.</li>
+        <li><strong>ECCC GeoMet</strong> (Environment and Climate Change Canada: WMS, CAP, AQHI) — <a href="https://eccc-msc.github.io/open-data/readme_en/" target="_blank" rel="noopener">Open Government Licence - Canada</a>.</li>
+        <li><strong>MeteoAlarm</strong> (Europæiske Atom/CAP-varsler) — <a href="https://feeds.meteoalarm.org/" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>NASA POWER</strong> (klimatologi 1991–2020) — <a href="https://power.larc.nasa.gov/" target="_blank" rel="noopener">Public Domain</a>.</li>
+        <li><strong>OpenFreeMap &amp; © OpenStreetMap</strong> — <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">ODbL</a> / <a href="https://openfreemap.org/" target="_blank" rel="noopener">OpenFreeMap</a>; rutemotor <strong>Valhalla</strong> (MIT).</li>
+        <li><strong>GeoNames (<code>cities5000</code>)</strong> — <a href="https://www.geonames.org/" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>Indbyggede systemgeokodere:</strong> Apple <code>CLGeocoder</code> / <code>MKDirections</code> på iOS (<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privatliv</a>) og Android <code>Geocoder</code> på Android (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privatliv</a>).</li>
+        <li><strong>Valgfri edge-cache (<code>https://api-atmoway.castellanosoftware.com</code>):</strong> På Cloudflare Workers kvantiseres koordinater til <strong>~5 km (<code>0,05°</code>)</strong> gitterceller før caching, logger ingen PII eller præcise koordinater og falder automatisk tilbage til officielle nøglefri kilder via circuit breaker.</li>
+      </ul>
+      <h3>5. Baggrundsvarsler &amp; lokal TTS</h3>
+      <p>Via <code>BGAppRefreshTask</code> / <code>BGProcessingTask</code> (iOS) og <code>WorkManager</code> (Android) vurderer AtmoWay lokalt fire notifikationsfamilier: Officielle CAP-varsler, Nærliggende regn/storm, Biometeo (frost/trykfald) og Aktiv Tur TTS. Stilletimer respekteres (med valgfri sikkerhedsundtagelse for Orange/Røde CAP-varsler). Talesyntese (<code>AVAudioSession</code> <code>.duckOthers</code> / <code>AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK</code>) sker lokalt uden lydoptagelse.</p>
+      <h3>6. Køb i appen (AtmoWay Pro)</h3>
+      <p>Abonnementer og livstidskøb (<code>atmoway_pro_monthly</code>, <code>atmoway_pro_annual</code>, <code>atmoway_pro_lifetime</code>) behandles udelukkende via <strong>Apple StoreKit 2</strong> og <strong>Google Play Billing</strong>. Castellano Software gemmer aldrig betalingsoplysninger. ”Gendan køb” findes i Indstillinger og betalingsoversigten.</p>
+      <h3>7. Børn, GDPR/CCPA &amp; sletning</h3>
+      <p>AtmoWay henvender sig ikke til børn under 13 år. Da vi ikke har brugerkonti eller serverprofiler, sletter du alle lokale data ved at rydde appdata, afinstallere appen eller tilbagekalde tilladelser i systemindstillingerne. Kontakt: <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a>. Sidst opdateret: 2026-11-25.</p>
+      <nav class="section-links">
+        <a href="../">Oversigt</a> <a href="../terms/">Servicevilkår</a> <a href="../support/">Support &amp; FAQ</a>
+      </nav>
+      <div class="support-block">
+        <p>Brug for hjælp til AtmoWay? Skriv til <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a></p>
+      </div>
+      <div class="back-top-wrap">
+        <a class="back-top-pill" href="#top">↑ Top / Sprog</a>
+      </div>
+    </section>
+
+    <section class="lang-section" id="nb" lang="nb">
+      <h2>Personvernerklæring (Norsk bokmål)</h2>
+      <div class="card"><strong>Kort oppsummert:</strong> AtmoWay har ingen brukerkontoer, viser ingen annonser, har ingen sporings-SDK-er (ingen IDFA, AAID, Firebase eller Mixpanel) og fungerer over hele verden uten GPS-tillatelse via den innebygde GeoNames-databasen.</div>
+      <h3>1. Behandlingsansvarlig og fravær av kontoer/sporere</h3>
+      <p><strong>Behandlingsansvarlig:</strong> Castellano Software (<a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a>). AtmoWay (<code>com.castellanosoftware.atmoway</code>) krever ingen registrering, e-post eller telefonnummer. Appen inneholder ingen annonsenettverk eller atferdsanalyse og selger aldri personopplysninger.</p>
+      <h3>2. Valgfri forgrunnsposisjon &amp; Aktiv Tur</h3>
+      <ul>
+        <li><strong>100 % brukbar uten GPS:</strong> Søk etter byer globalt frakoblet via innebygd GeoNames <code>cities5000</code> (SQLite FTS5) uten å gi posisjonstillatelse.</li>
+        <li><strong>Kun i forgrunnen som standard:</strong> På iOS bes det kun om <code>NSLocationWhenInUseUsageDescription</code>; på Android <code>ACCESS_COARSE_LOCATION</code> / <code>ACCESS_FINE_LOCATION</code>.</li>
+        <li><strong>Strengt avgrenset Aktiv Tur:</strong> Bare når du manuelt starter en tur i Rute-copiloten, aktiverer Android <code>FOREGROUND_SERVICE_LOCATION</code> (ingen permanent <code>ACCESS_BACKGROUND_LOCATION</code>) og iOS <code>allowsBackgroundLocationUpdates</code> med synlig systemindikator (ingen <code>UIBackgroundModes: audio</code>). Sporingen stopper automatisk ved ankomst (&lt; 150 m vedvarende), inaktivitet (&ge; 30 min) eller trykk på «Stopp tur».</li>
+      </ul>
+      <h3>3. Lokal lagring &amp; Widget-speil</h3>
+      <ul>
+        <li><strong>Drift (SQLite WAL):</strong> Lagrer værbuffer, CAP-polygoner, lagrede steder og frakoblet turbuffer (polylinje, værnoder &plusmn;2 t og CAP-varsler).</li>
+        <li><strong>Innstillinger &amp; Widget-speil:</strong> <code>SharedPreferences</code> / <code>UserDefaults</code> lagrer enheter og språk. Widget-speilet (<code>group.com.castellanosoftware.atmoway</code> på iOS; <code>SharedPreferences</code> på Android) inneholder utelukkende de <strong>6 uavrundede SI-tallene</strong> (<code>_tempC</code>, <code>_feelsLikeC</code>, <code>_windSpeedKmh</code>, <code>_windGustKmh</code>, <code>_precipMmh</code>, <code>_pressureHpa</code>), enhetsvalg og grovt bynavn — <strong>null GPS-koordinater og null abonnementsflagg</strong>.</li>
+        <li><strong>Kjøpssikkerhet:</strong> Rettigheter lagres i iOS Keychain og Android <code>EncryptedSharedPreferences</code> / Keystore (3 dagers frakoblet frist og <code>android:allowBackup="false"</code>).</li>
+      </ul>
+      <h3>4. Vær-, kart-, geokodings- og gatewaykilder</h3>
+      <ul>
+        <li><strong>MET Norway</strong> (Locationforecast 2.0, Nowcast 2.0, MetAlerts 2.0, Airqualityforecast) — <a href="https://www.met.no/en/About-us/Copyright-and-use-of-data" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>NOAA / NWS &amp; NOAA AWC</strong> (METAR, IEM NEXRAD / AWS NODD, USA CAP) — <a href="https://www.weather.gov/documentation/services-web-api" target="_blank" rel="noopener">Offentlig eiendom</a>.</li>
+        <li><strong>Bright Sky / DWD</strong> (Deutscher Wetterdienst og RADOLAN-radar) — <a href="https://brightsky.dev/" target="_blank" rel="noopener">MIT / DL-DE-&gt;BY-2.0</a>.</li>
+        <li><strong>ECCC GeoMet</strong> (Environment and Climate Change Canada: WMS, CAP, AQHI) — <a href="https://eccc-msc.github.io/open-data/readme_en/" target="_blank" rel="noopener">Open Government Licence - Canada</a>.</li>
+        <li><strong>MeteoAlarm</strong> (Europeiske Atom/CAP-varsler) — <a href="https://feeds.meteoalarm.org/" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>NASA POWER</strong> (klimatologi 1991–2020) — <a href="https://power.larc.nasa.gov/" target="_blank" rel="noopener">Offentlig eiendom</a>.</li>
+        <li><strong>OpenFreeMap &amp; © OpenStreetMap</strong> — <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">ODbL</a> / <a href="https://openfreemap.org/" target="_blank" rel="noopener">OpenFreeMap</a>; rutemotor <strong>Valhalla</strong> (MIT).</li>
+        <li><strong>GeoNames (<code>cities5000</code>)</strong> — <a href="https://www.geonames.org/" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>Systemets geokodere:</strong> Apple <code>CLGeocoder</code> / <code>MKDirections</code> på iOS (<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Personvern</a>) og Android <code>Geocoder</code> på Android (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Personvern</a>).</li>
+        <li><strong>Valgfri edge-cache (<code>https://api-atmoway.castellanosoftware.com</code>):</strong> På Cloudflare Workers kvantiseres koordinater til <strong>~5 km (<code>0,05°</code>)</strong> rutenettceller før mellomlagring, logger ingen PII eller eksakte koordinater og faller automatisk tilbake direkte til offisielle nøkkelfrie kilder.</li>
+      </ul>
+      <h3>5. Bakgrunnsvarsler og lokal TTS</h3>
+      <p>Med <code>BGAppRefreshTask</code> / <code>BGProcessingTask</code> (iOS) og <code>WorkManager</code> (Android) vurderer AtmoWay lokalt fire varslingsfamilier: Offisielle CAP-varsler, Nært forestående regn/uvær, Biometeo (frost/trykkfall) og Aktiv Tur TTS. Stilletid respekteres (med valgfritt sikkerhetsunntak for Oransje/Røde CAP-varsler). Talesyntese (<code>AVAudioSession</code> <code>.duckOthers</code> / <code>AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK</code>) skjer lokalt uten lydopptak.</p>
+      <h3>6. Kjøp i appen (AtmoWay Pro)</h3>
+      <p>Abonnement og livstidskjøp (<code>atmoway_pro_monthly</code>, <code>atmoway_pro_annual</code>, <code>atmoway_pro_lifetime</code>) håndteres utelukkende via <strong>Apple StoreKit 2</strong> og <strong>Google Play Billing</strong>. Castellano Software lagrer ingen betalingsdata. «Gjenopprett kjøp» finnes i Innstillinger og kjøpsvinduet.</p>
+      <h3>7. Barn, GDPR/CCPA og sletting</h3>
+      <p>AtmoWay er ikke rettet mot barn under 13 år. Siden det ikke finnes kontoer eller serverprofiler, sletter du alle lokale data ved å tømme appdata, avinstallere appen eller trekke tilbake tillatelser i OS-innstillingene. Kontakt: <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a>. Sist oppdatert: 2026-11-25.</p>
+      <nav class="section-links">
+        <a href="../">Oversikt</a> <a href="../terms/">Vilkår for bruk</a> <a href="../support/">Brukerstøtte &amp; FAQ</a>
+      </nav>
+      <div class="support-block">
+        <p>Trenger du hjelp med AtmoWay? Send e-post til <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a></p>
+      </div>
+      <div class="back-top-wrap">
+        <a class="back-top-pill" href="#top">↑ Topp / Språk</a>
+      </div>
+    </section>
+
+    <section class="lang-section" id="cs" lang="cs">
+      <h2>Zásady ochrany soukromí (Čeština)</h2>
+      <div class="card"><strong>Stručné shrnutí:</strong> AtmoWay nevyžaduje uživatelský účet, nezobrazuje reklamy, neobsahuje sledovací SDK (žádné IDFA, AAID, Firebase ani Mixpanel) a funguje po celém světě i bez oprávnění GPS díky vestavěné offline databázi GeoNames.</div>
+      <h3>1. Správce údajů a absence účtů či sledovačů</h3>
+      <p><strong>Správce:</strong> Castellano Software (<a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a>). Aplikace AtmoWay (<code>com.castellanosoftware.atmoway</code>) nevyžaduje registraci, e-mail ani telefon. Neobsahuje reklamní sítě ani behaviorální analytiku a neprodává žádné osobní údaje.</p>
+      <h3>2. Volitelná poloha na popředí a Aktivní cesta</h3>
+      <ul>
+        <li><strong>100 % funkční bez GPS:</strong> Vestavěný globální index GeoNames <code>cities5000</code> (SQLite FTS5) umožňuje vyhledat libovolné město offline bez udělení přístupu k poloze.</li>
+        <li><strong>Ve výchozím stavu pouze na popředí:</strong> V iOS žádáme pouze o <code>NSLocationWhenInUseUsageDescription</code>; v Androidu o <code>ACCESS_COARSE_LOCATION</code> / <code>ACCESS_FINE_LOCATION</code>.</li>
+        <li><strong>Přesně vymezená Aktivní cesta:</strong> Pouze když ručně spustíte cestu v Kopilotovi trasy, Android aktivuje <code>FOREGROUND_SERVICE_LOCATION</code> (bez trvalého <code>ACCESS_BACKGROUND_LOCATION</code>) a iOS povolí <code>allowsBackgroundLocationUpdates</code> s viditelným indikátorem systému (bez <code>UIBackgroundModes: audio</code>). Sledování se automaticky ukončí po příjezdu (&lt; 150 m setrvale), při nečinnosti (&ge; 30 min) nebo klepnutím na „Ukončit cestu“.</li>
+      </ul>
+      <h3>3. Místní úložiště a zrcadlo pro Widgety</h3>
+      <ul>
+        <li><strong>Databáze Drift (SQLite WAL):</strong> Uchovává mezipaměť předpovědí, polygony CAP, uložená místa a offline mezipaměť aktivní cesty (polylinie, uzly počasí &plusmn;2 h a výstrahy CAP).</li>
+        <li><strong>Nastavení a zrcadlo Widgetů:</strong> <code>SharedPreferences</code> / <code>UserDefaults</code> uchovávají jednotky a jazyk. Zrcadlo pro widgety (<code>group.com.castellanosoftware.atmoway</code> v iOS; <code>SharedPreferences</code> v Androidu) obsahuje výhradně <strong>6 nezaokrouhlených hodnot SI</strong> (<code>_tempC</code>, <code>_feelsLikeC</code>, <code>_windSpeedKmh</code>, <code>_windGustKmh</code>, <code>_precipMmh</code>, <code>_pressureHpa</code>), předvolby jednotek a přibližný název města — <strong>nulové souřadnice GPS a nulové příznaky předplatného</strong>.</li>
+        <li><strong>Zabezpečení nákupů:</strong> Nároky Pro jsou chráněny v iOS Keychain a Android <code>EncryptedSharedPreferences</code> / Keystore (3denní offline lhůta a <code>android:allowBackup="false"</code>).</li>
+      </ul>
+      <h3>4. Zdroje počasí, map, geokódování a hraniční brána</h3>
+      <ul>
+        <li><strong>MET Norway</strong> (Locationforecast 2.0, Nowcast 2.0, MetAlerts 2.0, Airqualityforecast) — <a href="https://www.met.no/en/About-us/Copyright-and-use-of-data" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>NOAA / NWS &amp; NOAA AWC</strong> (METAR, IEM NEXRAD / AWS NODD, USA CAP) — <a href="https://www.weather.gov/documentation/services-web-api" target="_blank" rel="noopener">Veřejná doména</a>.</li>
+        <li><strong>Bright Sky / DWD</strong> (Deutscher Wetterdienst a radar RADOLAN) — <a href="https://brightsky.dev/" target="_blank" rel="noopener">MIT / DL-DE-&gt;BY-2.0</a>.</li>
+        <li><strong>ECCC GeoMet</strong> (Environment and Climate Change Canada: WMS, CAP, AQHI) — <a href="https://eccc-msc.github.io/open-data/readme_en/" target="_blank" rel="noopener">Open Government Licence - Canada</a>.</li>
+        <li><strong>MeteoAlarm</strong> (Evropské výstrahy Atom/CAP) — <a href="https://feeds.meteoalarm.org/" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>NASA POWER</strong> (klimatologie 1991–2020) — <a href="https://power.larc.nasa.gov/" target="_blank" rel="noopener">Veřejná doména</a>.</li>
+        <li><strong>OpenFreeMap &amp; © OpenStreetMap</strong> — <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">ODbL</a> / <a href="https://openfreemap.org/" target="_blank" rel="noopener">OpenFreeMap</a>; směrovací engine <strong>Valhalla</strong> (MIT).</li>
+        <li><strong>GeoNames (<code>cities5000</code>)</strong> — <a href="https://www.geonames.org/" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>Nativní systémové geokodéry:</strong> Apple <code>CLGeocoder</code> / <code>MKDirections</code> v iOS (<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Soukromí Apple</a>) a Android <code>Geocoder</code> v Androidu (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Soukromí Google</a>).</li>
+        <li><strong>Volitelná okrajová mezipaměť (<code>https://api-atmoway.castellanosoftware.com</code>):</strong> Na Cloudflare Workers kvantuje souřadnice na buňky mřížky <strong>~5 km (<code>0,05°</code>)</strong>, nezaznamenává PII ani přesné souřadnice a při výpadku se automaticky přepne přímo na oficiální bezklíčové zdroje.</li>
+      </ul>
+      <h3>5. Vyhodnocování na pozadí, oznámení a hlas TTS</h3>
+      <p>Pomocí <code>BGAppRefreshTask</code> / <code>BGProcessingTask</code> (iOS) a <code>WorkManager</code> (Android) AtmoWay místně vyhodnocuje čtyři rodiny upozornění: Oficiální výstrahy CAP, Blížící se déšť/bouřka, Biometeo (mráz/pokles tlaku) a TTS Aktivní cesty. Noční klid je respektován (s volitelnou bezpečnostní výjimkou pro oranžové/červené výstrahy CAP). Hlasová syntéza (<code>AVAudioSession</code> <code>.duckOthers</code> / <code>AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK</code>) probíhá lokálně bez nahrávání zvuku.</p>
+      <h3>6. Nákupy v aplikaci (AtmoWay Pro)</h3>
+      <p>Předplatné i doživotní odemčení (<code>atmoway_pro_monthly</code>, <code>atmoway_pro_annual</code>, <code>atmoway_pro_lifetime</code>) zpracovávají výhradně <strong>Apple StoreKit 2</strong> a <strong>Google Play Billing</strong>. Castellano Software neukládá platební údaje. Funkce „Obnovit nákupy“ je v Nastavení i na obrazovce Pro.</p>
+      <h3>7. Děti, práva GDPR/CCPA a výmaz dat</h3>
+      <p>AtmoWay není určen dětem mladším 13 let. Protože nevedeme účty ani serverové profily, veškerá místní data kdykoli smažete vymazáním dat aplikace, jejím odinstalováním nebo odebráním oprávnění v systému. Kontakt: <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a>. Poslední aktualizace: 2026-11-25.</p>
+      <nav class="section-links">
+        <a href="../">Přehled</a> <a href="../terms/">Podmínky služby</a> <a href="../support/">Podpora a FAQ</a>
+      </nav>
+      <div class="support-block">
+        <p>Potřebujete pomoc s AtmoWay? Napište na <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a></p>
+      </div>
+      <div class="back-top-wrap">
+        <a class="back-top-pill" href="#top">↑ Nahoru / Jazyky</a>
+      </div>
+    </section>
+
+    <section class="lang-section" id="tr" lang="tr">
+      <h2>Gizlilik Politikası (Türkçe)</h2>
+      <div class="card"><strong>Temel özet:</strong> AtmoWay kullanıcı hesabı gerektirmez, reklam göstermez, izleme veya ilişkilendirme SDK’sı barındırmaz (IDFA, AAID, Firebase veya Mixpanel yoktur) ve yerleşik çevrimdışı GeoNames veritabanı sayesinde GPS izni olmadan tüm dünyada çalışır.</div>
+      <h3>1. Veri Sorumlusu ve Hesap / İzleyici Yokluğu</h3>
+      <p><strong>Veri Sorumlusu:</strong> Castellano Software (<a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a>). AtmoWay (<code>com.castellanosoftware.atmoway</code>) kayıt gerektirmez; ad, e-posta veya telefon numarası istemez. Reklam ağı veya davranışsal analiz SDK’sı içermez ve kişisel verileri asla satmaz.</p>
+      <h3>2. İsteğe Bağlı Ön Plan Konumu ve Aktif Yolculuk GPS’i</h3>
+      <ul>
+        <li><strong>GPS olmadan %100 işlevsel:</strong> Yerleşik GeoNames <code>cities5000</code> SQLite FTS5 dizini sayesinde konum izni vermeden dünyadaki her şehri çevrimdışı arayabilirsiniz.</li>
+        <li><strong>Varsayılan olarak yalnızca ön planda:</strong> iOS’ta yalnızca <code>NSLocationWhenInUseUsageDescription</code>; Android’de <code>ACCESS_COARSE_LOCATION</code> / <code>ACCESS_FINE_LOCATION</code> istenir.</li>
+        <li><strong>Yalnızca Aktif Yolculukla sınırlı izleme:</strong> Yalnızca Rota Yardımcı Pilotunda bir yolculuk başlattığınızda Android <code>FOREGROUND_SERVICE_LOCATION</code> (kalıcı <code>ACCESS_BACKGROUND_LOCATION</code> olmadan) ve iOS görünür sistem göstergesiyle <code>allowsBackgroundLocationUpdates</code> (<code>UIBackgroundModes: audio</code> olmadan) etkinleşir. Hedefe varışta (&lt; 150 m sürekli), uzun hareketsizlikte (&ge; 30 dk) veya «Yolculuğu durdur»a dokunduğunuzda konum alımı otomatik durur.</li>
+      </ul>
+      <h3>3. Yerel Depolama ve Widget Aynası</h3>
+      <ul>
+        <li><strong>Drift (SQLite WAL):</strong> Hava önbelleğini, CAP poligonlarını, kayıtlı konumları ve Aktif Yolculuk çevrimdışı önbelleğini (rota çizgisi, &plusmn;2 sa hava düğümleri ve CAP uyarıları) saklar.</li>
+        <li><strong>Ayarlar ve Widget Aynası:</strong> <code>SharedPreferences</code> / <code>UserDefaults</code> birim ve dil ayarlarını tutar. Widget aynası (iOS’ta <code>group.com.castellanosoftware.atmoway</code>; Android’de <code>SharedPreferences</code>) yalnızca <strong>6 yuvarlanmamış SI değerini</strong> (<code>_tempC</code>, <code>_feelsLikeC</code>, <code>_windSpeedKmh</code>, <code>_windGustKmh</code>, <code>_precipMmh</code>, <code>_pressureHpa</code>), birim tercihlerini ve kaba şehir adını saklar — <strong>sıfır GPS koordinatı ve sıfır abonelik bayrağı</strong>.</li>
+        <li><strong>Satın alma güvenliği:</strong> Haklar iOS Keychain ve Android <code>EncryptedSharedPreferences</code> / Keystore içinde 3 günlük çevrimdışı tolerans ve <code>android:allowBackup="false"</code> ile korunur.</li>
+      </ul>
+      <h3>4. Hava Durumu, Harita, Coğrafi Kodlama ve Uç Ağ Geçidi Kaynakları</h3>
+      <ul>
+        <li><strong>MET Norway</strong> (Locationforecast 2.0, Nowcast 2.0, MetAlerts 2.0, Airqualityforecast) — <a href="https://www.met.no/en/About-us/Copyright-and-use-of-data" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>NOAA / NWS &amp; NOAA AWC</strong> (METAR, IEM NEXRAD / AWS NODD, ABD CAP) — <a href="https://www.weather.gov/documentation/services-web-api" target="_blank" rel="noopener">Kamu Malı</a>.</li>
+        <li><strong>Bright Sky / DWD</strong> (Deutscher Wetterdienst ve RADOLAN radarı) — <a href="https://brightsky.dev/" target="_blank" rel="noopener">MIT / DL-DE-&gt;BY-2.0</a>.</li>
+        <li><strong>ECCC GeoMet</strong> (Environment and Climate Change Canada: WMS, CAP, AQHI) — <a href="https://eccc-msc.github.io/open-data/readme_en/" target="_blank" rel="noopener">Open Government Licence - Canada</a>.</li>
+        <li><strong>MeteoAlarm</strong> (Avrupa resmî Atom/CAP uyarıları) — <a href="https://feeds.meteoalarm.org/" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>NASA POWER</strong> (1991–2020 klimatolojisi) — <a href="https://power.larc.nasa.gov/" target="_blank" rel="noopener">Kamu Malı</a>.</li>
+        <li><strong>OpenFreeMap &amp; © OpenStreetMap</strong> — <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">ODbL</a> / <a href="https://openfreemap.org/" target="_blank" rel="noopener">OpenFreeMap</a>; rota motoru <strong>Valhalla</strong> (MIT).</li>
+        <li><strong>GeoNames (<code>cities5000</code>)</strong> — <a href="https://www.geonames.org/" target="_blank" rel="noopener">CC BY 4.0</a>.</li>
+        <li><strong>Yerel sistem coğrafi kodlayıcıları:</strong> iOS’ta Apple <code>CLGeocoder</code> / <code>MKDirections</code> (<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Gizliliği</a>); Android’de Android <code>Geocoder</code> (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Gizliliği</a>).</li>
+        <li><strong>İsteğe bağlı uç önbellek (<code>https://api-atmoway.castellanosoftware.com</code>):</strong> Cloudflare Workers üzerinde çalışır; koordinatları önbellekleme öncesi <strong>~5 km (<code>0,05°</code>)</strong> ızgara hücrelerine yuvarlar, PII veya tam koordinat günlüğü tutmaz ve kesintide devre kesici aracılığıyla doğrudan resmî anahtarsız kaynaklara geçer.</li>
+      </ul>
+      <h3>5. Arka Plan Uyarıları, Bildirimler ve Geçici TTS</h3>
+      <p>AtmoWay, <code>BGAppRefreshTask</code> / <code>BGProcessingTask</code> (iOS) ve <code>WorkManager</code> (Android) kullanarak dört bildirim ailesini yerel olarak değerlendirir: Resmî CAP Uyarıları, Yaklaşan Yağmur/Fırtına, Biyometeo Don/Basınç Düşüşü ve Aktif Rota TTS. Sessiz Saatlere uyulur (Turuncu/Kırmızı CAP uyarıları için isteğe bağlı güvenlik istisnası ile). TTS ses sentezi (iOS’ta <code>AVAudioSession</code> <code>.duckOthers</code>; Android’de <code>AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK</code>) cihazda yerel olarak üretilir, ses kaydı yapılmaz.</p>
+      <h3>6. Uygulama İçi Satın Almalar (AtmoWay Pro)</h3>
+      <p>Abonelikler ve ömür boyu kilit açma (<code>atmoway_pro_monthly</code>, <code>atmoway_pro_annual</code>, <code>atmoway_pro_lifetime</code>) yalnızca <strong>Apple StoreKit 2</strong> ve <strong>Google Play Billing</strong> üzerinden işlenir. Castellano Software ödeme bilgisi toplamaz. «Satın almaları geri yükle» Ayarlar ve Pro ekranında yer alır.</p>
+      <h3>7. Çocuklar, GDPR/CCPA Hakları ve Veri Silme</h3>
+      <p>AtmoWay 13 yaşından küçüklere yönelik değildir. Sunucuda hesap veya kişisel profil tutulmadığından, uygulama verilerini temizleyerek, uygulamayı kaldırarak veya sistem izinlerini iptal ederek tüm yerel verileri istediğiniz an silebilirsiniz. İletişim: <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a>. Son güncelleme: 2026-11-25.</p>
+      <nav class="section-links">
+        <a href="../">Genel Bakış</a> <a href="../terms/">Hizmet Koşulları</a> <a href="../support/">Destek ve SSS</a>
+      </nav>
+      <div class="support-block">
+        <p>AtmoWay ile ilgili yardıma mı ihtiyacınız var? Yazın: <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a></p>
+      </div>
+      <div class="back-top-wrap">
+        <a class="back-top-pill" href="#top">↑ Yukarı / Diller</a>
+      </div>
+    </section>
+
   </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="../">Overview</a>
+      <a href="../privacy/">Privacy</a>
+      <a href="../terms/">Terms</a>
+      <a href="../support/">Support</a>
+    </div>
+    <div>Castellano Software &middot; AtmoWay (<code>com.castellanosoftware.atmoway</code>) &middot; <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a></div>
+  </footer>
 </body>
 </html>

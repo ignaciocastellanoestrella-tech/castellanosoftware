@@ -1,36 +1,721 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AtmoWay — Global Weather, Radar & Route Copilot | Castellano Software</title>
-  <style>
-    :root { --bg: #081226; --card: #0e1d38; --text: #f8fafc; --muted: #94a3b8; --accent: #38bdf8; --border: rgba(148,163,184,0.2); }
-    * { box-sizing: border-box; }
-    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: radial-gradient(circle at top right, #0f2952, var(--bg)); color: var(--text); line-height: 1.6; }
-    main { max-width: 820px; margin: 0 auto; padding: 40px 20px 64px; }
-    .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 24px; margin-bottom: 20px; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    h1, h2 { margin-top: 0; }
-    .nav { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 24px; font-weight: 600; }
-    .pill { background: rgba(56,189,248,0.12); border: 1px solid rgba(56,189,248,0.35); border-radius: 999px; padding: 6px 14px; }
-  </style>
+  <meta name="robots" content="index,follow" />
+  <title>AtmoWay — Global Weather, Radar &amp; Route Copilot | Castellano Software</title>
+  <link rel="stylesheet" href="./style.css" />
 </head>
-<body>
-  <main>
-    <nav class="nav">
-      <a class="pill" href="./">AtmoWay</a>
-      <a class="pill" href="./privacy/">Privacy / Privacidad</a>
-      <a class="pill" href="./terms/">Terms / Términos</a>
-      <a class="pill" href="./support/">Support / Soporte</a>
+<body id="top">
+  <header>
+    <img src="./icon.png" alt="AtmoWay" />
+    <h1>AtmoWay</h1>
+    <p class="subtitle">Global Atmospheric Telemetry, Live Radar &amp; Hands-Free Route Copilot · Castellano Software</p>
+    <nav class="top-links" aria-label="Site navigation">
+      <a href="./" class="active">Overview / Inicio</a>
+      <a href="privacy/">Privacy / Privacidad</a>
+      <a href="terms/">Terms / Términos</a>
+      <a href="support/">Support / Soporte</a>
     </nav>
-    <section class="card">
-      <h1>AtmoWay</h1>
-      <p>Global atmospheric telemetry, multi-model consensus, vector weather radar, and hands-free Weather Route Copilot by <strong>Castellano Software</strong>.</p>
-      <p>Telemetría atmosférica global, consenso multimodelo, radar vectorial y Copiloto Meteorológico de Ruta de <strong>Castellano Software</strong>.</p>
-      <p>Contact / Contacto: <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a></p>
+  </header>
+
+  <main>
+    <span class="meta-line">13 Languages · iOS &amp; Android · Last update: 2026-11-25</span>
+    <div class="hero-card">
+      <strong>AtmoWay</strong> (<code>com.castellanosoftware.atmoway</code>) combines a 4-level meteorological truth hierarchy, 120 fps Living Sky visualization, and a hands-free <strong>Weather Route Copilot</strong> — with zero user accounts, zero ads, and zero tracking SDKs. Explore full documentation below in all <strong>13 supported languages</strong>.
+    </div>
+
+    <h3>Languages / Idiomas (13)</h3>
+    <nav class="lang-nav" aria-label="Languages">
+      <a href="#es">Español</a>
+      <a href="#en">English</a>
+      <a href="#de">Deutsch</a>
+      <a href="#fr">Français</a>
+      <a href="#it">Italiano</a>
+      <a href="#pt">Português</a>
+      <a href="#nl">Nederlands</a>
+      <a href="#pl">Polski</a>
+      <a href="#sv">Svenska</a>
+      <a href="#da">Dansk</a>
+      <a href="#nb">Norsk bokmål</a>
+      <a href="#cs">Čeština</a>
+      <a href="#tr">Türkçe</a>
+    </nav>
+
+    <section class="lang-section" id="es" lang="es">
+      <h2>Español — Telemetría atmosférica y Copiloto de Ruta</h2>
+      <div class="card"><strong>AtmoWay</strong> reúne observación meteorológica real, radar de alta resolución, alertas oficiales CAP y un <strong>Copiloto Meteorológico de Ruta</strong> manos libres en una sola aplicación sin cuentas ni rastreadores.</div>
+      <h3>Jerarquía de verdad meteorológica en 4 niveles</h3>
+      <div class="grid-2">
+        <div class="feature-box">
+          <h4><span class="badge">Nivel 1</span> Estaciones y METAR</h4>
+          <p>Observaciones reales en superficie (NOAA AWC METAR, NWS, Bright Sky / DWD y ECCC GeoMet) filtradas automáticamente por frescura (<code>&le; 45 min</code>) y diferencia de altitud (<code>|&Delta;elev| &le; 300 m</code>).</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Nivel 2</span> Radar vivo y Nowcast (0–90 min)</h4>
+          <p>Radar de precipitación en tiempo real (IEM NEXRAD / AWS NODD, DWD RADOLAN, ECCC GeoMet WMS y MET Norway Nowcast 2.0) junto con malla global animada NWP y distintivo honesto de cobertura (<em>Radar alta resolución</em> frente a <em>Precipitación global NWP</em>).</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Nivel 3</span> Alertas oficiales CAP</h4>
+          <p>Intersección geoespacial exacta con polígonos oficiales de MeteoAlarm (Europa), NWS CAP (EE. UU.) y ECCC CAP (Canadá) en el punto observado y a lo largo del corredor de viaje.</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Nivel 4</span> Consenso multimodelo NWP</h4>
+          <p>Predicción de 90 minutos a 10 días combinando múltiples modelos meteorológicos con un porcentaje explícito de acuerdo para evaluar la fiabilidad real del pronóstico.</p>
+        </div>
+      </div>
+      <h3>Cielo Vivo a 120 fps y línea temporal de 48 horas</h3>
+      <p>La pantalla principal renderiza un cielo atmosférico dinámico a <strong>120 fps</strong> (presupuesto &lt; 8,3 ms/fotograma, respetando la reducción de movimiento del sistema) sincronizado con una línea temporal interactiva de <strong>48 horas</strong>, límites diarios y efemérides solares y lunares calculadas en la zona horaria IANA exacta de cada coordenada (incluidos días DST de 23 h y 25 h).</p>
+      <h3>Copiloto Meteorológico de Ruta</h3>
+      <ul>
+        <li><strong>5 modos de desplazamiento:</strong> Coche, Moto, Camper, Bicicleta y Senderismo, con soporte para hasta <strong>5 paradas intermedias (waypoints)</strong>.</li>
+        <li><strong>Riesgos del corredor y mejor hora de salida:</strong> Análisis tramo a tramo de precipitación, viento lateral y riesgo de hielo negro, con optimizador de salida <strong>+0 h a +24 h</strong>.</li>
+        <li><strong>Avisos de voz TTS manos libres:</strong> Alertas habladas en los <strong>13 idiomas</strong> con atenuación nativa del audio multimedia (<em>audio ducking</em>), perfiles de voz (Sistema, Femenina, Masculina), ajuste de velocidad y prueba inmediata con <em>Probar voz</em>.</li>
+        <li><strong>Caché offline para túneles y zonas sin cobertura:</strong> Al iniciar un viaje, AtmoWay guarda localmente la polilínea, nodos meteorológicos (margen &plusmn;2 h) y polígonos CAP en SQLite para mantener el HUD y los avisos de voz activos sin conexión.</li>
+        <li><strong>Salto en un toque:</strong> Inicia la navegación giro a giro directamente en Apple Maps, Google Maps o Waze.</li>
+      </ul>
+      <h3>Ventanas de actividad, climatología, calidad del aire y widgets</h3>
+      <ul>
+        <li><strong>6 ventanas de actividad:</strong> Moto y coche, Ciclismo y carrera, Fotografía, Astronomía, Salud y biometeo, y Hogar y cuidado del vehículo.</li>
+        <li><strong>Climatología NASA POWER (1991–2020):</strong> Anomalías térmicas y pluviométricas frente a la media histórica de 30 años.</li>
+        <li><strong>Calidad del aire global:</strong> Índice europeo AQI y canadiense AQHI (MET Norway Airqualityforecast y ECCC GeoMet AQHI; OpenAQ v3 opcional vía gateway).</li>
+        <li><strong>Unidades completas y presets:</strong> Temperaturas (°C/°F), viento (km/h, mph, kn, m/s, Beaufort), presión (hPa, mbar, inHg, mmHg), precipitación (mm, in), distancia (km, mi), reloj (24h/12h) y fecha (DMY/MDY).</li>
+        <li><strong>Widgets y 4 temas:</strong> Widgets nativos de pantalla de inicio (WidgetKit en iOS y AppWidgetProvider en Android) y temas Claro, Oscuro, Negro OLED y Día/Noche automático.</li>
+      </ul>
+      <nav class="section-links">
+        <a href="privacy/">Política de privacidad</a> <a href="terms/">Términos de servicio</a> <a href="support/">Soporte y FAQ</a>
+      </nav>
+      <div class="support-block">
+        <p>¿Necesitas ayuda con AtmoWay? Escribe a <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a></p>
+      </div>
+      <div class="back-top-wrap">
+        <a class="back-top-pill" href="#top">↑ Arriba / Idiomas</a>
+      </div>
     </section>
+
+    <section class="lang-section" id="en" lang="en">
+      <h2>English — Spatial Weather Telemetry &amp; Route Copilot</h2>
+      <div class="card"><strong>AtmoWay</strong> unites verified ground observations, live precipitation radar, official CAP weather warnings, and a hands-free <strong>Weather Route Copilot</strong> in a privacy-first app with zero accounts and zero ad trackers.</div>
+      <h3>4-Level Meteorological Truth Hierarchy</h3>
+      <div class="grid-2">
+        <div class="feature-box">
+          <h4><span class="badge">Level 1</span> Ground &amp; METAR Observations</h4>
+          <p>Live surface stations and aviation METAR feeds (NOAA AWC, NWS, Bright Sky / DWD, ECCC GeoMet) filtered strictly by freshness (<code>&le; 45 min</code>) and elevation delta (<code>|&Delta;elev| &le; 300 m</code>).</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Level 2</span> Live Radar &amp; Nowcast (0–90 min)</h4>
+          <p>High-resolution precipitation radar (IEM NEXRAD / AWS NODD, DWD RADOLAN, ECCC GeoMet WMS, MET Norway Nowcast 2.0) paired with an animated global NWP grid and an honest coverage badge (<em>High-res radar</em> vs. <em>Global NWP precip</em>).</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Level 3</span> Official CAP Warnings</h4>
+          <p>Exact GeoJSON polygon intersection against official MeteoAlarm (Europe), NWS CAP (US), and ECCC CAP (Canada) severe weather alerts for both saved places and active route corridors.</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Level 4</span> Multi-Model NWP Consensus</h4>
+          <p>Forecasts from 90 minutes out to 10 days combining multiple weather models with an explicit agreement percentage score so you know how confident the forecast is.</p>
+        </div>
+      </div>
+      <h3>120 fps Living Sky &amp; 48-Hour Timeline</h3>
+      <p>The primary screen renders a procedural <strong>120 fps Living Sky</strong> hero (&lt; 8.3 ms frame budget, automatically honoring system reduced-motion preferences) coupled with an interactive <strong>48-hour timeline scrub</strong>, daily boundaries, and astronomical sun/moon events computed in each coordinate’s exact IANA timezone (including 23 h and 25 h DST transitions).</p>
+      <h3>Weather Route Copilot</h3>
+      <ul>
+        <li><strong>5 travel modes:</strong> Car, Motorcycle, Camper/RV, Bicycle, and Hiking, with support for up to <strong>5 intermediate waypoints</strong>.</li>
+        <li><strong>Corridor hazards &amp; Best Departure Time:</strong> Segment-by-segment precipitation, crosswind, and black-ice risk scoring, plus a <strong>+0 h to +24 h</strong> departure optimizer.</li>
+        <li><strong>Hands-free TTS voice alerts:</strong> Spoken warnings in all <strong>13 languages</strong> with native media audio ducking, selectable voice profiles (System, Female, Male), speech-rate slider, and instant <em>Test Voice</em> preview.</li>
+        <li><strong>Offline tunnel &amp; dead-zone cache:</strong> Starting a trip stores the route polyline, interpolated weather nodes (&plusmn;2 h margin), and CAP polygons locally in SQLite so HUD and voice alerts keep running offline.</li>
+        <li><strong>One-tap external handoff:</strong> Launch turn-by-turn navigation directly in Apple Maps, Google Maps, or Waze.</li>
+      </ul>
+      <h3>Activity Windows, Climatology, Air Quality &amp; Widgets</h3>
+      <ul>
+        <li><strong>6 Activity Windows:</strong> Moto &amp; Car, Cycling &amp; Running, Photography, Astronomy, Health &amp; Bio-Meteo, and Home &amp; Car Care.</li>
+        <li><strong>NASA POWER 1991–2020 Climatology:</strong> Temperature and precipitation anomalies benchmarked against 30-year climate normals.</li>
+        <li><strong>Air Quality (AQI &amp; AQHI):</strong> European AQI and Canadian AQHI via keyless MET Norway Airqualityforecast and ECCC GeoMet AQHI (plus optional gateway OpenAQ v3).</li>
+        <li><strong>Full Unit Customization:</strong> Independent toggles and presets for °C/°F, wind (km/h, mph, kn, m/s, Beaufort), pressure (hPa, mbar, inHg, mmHg), rain (mm, in), distance (km, mi), 24h/12h clock, and DMY/MDY date.</li>
+        <li><strong>Widgets &amp; 4 Themes:</strong> Native Home Screen widgets (iOS WidgetKit &amp; Android AppWidgetProvider) and Light, Dark, OLED Black, and Auto Day/Night themes.</li>
+      </ul>
+      <nav class="section-links">
+        <a href="privacy/">Privacy Policy</a> <a href="terms/">Terms of Service</a> <a href="support/">Support &amp; FAQ</a>
+      </nav>
+      <div class="support-block">
+        <p>Need help with AtmoWay? Email <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a></p>
+      </div>
+      <div class="back-top-wrap">
+        <a class="back-top-pill" href="#top">↑ Top / Languages</a>
+      </div>
+    </section>
+
+    <section class="lang-section" id="de" lang="de">
+      <h2>Deutsch — Räumliche Wettertelemetrie &amp; Routen-Copilot</h2>
+      <div class="card"><strong>AtmoWay</strong> vereint geprüfte Bodenbeobachtungen, hochauflösendes Niederschlagsradar, offizielle CAP-Unwetterwarnungen und einen freihändigen <strong>Wetter-Routen-Copiloten</strong> — ohne Benutzerkonto und ohne Werbetracker.</div>
+      <h3>4-Stufen-Wahrheitshierarchie für Wetterdaten</h3>
+      <div class="grid-2">
+        <div class="feature-box">
+          <h4><span class="badge">Stufe 1</span> Bodenstationen &amp; METAR</h4>
+          <p>Aktuelle Bodenmesswerte und Luftfahrt-METARs (NOAA AWC, NWS, Bright Sky / DWD, ECCC GeoMet), streng gefiltert nach Aktualität (<code>&le; 45 Min.</code>) und Höhenunterschied (<code>|&Delta;elev| &le; 300 m</code>).</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Stufe 2</span> Live-Radar &amp; Nowcast (0–90 Min.)</h4>
+          <p>Hochauflösendes Niederschlagsradar (IEM NEXRAD / AWS NODD, DWD RADOLAN, ECCC GeoMet WMS, MET Norway Nowcast 2.0) kombiniert mit einem animierten globalen NWP-Raster und ehrlichem Abdeckungs-Badge (<em>Hochauflösendes Radar</em> vs. <em>Globales NWP-Niederschlagsmodell</em>).</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Stufe 3</span> Offizielle CAP-Warnungen</h4>
+          <p>Präzise GeoJSON-Polygonschnittpunkte mit offiziellen Warnungen von MeteoAlarm (Europa), NWS CAP (USA) und ECCC CAP (Kanada) am Standort und entlang der Route.</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Stufe 4</span> Multimodell-NWP-Konsens</h4>
+          <p>Vorhersagen von 90 Minuten bis 10 Tagen aus mehreren Modellen samt prozentualem Übereinstimmungswert zur objektiven Einschätzung der Prognosesicherheit.</p>
+        </div>
+      </div>
+      <h3>120-fps-Living-Sky &amp; 48-Stunden-Zeitleiste</h3>
+      <p>Der Hauptbildschirm rendert einen prozeduralen <strong>Living Sky mit 120 fps</strong> (Budget &lt; 8,3 ms/Frame, unter Beachtung reduzierter Bewegung im System) samt interaktiver <strong>48-Stunden-Zeitleiste</strong>, Tagesgrenzen sowie Sonnen- und Monddaten in der exakten IANA-Zeitzone der Koordinate (inkl. 23-h- und 25-h-Zeitumstellungstagen).</p>
+      <h3>Wetter-Routen-Copilot</h3>
+      <ul>
+        <li><strong>5 Reisemodi:</strong> Auto, Motorrad, Wohnmobil/Camper, Fahrrad und Wandern — mit bis zu <strong>5 Zwischenzielen (Waypoints)</strong>.</li>
+        <li><strong>Korridor-Risiken &amp; Beste Abfahrtszeit:</strong> Abschnittsweise Bewertung von Niederschlag, Seitenwind und Glatteisrisiko sowie Abfahrtsoptimierung von <strong>+0 h bis +24 h</strong>.</li>
+        <li><strong>Freihändige TTS-Sprachwarnungen:</strong> Gesprochene Hinweise in allen <strong>13 Sprachen</strong> mit nativem Audio-Ducking, wählbarem Stimmprofil (System, Weiblich, Männlich), Geschwindigkeitsregler und direktem <em>Stimme testen</em>.</li>
+        <li><strong>Offline-Cache für Tunnel &amp; Funklöcher:</strong> Beim Start einer Fahrt speichert AtmoWay die Routen-Polylinie, Wetterknoten (&plusmn;2 h Puffer) und CAP-Polygone lokal in SQLite, sodass HUD und Sprachwarnungen auch offline weiterlaufen.</li>
+        <li><strong>Übergabe mit einem Tipp:</strong> Direkter Start der Abbiegenavigation in Apple Karten, Google Maps oder Waze.</li>
+      </ul>
+      <h3>Aktivitätsfenster, Klimatologie, Luftqualität &amp; Widgets</h3>
+      <ul>
+        <li><strong>6 Aktivitätsfenster:</strong> Motorrad &amp; Auto, Radfahren &amp; Laufen, Fotografie, Astronomie, Gesundheit &amp; Biometeo sowie Haus &amp; Fahrzeugpflege.</li>
+        <li><strong>NASA POWER Klimatologie (1991–2020):</strong> Temperatur- und Niederschlagsanomalien im Vergleich zum 30-jährigen Klimamittel.</li>
+        <li><strong>Luftqualität (AQI &amp; AQHI):</strong> Europäischer AQI und kanadischer AQHI über schlüssellose Quellen von MET Norway und ECCC GeoMet (optional OpenAQ v3 über Gateway).</li>
+        <li><strong>Vollständige Einheiten &amp; Voreinstellungen:</strong> °C/°F, Wind (km/h, mph, kn, m/s, Beaufort), Luftdruck (hPa, mbar, inHg, mmHg), Niederschlag (mm, in), Distanz (km, mi), 24h/12h und TT.MM./MM.TT.</li>
+        <li><strong>Widgets &amp; 4 Designs:</strong> Native Startbildschirm-Widgets (WidgetKit / AppWidgetProvider) sowie die Themes Hell, Dunkel, OLED-Schwarz und Auto Tag/Nacht.</li>
+      </ul>
+      <nav class="section-links">
+        <a href="privacy/">Datenschutzerklärung</a> <a href="terms/">Nutzungsbedingungen</a> <a href="support/">Support &amp; FAQ</a>
+      </nav>
+      <div class="support-block">
+        <p>Hilfe zu AtmoWay benötigt? Schreib an <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a></p>
+      </div>
+      <div class="back-top-wrap">
+        <a class="back-top-pill" href="#top">↑ Nach oben / Sprachen</a>
+      </div>
+    </section>
+
+    <section class="lang-section" id="fr" lang="fr">
+      <h2>Français — Télémétrie atmosphérique &amp; Copilote de Route</h2>
+      <div class="card"><strong>AtmoWay</strong> réunit observations météo au sol, radar haute résolution, alertes officielles CAP et un <strong>Copilote Météo de Route</strong> mains libres, sans création de compte ni traceurs publicitaires.</div>
+      <h3>Hiérarchie de vérité météorologique en 4 niveaux</h3>
+      <div class="grid-2">
+        <div class="feature-box">
+          <h4><span class="badge">Niveau 1</span> Stations au sol &amp; METAR</h4>
+          <p>Observations réelles (NOAA AWC METAR, NWS, Bright Sky / DWD, ECCC GeoMet) filtrées par fraîcheur (<code>&le; 45 min</code>) et écart d’altitude (<code>|&Delta;elev| &le; 300 m</code>).</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Niveau 2</span> Radar direct &amp; Nowcast (0–90 min)</h4>
+          <p>Radar de précipitations en temps réel (IEM NEXRAD / AWS NODD, DWD RADOLAN, ECCC GeoMet WMS, MET Norway Nowcast 2.0) avec grille mondiale NWP animée et badge de couverture transparent (<em>Radar haute résolution</em> vs <em>Précipitations NWP globales</em>).</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Niveau 3</span> Alertes officielles CAP</h4>
+          <p>Intersection géométrique GeoJSON exacte avec les vigilances officielles MeteoAlarm (Europe), NWS CAP (États-Unis) et ECCC CAP (Canada) sur site et le long du trajet.</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Niveau 4</span> Consensus multimodèle NWP</h4>
+          <p>Prévisions de 90 minutes à 10 jours croisant plusieurs modèles avec un indice de concordance en pourcentage.</p>
+        </div>
+      </div>
+      <h3>Ciel Vivant 120 ips et chronologie sur 48 heures</h3>
+      <p>L’écran principal anime un ciel atmosphérique à <strong>120 ips</strong> (budget &lt; 8,3 ms/image, respectant la réduction des animations système) relié à une barre temporelle interactive de <strong>48 heures</strong> et aux éphémérides solaires et lunaires calculées dans le fuseau horaire IANA exact du lieu (y compris les journées de changement d’heure de 23 h et 25 h).</p>
+      <h3>Copilote Météo de Route</h3>
+      <ul>
+        <li><strong>5 modes de trajet :</strong> Voiture, Moto, Camping-car, Vélo et Randonnée, avec jusqu’à <strong>5 étapes intermédiaires (waypoints)</strong>.</li>
+        <li><strong>Risques du corridor et heure de départ idéale :</strong> Analyse des précipitations, vents latéraux et risques de verglas, avec optimiseur de départ de <strong>+0 h à +24 h</strong>.</li>
+        <li><strong>Alertes vocales TTS mains libres :</strong> Annonces dans les <strong>13 langues</strong> avec atténuation audio native (<em>audio ducking</em>), choix de voix (Système, Féminine, Masculine), réglage de vitesse et bouton <em>Tester la voix</em>.</li>
+        <li><strong>Cache hors ligne pour tunnels et zones blanches :</strong> Au départ, AtmoWay enregistre la polyligne, les nœuds météo (&plusmn;2 h) et les polygones CAP dans SQLite pour assurer la continuité vocale et visuelle hors réseau.</li>
+        <li><strong>Transfert en un geste :</strong> Ouvrez le guidage virage par virage dans Apple Plans, Google Maps ou Waze.</li>
+      </ul>
+      <h3>Fenêtres d’activité, climatologie, qualité de l’air et widgets</h3>
+      <ul>
+        <li><strong>6 fenêtres d’activité :</strong> Moto et Voiture, Cyclisme et Course, Photographie, Astronomie, Santé et Biométéo, Maison et Entretien auto.</li>
+        <li><strong>Climatologie NASA POWER (1991–2020) :</strong> Écarts de température et de précipitations par rapport aux normales trentenaires.</li>
+        <li><strong>Qualité de l’air (IQA / CAS) :</strong> Indice européen AQI et canadien AQHI (MET Norway Airqualityforecast et ECCC GeoMet AQHI ; OpenAQ v3 optionnel via passerelle).</li>
+        <li><strong>Unités complètes et préréglages :</strong> °C/°F, vent (km/h, mph, kn, m/s, Beaufort), pression (hPa, mbar, inHg, mmHg), pluie (mm, in), distance (km, mi), 24h/12h et JMA/MJA.</li>
+        <li><strong>Widgets et 4 thèmes :</strong> Widgets natifs (WidgetKit iOS et AppWidgetProvider Android) et thèmes Clair, Sombre, Noir OLED et Jour/Nuit automatique.</li>
+      </ul>
+      <nav class="section-links">
+        <a href="privacy/">Politique de confidentialité</a> <a href="terms/">Conditions d’utilisation</a> <a href="support/">Assistance &amp; FAQ</a>
+      </nav>
+      <div class="support-block">
+        <p>Besoin d’aide avec AtmoWay ? Écrivez à <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a></p>
+      </div>
+      <div class="back-top-wrap">
+        <a class="back-top-pill" href="#top">↑ Haut / Langues</a>
+      </div>
+    </section>
+
+    <section class="lang-section" id="it" lang="it">
+      <h2>Italiano — Telemetria atmosferica e Copilota di Percorso</h2>
+      <div class="card"><strong>AtmoWay</strong> unisce osservazioni meteorologiche reali, radar ad alta risoluzione, allerte ufficiali CAP e un <strong>Copilota Meteo di Percorso</strong> a mani libere, senza account e senza tracciamento pubblicitario.</div>
+      <h3>Gerarchia di verità meteorologica a 4 livelli</h3>
+      <div class="grid-2">
+        <div class="feature-box">
+          <h4><span class="badge">Livello 1</span> Stazioni al suolo e METAR</h4>
+          <p>Osservazioni reali (NOAA AWC METAR, NWS, Bright Sky / DWD, ECCC GeoMet) filtrate rigorosamente per freschezza (<code>&le; 45 min</code>) e dislivello (<code>|&Delta;elev| &le; 300 m</code>).</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Livello 2</span> Radar live e Nowcast (0–90 min)</h4>
+          <p>Radar delle precipitazioni in tempo reale (IEM NEXRAD / AWS NODD, DWD RADOLAN, ECCC GeoMet WMS, MET Norway Nowcast 2.0) con griglia NWP globale animata e badge di copertura trasparente (<em>Radar ad alta risoluzione</em> vs <em>Precipitazioni NWP globali</em>).</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Livello 3</span> Allerte ufficiali CAP</h4>
+          <p>Intersezione geometrica GeoJSON con i poligoni ufficiali MeteoAlarm (Europa), NWS CAP (USA) ed ECCC CAP (Canada) sul luogo e lungo il percorso.</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Livello 4</span> Consenso multimodello NWP</h4>
+          <p>Previsioni da 90 minuti a 10 giorni che combinano più modelli numerici con una percentuale chiara di accordo.</p>
+        </div>
+      </div>
+      <h3>Cielo Vivo a 120 fps e timeline di 48 ore</h3>
+      <p>La schermata principale renderizza un cielo dinamico a <strong>120 fps</strong> (budget &lt; 8,3 ms/fotogramma, rispettando la riduzione dei movimenti di sistema) collegato a una timeline interattiva di <strong>48 ore</strong>, ai confini giornalieri e agli eventi solari e lunari calcolati nel fuso orario IANA esatto della coordinata (inclusi i giorni DST da 23 e 25 ore).</p>
+      <h3>Copilota Meteo di Percorso</h3>
+      <ul>
+        <li><strong>5 modalità di viaggio:</strong> Auto, Moto, Camper, Bici e Trekking, fino a <strong>5 tappe intermedie (waypoint)</strong>.</li>
+        <li><strong>Rischi lungo la tratta e orario migliore di partenza:</strong> Analisi di pioggia, vento laterale e rischio ghiaccio nero con ottimizzatore di partenza <strong>+0 h .. +24 h</strong>.</li>
+        <li><strong>Avvisi vocali TTS a mani libere:</strong> Indicazioni in tutte le <strong>13 lingue</strong> con attenuazione audio nativa (<em>audio ducking</em>), profilo vocale (Sistema, Femminile, Maschile), velocità regolabile e pulsante <em>Prova voce</em>.</li>
+        <li><strong>Cache offline per gallerie e zone senza segnale:</strong> All’avvio del viaggio AtmoWay salva localmente in SQLite il tracciato, i nodi meteo (&plusmn;2 h) e i poligoni CAP per mantenere attivi HUD e voce anche offline.</li>
+        <li><strong>Passaggio con un tocco:</strong> Avvia la navigazione svolta per svolta in Apple Mappe, Google Maps o Waze.</li>
+      </ul>
+      <h3>Finestre di attività, climatologia, qualità dell’aria e widget</h3>
+      <ul>
+        <li><strong>6 finestre di attività:</strong> Moto e Auto, Ciclismo e Corsa, Fotografia, Astronomia, Salute e Biometeo, Casa e Cura dell’auto.</li>
+        <li><strong>Climatologia NASA POWER (1991–2020):</strong> Anomalie di temperatura e precipitazioni rispetto alle medie trentennali.</li>
+        <li><strong>Qualità dell’aria (AQI e AQHI):</strong> Indice europeo AQI e canadese AQHI tramite MET Norway Airqualityforecast ed ECCC GeoMet AQHI (OpenAQ v3 opzionale via gateway).</li>
+        <li><strong>Unità complete e preset:</strong> °C/°F, vento (km/h, mph, kn, m/s, Beaufort), pressione (hPa, mbar, inHg, mmHg), pioggia (mm, in), distanza (km, mi), 24h/12h e GMA/MGA.</li>
+        <li><strong>Widget e 4 temi:</strong> Widget nativi (WidgetKit su iOS e AppWidgetProvider su Android) e temi Chiaro, Scuro, Nero OLED e Giorno/Notte automatico.</li>
+      </ul>
+      <nav class="section-links">
+        <a href="privacy/">Informativa sulla privacy</a> <a href="terms/">Termini di servizio</a> <a href="support/">Supporto &amp; FAQ</a>
+      </nav>
+      <div class="support-block">
+        <p>Serve aiuto con AtmoWay? Scrivi a <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a></p>
+      </div>
+      <div class="back-top-wrap">
+        <a class="back-top-pill" href="#top">↑ Su / Lingue</a>
+      </div>
+    </section>
+
+    <section class="lang-section" id="pt" lang="pt">
+      <h2>Português — Telemetria atmosférica e Copiloto de Rota</h2>
+      <div class="card"><strong>AtmoWay</strong> reúne observações meteorológicas reais, radar de alta resolução, alertas oficiais CAP e um <strong>Copiloto Meteorológico de Rota</strong> mãos-livres, sem contas nem rastreadores publicitários.</div>
+      <h3>Hierarquia de verdade meteorológica em 4 níveis</h3>
+      <div class="grid-2">
+        <div class="feature-box">
+          <h4><span class="badge">Nível 1</span> Estações de superfície e METAR</h4>
+          <p>Observações reais (NOAA AWC METAR, NWS, Bright Sky / DWD, ECCC GeoMet) filtradas por atualidade (<code>&le; 45 min</code>) e diferença de altitude (<code>|&Delta;elev| &le; 300 m</code>).</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Nível 2</span> Radar em direto e Nowcast (0–90 min)</h4>
+          <p>Radar de precipitação em tempo real (IEM NEXRAD / AWS NODD, DWD RADOLAN, ECCC GeoMet WMS, MET Norway Nowcast 2.0) com grelha global NWP animada e selo honesto de cobertura (<em>Radar de alta resolução</em> vs. <em>Precipitação global NWP</em>).</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Nível 3</span> Alertas oficiais CAP</h4>
+          <p>Interseção exata de polígonos GeoJSON com avisos oficiais MeteoAlarm (Europa), NWS CAP (EUA) e ECCC CAP (Canadá) no local e ao longo da rota.</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Nível 4</span> Consenso multimodelo NWP</h4>
+          <p>Previsões de 90 minutos até 10 dias combinando vários modelos numéricos com percentagem explícita de concordância.</p>
+        </div>
+      </div>
+      <h3>Céu Vivo a 120 fps e linha temporal de 48 horas</h3>
+      <p>O ecrã principal apresenta um céu atmosférico procedural a <strong>120 fps</strong> (orçamento &lt; 8,3 ms/fotograma, respeitando a redução de movimento do sistema) ligado a uma linha temporal interativa de <strong>48 horas</strong> e eventos solares e lunares calculados no fuso horário IANA exato de cada coordenada (incluindo dias de 23 h e 25 h na mudança de hora).</p>
+      <h3>Copiloto Meteorológico de Rota</h3>
+      <ul>
+        <li><strong>5 modos de viagem:</strong> Carro, Moto, Autocaravana/Camper, Bicicleta e Caminhada, até <strong>5 pontos intermédios (waypoints)</strong>.</li>
+        <li><strong>Riscos no corredor e melhor hora de partida:</strong> Análise de chuva, vento lateral e risco de gelo negro, com otimizador de partida de <strong>+0 h a +24 h</strong>.</li>
+        <li><strong>Alertas por voz TTS mãos-livres:</strong> Avisos falados nos <strong>13 idiomas</strong> com atenuação nativa de áudio (<em>audio ducking</em>), perfis de voz (Sistema, Feminina, Masculina), velocidade ajustável e botão <em>Testar voz</em>.</li>
+        <li><strong>Cache offline para túneis e zonas sem rede:</strong> Ao iniciar viagem, o AtmoWay guarda localmente em SQLite a polilinha, os nós meteorológicos (&plusmn;2 h) e os polígonos CAP para manter o HUD e a voz ativos offline.</li>
+        <li><strong>Transferência num toque:</strong> Abra a navegação curva a curva no Apple Maps, Google Maps ou Waze.</li>
+      </ul>
+      <h3>Janelas de atividade, climatologia, qualidade do ar e widgets</h3>
+      <ul>
+        <li><strong>6 janelas de atividade:</strong> Moto e Carro, Ciclismo e Corrida, Fotografia, Astronomia, Saúde e Biometeo, Casa e Cuidados do veículo.</li>
+        <li><strong>Climatologia NASA POWER (1991–2020):</strong> Anomalias térmicas e de precipitação face às normais climatológicas de 30 anos.</li>
+        <li><strong>Qualidade do ar (AQI e AQHI):</strong> Índices europeu AQI e canadiano AQHI (MET Norway Airqualityforecast e ECCC GeoMet AQHI; OpenAQ v3 opcional via gateway).</li>
+        <li><strong>Unidades completas e predefinições:</strong> °C/°F, vento (km/h, mph, kn, m/s, Beaufort), pressão (hPa, mbar, inHg, mmHg), chuva (mm, in), distância (km, mi), 24h/12h e DMA/MDA.</li>
+        <li><strong>Widgets e 4 temas:</strong> Widgets nativos (WidgetKit no iOS e AppWidgetProvider no Android) e temas Claro, Escuro, Preto OLED e Dia/Noite automático.</li>
+      </ul>
+      <nav class="section-links">
+        <a href="privacy/">Política de privacidade</a> <a href="terms/">Termos de serviço</a> <a href="support/">Suporte &amp; FAQ</a>
+      </nav>
+      <div class="support-block">
+        <p>Precisa de ajuda com o AtmoWay? Escreva para <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a></p>
+      </div>
+      <div class="back-top-wrap">
+        <a class="back-top-pill" href="#top">↑ Topo / Idiomas</a>
+      </div>
+    </section>
+
+    <section class="lang-section" id="nl" lang="nl">
+      <h2>Nederlands — Ruimtelijke weertelemetrie &amp; Routecopiloot</h2>
+      <div class="card"><strong>AtmoWay</strong> combineert geverifieerde grondwaarnemingen, hogeresolutieradar, officiële CAP-waarschuwingen en een handsfree <strong>Weer-Routecopiloot</strong> in één app zonder accounts of advertentietrackers.</div>
+      <h3>4-laagse meteorologische waarheidshiërarchie</h3>
+      <div class="grid-2">
+        <div class="feature-box">
+          <h4><span class="badge">Niveau 1</span> Grondstations &amp; METAR</h4>
+          <p>Actuele metingen en luchtvaart-METAR’s (NOAA AWC, NWS, Bright Sky / DWD, ECCC GeoMet) streng gefilterd op actualiteit (<code>&le; 45 min</code>) en hoogteverschil (<code>|&Delta;elev| &le; 300 m</code>).</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Niveau 2</span> Live radar &amp; Nowcast (0–90 min)</h4>
+          <p>Realtime neerslagradar (IEM NEXRAD / AWS NODD, DWD RADOLAN, ECCC GeoMet WMS, MET Norway Nowcast 2.0) met geanimeerd wereldwijd NWP-raster en eerlijk dekkingslabel (<em>Hogeresolutieradar</em> vs. <em>Wereldwijde NWP-neerslag</em>).</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Niveau 3</span> Officiële CAP-waarschuwingen</h4>
+          <p>Exacte GeoJSON-polygoondoorsnede met officiële meldingen van MeteoAlarm (Europa), NWS CAP (VS) en ECCC CAP (Canada) op locatie en langs de route.</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Niveau 4</span> Multimodel NWP-consensus</h4>
+          <p>Verwachtingen van 90 minuten tot 10 dagen uit meerdere weermodellen met een expliciet overeenkomstpercentage.</p>
+        </div>
+      </div>
+      <h3>120 fps Living Sky &amp; 48-uurstijdlijn</h3>
+      <p>Het hoofdscherm tekent een dynamische <strong>Living Sky op 120 fps</strong> (&lt; 8,3 ms/frame, met respect voor minder beweging in het systeem), gekoppeld aan een interactieve <strong>48-uurstijdlijn</strong> en zon-/maantijden in de exacte IANA-tijdzone van de coördinaat (inclusief 23- en 25-uurs zomertijdovergangen).</p>
+      <h3>Weer-Routecopiloot</h3>
+      <ul>
+        <li><strong>5 reismodi:</strong> Auto, Motor, Camper, Fiets en Wandelen, met maximaal <strong>5 tussenstops (waypoints)</strong>.</li>
+        <li><strong>Corridorrisico’s &amp; beste vertrektijd:</strong> Analyse van neerslag, zijwind en kans op ijzel per segment, plus vertrekoptimalisatie van <strong>+0 u tot +24 u</strong>.</li>
+        <li><strong>Handsfree TTS-spraakmeldingen:</strong> Gesproken waarschuwingen in alle <strong>13 talen</strong> met native audio ducking, stemprofielen (Systeem, Vrouwelijk, Mannelijk), spreeksnelheid en directe knop <em>Stem testen</em>.</li>
+        <li><strong>Offline tunnel- &amp; dekkingscache:</strong> Bij vertrek slaat AtmoWay de routepolylijn, weerknooppunten (&plusmn;2 u marge) en CAP-polygonen lokaal op in SQLite zodat HUD en spraak offline blijven werken.</li>
+        <li><strong>Direct doorsturen met één tik:</strong> Start turn-by-turn navigatie in Apple Kaarten, Google Maps of Waze.</li>
+      </ul>
+      <h3>Activiteitsvensters, klimatologie, luchtkwaliteit &amp; widgets</h3>
+      <ul>
+        <li><strong>6 activiteitsvensters:</strong> Motor &amp; Auto, Fietsen &amp; Hardlopen, Fotografie, Astronomie, Gezondheid &amp; Biometeo, en Huis &amp; Auto-onderhoud.</li>
+        <li><strong>NASA POWER 1991–2020 klimatologie:</strong> Temperatuur- en neerslagafwijkingen ten opzichte van 30-jarige klimaatnormalen.</li>
+        <li><strong>Luchtkwaliteit (AQI &amp; AQHI):</strong> Europese AQI en Canadese AQHI via sleutelvrije MET Norway Airqualityforecast en ECCC GeoMet AQHI (optioneel OpenAQ v3 via gateway).</li>
+        <li><strong>Volledige eenheden &amp; voorinstellingen:</strong> °C/°F, wind (km/h, mph, kn, m/s, Beaufort), luchtdruk (hPa, mbar, inHg, mmHg), neerslag (mm, in), afstand (km, mi), 24u/12u en DMJ/MDJ.</li>
+        <li><strong>Widgets &amp; 4 thema’s:</strong> Native startschermwidgets (WidgetKit / AppWidgetProvider) en thema’s Licht, Donker, OLED Zwart en Auto Dag/Nacht.</li>
+      </ul>
+      <nav class="section-links">
+        <a href="privacy/">Privacybeleid</a> <a href="terms/">Servicevoorwaarden</a> <a href="support/">Ondersteuning &amp; FAQ</a>
+      </nav>
+      <div class="support-block">
+        <p>Hulp nodig bij AtmoWay? Mail naar <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a></p>
+      </div>
+      <div class="back-top-wrap">
+        <a class="back-top-pill" href="#top">↑ Omhoog / Talen</a>
+      </div>
+    </section>
+
+    <section class="lang-section" id="pl" lang="pl">
+      <h2>Polski — Przestrzenna telemetria pogodowa i Pilot Trasy</h2>
+      <div class="card"><strong>AtmoWay</strong> łączy zweryfikowane pomiary naziemne, radar opadów wysokiej rozdzielczości, oficjalne ostrzeżenia CAP oraz głosowego <strong>Pogodowego Pilota Trasy</strong> — bez kont użytkowników i bez trackerów reklamowych.</div>
+      <h3>4-poziomowa hierarchia wiarygodności pogodowej</h3>
+      <div class="grid-2">
+        <div class="feature-box">
+          <h4><span class="badge">Poziom 1</span> Stacje naziemne i METAR</h4>
+          <p>Pomiary ze stacji powierzchniowych i lotnicze komunikaty METAR (NOAA AWC, NWS, Bright Sky / DWD, ECCC GeoMet) rygorystycznie filtrowane pod kątem świeżości (<code>&le; 45 min</code>) i różnicy wysokości (<code>|&Delta;elev| &le; 300 m</code>).</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Poziom 2</span> Radar na żywo i Nowcast (0–90 min)</h4>
+          <p>Radar opadów w czasie rzeczywistym (IEM NEXRAD / AWS NODD, DWD RADOLAN, ECCC GeoMet WMS, MET Norway Nowcast 2.0) wraz z animowaną globalną siatką NWP i przejrzystym oznaczeniem zasięgu (<em>Radar wysokiej rozdzielczości</em> vs <em>Globalne opady NWP</em>).</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Poziom 3</span> Oficjalne ostrzeżenia CAP</h4>
+          <p>Dokładne przecięcia wielokątów GeoJSON z oficjalnymi alertami MeteoAlarm (Europa), NWS CAP (USA) i ECCC CAP (Kanada) w wybranym punkcie i na trasie.</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Poziom 4</span> Konsensus wielomodelowy NWP</h4>
+          <p>Prognozy od 90 minut do 10 dni łączące wiele modeli numerycznych z wyraźnym procentowym wskaźnikiem zgodności.</p>
+        </div>
+      </div>
+      <h3>Żywe Niebo 120 kl./s i oś czasu 48 godzin</h3>
+      <p>Główny ekran renderuje proceduralne <strong>Żywe Niebo w 120 kl./s</strong> (budżet &lt; 8,3 ms/klatkę, z poszanowaniem ustawień ograniczenia ruchu) sprzężone z interaktywną <strong>osią 48 godzin</strong>, granicami dni i zjawiskami słoneczno-księżycowymi w dokładnej strefie czasowej IANA danej lokalizacji (w tym dni zmiany czasu 23 h i 25 h).</p>
+      <h3>Pogodowy Pilot Trasy</h3>
+      <ul>
+        <li><strong>5 trybów podróży:</strong> Samochód, Motocykl, Kamper, Rower i Piesza wędrówka, z obsługą do <strong>5 punktów pośrednich (waypoints)</strong>.</li>
+        <li><strong>Zagrożenia na trasie i najlepszy czas wyjazdu:</strong> Analiza opadów, wiatru bocznego i ryzyka gołoledzi odcinek po odcinku oraz optymalizator wyjazdu <strong>+0 h .. +24 h</strong>.</li>
+        <li><strong>Głosowe alerty TTS bez użycia rąk:</strong> Komunikaty we wszystkich <strong>13 językach</strong> z natywnym ściszaniem multimediów (<em>audio ducking</em>), wyborem głosu (Systemowy, Żeński, Męski), regulacją tempa i przyciskiem <em>Testuj głos</em>.</li>
+        <li><strong>Pamięć offline do tuneli i stref bez zasięgu:</strong> Po rozpoczęciu trasy AtmoWay zapisuje w SQLite polilinię, węzły pogodowe (zapas &plusmn;2 h) i poligony CAP, aby HUD i komunikaty głosowe działały bez sieci.</li>
+        <li><strong>Przekazanie jednym stuknięciem:</strong> Otwórz nawigację zakręt po zakręcie w Apple Maps, Google Maps lub Waze.</li>
+      </ul>
+      <h3>Okna aktywności, klimatologia, jakość powietrza i widżety</h3>
+      <ul>
+        <li><strong>6 okien aktywności:</strong> Motocykl i Auto, Rower i Bieganie, Fotografia, Astronomia, Zdrowie i Biometeo oraz Dom i Pielęgnacja auta.</li>
+        <li><strong>Klimatologia NASA POWER (1991–2020):</strong> Odchylenia temperatury i opadów względem 30-letnich norm klimatycznych.</li>
+        <li><strong>Jakość powietrza (AQI i AQHI):</strong> Europejski AQI oraz kanadyjski AQHI z bezkluczowych źródeł MET Norway i ECCC GeoMet (opcjonalnie OpenAQ v3 przez bramkę).</li>
+        <li><strong>Pełna konfiguracja jednostek:</strong> °C/°F, wiatr (km/h, mph, kn, m/s, Beaufort), ciśnienie (hPa, mbar, inHg, mmHg), opady (mm, in), dystans (km, mi), zegar 24h/12h i format daty DMY/MDY.</li>
+        <li><strong>Widżety i 4 motywy:</strong> Natywne widżety ekranu głównego (WidgetKit / AppWidgetProvider) oraz motywy Jasny, Ciemny, Czerń OLED i Automatyczny Dzień/Noc.</li>
+      </ul>
+      <nav class="section-links">
+        <a href="privacy/">Polityka prywatności</a> <a href="terms/">Warunki korzystania</a> <a href="support/">Wsparcie i FAQ</a>
+      </nav>
+      <div class="support-block">
+        <p>Potrzebujesz pomocy z AtmoWay? Napisz na <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a></p>
+      </div>
+      <div class="back-top-wrap">
+        <a class="back-top-pill" href="#top">↑ Góra / Języki</a>
+      </div>
+    </section>
+
+    <section class="lang-section" id="sv" lang="sv">
+      <h2>Svenska — Rumslig vädertelemetri &amp; Rutt-copilot</h2>
+      <div class="card"><strong>AtmoWay</strong> förenar verifierade markobservationer, högupplöst nederbördsradar, officiella CAP-varningar och en handsfree <strong>Väder-Ruttcopilot</strong> utan användarkonton eller reklamskript.</div>
+      <h3>4-nivåers meteorologisk sanningshierarki</h3>
+      <div class="grid-2">
+        <div class="feature-box">
+          <h4><span class="badge">Nivå 1</span> Markstationer &amp; METAR</h4>
+          <p>Realtidsobservationer och flyg-METAR (NOAA AWC, NWS, Bright Sky / DWD, ECCC GeoMet) filtrerade på aktualitet (<code>&le; 45 min</code>) och höjdskillnad (<code>|&Delta;elev| &le; 300 m</code>).</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Nivå 2</span> Live-radar &amp; Nowcast (0–90 min)</h4>
+          <p>Högupplöst nederbördsradar (IEM NEXRAD / AWS NODD, DWD RADOLAN, ECCC GeoMet WMS, MET Norway Nowcast 2.0) samt animerat globalt NWP-rutnät med tydlig täckningsmärkning (<em>Högupplöst radar</em> kontra <em>Global NWP-nederbörd</em>).</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Nivå 3</span> Officiella CAP-varningar</h4>
+          <p>Exakt GeoJSON-polygonträff mot officiella varningar från MeteoAlarm (Europa), NWS CAP (USA) och ECCC CAP (Kanada) både för platser och ruttkorridorer.</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Nivå 4</span> Multimodell NWP-konsensus</h4>
+          <p>Prognoser från 90 minuter upp till 10 dagar som väger samman flera vädermodeller och visar modellernas samstämmighet i procent.</p>
+        </div>
+      </div>
+      <h3>Living Sky i 120 fps &amp; 48-timmars tidslinje</h3>
+      <p>Huvudskärmen renderar en dynamisk <strong>Living Sky i 120 fps</strong> (&lt; 8,3 ms bildbudget, med respekt för systemets inställning för minskad rörelse) kopplad till en interaktiv <strong>48-timmars tidslinje</strong> och sol-/måndata beräknade i platsens exakta IANA-tidszon (inklusive 23- och 25-timmars sommartidsdygn).</p>
+      <h3>Väder-Ruttcopilot</h3>
+      <ul>
+        <li><strong>5 färdlägen:</strong> Bil, Motorcykel, Husbil/Camper, Cykel och Vandring, med upp till <strong>5 delmål (waypoints)</strong>.</li>
+        <li><strong>Korridorrisker &amp; bästa avresetid:</strong> Sträckvis bedömning av nederbörd, sidvind och halka samt avgångsoptimering för <strong>+0 h till +24 h</strong>.</li>
+        <li><strong>Handsfree TTS-röstvarningar:</strong> Talade varningar på alla <strong>13 språk</strong> med inbyggd ljuddämpning (<em>audio ducking</em>), röstprofil (System, Kvinna, Man), hastighetsreglage och <em>Testa röst</em>.</li>
+        <li><strong>Offline-cache för tunnlar och skuggzoner:</strong> Vid resestart sparas ruttens polylinje, vädernoder (&plusmn;2 h marginal) och CAP-polygoner lokalt i SQLite så att HUD och röstvarningar fortsätter offline.</li>
+        <li><strong>Överlämning med ett tryck:</strong> Starta sväng-för-sväng-navigering direkt i Apple Maps, Google Maps eller Waze.</li>
+      </ul>
+      <h3>Aktivitetsfönster, klimatologi, luftkvalitet &amp; widgetar</h3>
+      <ul>
+        <li><strong>6 aktivitetsfönster:</strong> Motorcykel &amp; Bil, Cykling &amp; Löpning, Fotografi, Astronomi, Hälsa &amp; Biometeo samt Hem &amp; Fordonsvård.</li>
+        <li><strong>NASA POWER 1991–2020 klimatologi:</strong> Temperatur- och nederbördsavvikelser jämförda med 30-åriga klimatnormaler.</li>
+        <li><strong>Luftkvalitet (AQI &amp; AQHI):</strong> Europeiskt AQI och kanadensiskt AQHI via nyckelfria MET Norway Airqualityforecast och ECCC GeoMet AQHI (valfritt OpenAQ v3 via gateway).</li>
+        <li><strong>Fullständiga enheter &amp; förval:</strong> °C/°F, vind (km/h, mph, kn, m/s, Beaufort), tryck (hPa, mbar, inHg, mmHg), regn (mm, in), avstånd (km, mi), 24h/12h och DMY/MDY.</li>
+        <li><strong>Widgetar &amp; 4 teman:</strong> Inbyggda hemskärmswidgetar (WidgetKit / AppWidgetProvider) och temana Ljust, Mörkt, OLED Svart och Auto Dag/Natt.</li>
+      </ul>
+      <nav class="section-links">
+        <a href="privacy/">Integritetspolicy</a> <a href="terms/">Användarvillkor</a> <a href="support/">Support &amp; FAQ</a>
+      </nav>
+      <div class="support-block">
+        <p>Behöver du hjälp med AtmoWay? Mejla <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a></p>
+      </div>
+      <div class="back-top-wrap">
+        <a class="back-top-pill" href="#top">↑ Upp / Språk</a>
+      </div>
+    </section>
+
+    <section class="lang-section" id="da" lang="da">
+      <h2>Dansk — Rumlig vejrtelemetri &amp; Rute-copilot</h2>
+      <div class="card"><strong>AtmoWay</strong> forener verificerede jordobservationer, højopløselig nedbørsradar, officielle CAP-varsler og en håndfri <strong>Vejr-Rutecopilot</strong> — helt uden brugerkonti eller annoncetrackere.</div>
+      <h3>4-niveaus meteorologisk sandhedshierarki</h3>
+      <div class="grid-2">
+        <div class="feature-box">
+          <h4><span class="badge">Niveau 1</span> Jordstationer &amp; METAR</h4>
+          <p>Live-overflademålinger og flyvejr-METAR (NOAA AWC, NWS, Bright Sky / DWD, ECCC GeoMet) filtreret strengt efter aktualitet (<code>&le; 45 min</code>) og højdeforskel (<code>|&Delta;elev| &le; 300 m</code>).</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Niveau 2</span> Live-radar &amp; Nowcast (0–90 min)</h4>
+          <p>Nedbørsradar i realtid (IEM NEXRAD / AWS NODD, DWD RADOLAN, ECCC GeoMet WMS, MET Norway Nowcast 2.0) sammen med animeret globalt NWP-gitter og ærligt dækningsmærke (<em>Højopløsningsradar</em> vs. <em>Global NWP-nedbør</em>).</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Niveau 3</span> Officielle CAP-varsler</h4>
+          <p>Præcis GeoJSON-polygonskæring med officielle varsler fra MeteoAlarm (Europa), NWS CAP (USA) og ECCC CAP (Canada) både på steder og langs ruten.</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Niveau 4</span> Multimodel NWP-konsensus</h4>
+          <p>Prognoser fra 90 minutter til 10 dage, der kombinerer flere vejrmodeller med en eksplicit enighedsprocent.</p>
+        </div>
+      </div>
+      <h3>120 fps Living Sky &amp; 48-timers tidslinje</h3>
+      <p>Hovedskærmen gengiver en dynamisk <strong>Living Sky ved 120 fps</strong> (&lt; 8,3 ms frame-budget, med respekt for systemets reducerede bevægelse) forbundet til en interaktiv <strong>48-timers tidslinje</strong> og sol-/månetider i koordinatens nøjagtige IANA-tidszone (inklusive 23- og 25-timers sommertidsskift).</p>
+      <h3>Vejr-Rutecopilot</h3>
+      <ul>
+        <li><strong>5 rejsetilstande:</strong> Bil, Motorcykel, Camper, Cykel og Vandring med op til <strong>5 delmål (waypoints)</strong>.</li>
+        <li><strong>Korridorrisici &amp; bedste afgangstid:</strong> Analyse af nedbør, sidevind og isslag pr. strækning samt afgangsoptimering fra <strong>+0 t til +24 t</strong>.</li>
+        <li><strong>Håndfri TTS-stemmeadvarsler:</strong> Indtalte advarsler på alle <strong>13 sprog</strong> med indbygget lyddæmpning (<em>audio ducking</em>), stemmeprofil (System, Kvinde, Mand), talehastighed og øjeblikkelig knap til <em>Test stemme</em>.</li>
+        <li><strong>Offline-cache til tunneller og døde zoner:</strong> Ved turstart gemmer AtmoWay rutens polylinje, vejrnoder (&plusmn;2 t margin) og CAP-polygoner lokalt i SQLite, så HUD og stemme fortsætter offline.</li>
+        <li><strong>Viderestilling med ét tryk:</strong> Åbn sving-for-sving-navigation direkte i Apple Kort, Google Maps eller Waze.</li>
+      </ul>
+      <h3>Aktivitetsvinduer, klimatologi, luftkvalitet &amp; widgets</h3>
+      <ul>
+        <li><strong>6 aktivitetsvinduer:</strong> Motorcykel &amp; Bil, Cykling &amp; Løb, Fotografi, Astronomi, Sundhed &amp; Biometeo samt Hjem &amp; Bilpleje.</li>
+        <li><strong>NASA POWER 1991–2020 klimatologi:</strong> Temperatur- og nedbørsanomalier målt mod 30-årige klimanormaler.</li>
+        <li><strong>Luftkvalitet (AQI &amp; AQHI):</strong> Europæisk AQI og canadisk AQHI fra nøglefri MET Norway Airqualityforecast og ECCC GeoMet AQHI (valgfri OpenAQ v3 via gateway).</li>
+        <li><strong>Fuld enhedstilpasning:</strong> °C/°F, vind (km/h, mph, kn, m/s, Beaufort), tryk (hPa, mbar, inHg, mmHg), regn (mm, in), afstand (km, mi), 24t/12t og DMY/MDY.</li>
+        <li><strong>Widgets &amp; 4 temaer:</strong> Indbyggede hjemmeskærmwidgets (WidgetKit / AppWidgetProvider) samt temaerne Lys, Mørk, OLED Sort og Auto Dag/Nat.</li>
+      </ul>
+      <nav class="section-links">
+        <a href="privacy/">Privatlivspolitik</a> <a href="terms/">Servicevilkår</a> <a href="support/">Support &amp; FAQ</a>
+      </nav>
+      <div class="support-block">
+        <p>Brug for hjælp til AtmoWay? Skriv til <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a></p>
+      </div>
+      <div class="back-top-wrap">
+        <a class="back-top-pill" href="#top">↑ Top / Sprog</a>
+      </div>
+    </section>
+
+    <section class="lang-section" id="nb" lang="nb">
+      <h2>Norsk bokmål — Romlig værtelemetri og Rute-copilot</h2>
+      <div class="card"><strong>AtmoWay</strong> samler verifiserte bakkeobservasjoner, høyoppløselig nedbørsradar, offisielle CAP-farevarsler og en håndfri <strong>Vær-Rutecopilot</strong> — uten brukerkontoer eller reklamesporing.</div>
+      <h3>4-nivå meteorologisk sannhetshierarki</h3>
+      <div class="grid-2">
+        <div class="feature-box">
+          <h4><span class="badge">Nivå 1</span> Bakkestasjoner &amp; METAR</h4>
+          <p>Sanntidsmålinger og luftfarts-METAR (NOAA AWC, NWS, Bright Sky / DWD, ECCC GeoMet) filtrert strengt på ferskhet (<code>&le; 45 min</code>) og høydeforskjell (<code>|&Delta;elev| &le; 300 m</code>).</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Nivå 2</span> Direkteradar &amp; Nowcast (0–90 min)</h4>
+          <p>Sanntids nedbørsradar (IEM NEXRAD / AWS NODD, DWD RADOLAN, ECCC GeoMet WMS, MET Norway Nowcast 2.0) med animert globalt NWP-rutenett og ærlig dekningsmerke (<em>Høyoppløselig radar</em> vs. <em>Global NWP-nedbør</em>).</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Nivå 3</span> Offisielle CAP-varsler</h4>
+          <p>Nøyaktig GeoJSON-polygonskjæring med offisielle farevarsler fra MeteoAlarm (Europa), NWS CAP (USA) og ECCC CAP (Canada) for steder og reisekorridorer.</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Nivå 4</span> Multimodell NWP-konsensus</h4>
+          <p>Varsler fra 90 minutter til 10 dager som kombinerer flere værmodeller med en tydelig enighetsprosent.</p>
+        </div>
+      </div>
+      <h3>120 fps Living Sky &amp; 48-timers tidslinje</h3>
+      <p>Hovedskjermen tegner en prosedyrebasert <strong>Living Sky i 120 fps</strong> (&lt; 8,3 ms bildebudsjett, som respekterer redusert bevegelse i systemet) koblet til en interaktiv <strong>48-timers tidslinje</strong> samt sol- og månetider i koordinatens eksakte IANA-tidssone (inkludert 23- og 25-timers sommertidsdøgn).</p>
+      <h3>Vær-Rutecopilot</h3>
+      <ul>
+        <li><strong>5 reisemoduser:</strong> Bil, Motorsykkel, Bobil/Camper, Sykkel og Fottur, med opptil <strong>5 delmål (waypoints)</strong>.</li>
+        <li><strong>Korridorfarer &amp; beste avreisetid:</strong> Etappevis vurdering av nedbør, sidevind og underkjølt regn/is, pluss avreiseoptimalisering <strong>+0 t til +24 t</strong>.</li>
+        <li><strong>Håndfrie TTS-talevarsler:</strong> Talte varsler på alle <strong>13 språk</strong> med innebygd lyddemping (<em>audio ducking</em>), stemmeprofil (System, Kvinne, Mann), talehastighet og knappen <em>Test stemme</em>.</li>
+        <li><strong>Frakoblet hurtigbuffer for tunneler:</strong> Når en tur starter, lagrer AtmoWay rutepolylinjen, værnoder (&plusmn;2 t margin) og CAP-polygoner lokalt i SQLite slik at HUD og tale fortsetter uten dekning.</li>
+        <li><strong>Videreføring med ett trykk:</strong> Start sving-for-sving-navigasjon direkte i Apple Kart, Google Maps eller Waze.</li>
+      </ul>
+      <h3>Aktivitetsvinduer, klimatologi, luftkvalitet &amp; widgeter</h3>
+      <ul>
+        <li><strong>6 aktivitetsvinduer:</strong> Motorsykkel &amp; Bil, Sykling &amp; Løping, Fotografi, Astronomi, Helse &amp; Biometeo, og Hjem &amp; Bilpleie.</li>
+        <li><strong>NASA POWER 1991–2020 klimatologi:</strong> Temperatur- og nedbørsavvik sammenlignet med 30-års klimanormaler.</li>
+        <li><strong>Luftkvalitet (AQI &amp; AQHI):</strong> Europeisk AQI og kanadisk AQHI via nøkkelfrie MET Norway Airqualityforecast og ECCC GeoMet AQHI (valgfritt OpenAQ v3 via gateway).</li>
+        <li><strong>Full enhetstilpasning:</strong> °C/°F, vind (km/h, mph, kn, m/s, Beaufort), trykk (hPa, mbar, inHg, mmHg), nedbør (mm, in), avstand (km, mi), 24t/12t og DMY/MDY.</li>
+        <li><strong>Widgeter &amp; 4 temaer:</strong> Innebygde hjemskjermwidgeter (WidgetKit / AppWidgetProvider) og temaene Lys, Mørk, OLED Svart og Auto Dag/Natt.</li>
+      </ul>
+      <nav class="section-links">
+        <a href="privacy/">Personvernerklæring</a> <a href="terms/">Vilkår for bruk</a> <a href="support/">Brukerstøtte &amp; FAQ</a>
+      </nav>
+      <div class="support-block">
+        <p>Trenger du hjelp med AtmoWay? Send e-post til <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a></p>
+      </div>
+      <div class="back-top-wrap">
+        <a class="back-top-pill" href="#top">↑ Topp / Språk</a>
+      </div>
+    </section>
+
+    <section class="lang-section" id="cs" lang="cs">
+      <h2>Čeština — Prostorová telemetrie počasí a Kopilot trasy</h2>
+      <div class="card"><strong>AtmoWay</strong> spojuje ověřená pozemní měření, radar s vysokým rozlišením, oficiální výstrahy CAP a hlasového <strong>Meteo kopilota trasy</strong> v jediné aplikaci bez uživatelských účtů a reklamních sledovačů.</div>
+      <h3>4úrovňová hierarchie meteorologické pravdy</h3>
+      <div class="grid-2">
+        <div class="feature-box">
+          <h4><span class="badge">Úroveň 1</span> Pozemní stanice a METAR</h4>
+          <p>Skutečná měření ze stanic a leteckých zpráv METAR (NOAA AWC, NWS, Bright Sky / DWD, ECCC GeoMet) filtrovaná podle stáří (<code>&le; 45 min</code>) a převýšení (<code>|&Delta;elev| &le; 300 m</code>).</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Úroveň 2</span> Živý radar a Nowcast (0–90 min)</h4>
+          <p>Srážkový radar v reálném čase (IEM NEXRAD / AWS NODD, DWD RADOLAN, ECCC GeoMet WMS, MET Norway Nowcast 2.0) doplněný o animovanou globální NWP mřížku a poctivé označení pokrytí (<em>Radar s vysokým rozlišením</em> vs. <em>Globální NWP srážky</em>).</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Úroveň 3</span> Oficiální výstrahy CAP</h4>
+          <p>Přesný GeoJSON průnik polygonů oficiálních výstrah MeteoAlarm (Evropa), NWS CAP (USA) a ECCC CAP (Kanada) pro sledovaná místa i trasové koridory.</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Úroveň 4</span> Multimodelový konsenzus NWP</h4>
+          <p>Předpověď od 90 minut do 10 dnů kombinující více numerických modelů s jasně vyjádřeným procentem shody.</p>
+        </div>
+      </div>
+      <h3>Živé nebe 120 fps a 48hodinová časová osa</h3>
+      <p>Hlavní obrazovka vykresluje procedurální <strong>Živé nebe při 120 fps</strong> (rozpočet &lt; 8,3 ms/snímek, s respektem k omezení pohybu v systému) propojené s interaktivní <strong>48hodinovou osou</strong> a astronomickými údaji Slunce a Měsíce v přesném IANA časovém pásmu souřadnice (včetně 23h a 25h dnů změny času).</p>
+      <h3>Meteo kopilot trasy</h3>
+      <ul>
+        <li><strong>5 režimů cesty:</strong> Auto, Motocykl, Obytný vůz / Camper, Kolo a Pěší turistika, s podporou až <strong>5 průjezdních bodů (waypoints)</strong>.</li>
+        <li><strong>Rizika koridoru a nejlepší čas odjezdu:</strong> Úsekové vyhodnocení srážek, bočního větru a náledí s optimalizací odjezdu <strong>+0 h až +24 h</strong>.</li>
+        <li><strong>Hlasová upozornění TTS bez použití rukou:</strong> Hlášení ve všech <strong>13 jazycích</strong> s nativním ztlumením médií (<em>audio ducking</em>), výběrem hlasu (Systémový, Ženský, Mužský), rychlostí řeči a tlačítkem <em>Otestovat hlas</em>.</li>
+        <li><strong>Offline mezipaměť pro tunely a místa bez signálu:</strong> Při spuštění cesty AtmoWay uloží trasu, meteorologické uzly (&plusmn;2 h rezerva) a CAP polygony do místní databáze SQLite, takže HUD i hlas fungují i offline.</li>
+        <li><strong>Předání jedním klepnutím:</strong> Spusťte podrobnou navigaci přímo v Apple Mapách, Google Mapách nebo Waze.</li>
+      </ul>
+      <h3>Okna aktivit, klimatologie, kvalita ovzduší a widgety</h3>
+      <ul>
+        <li><strong>6 oken aktivit:</strong> Motocykl a Auto, Cyklistika a Běh, Fotografie, Astronomie, Zdraví a Biometeo, Dům a Péče o vůz.</li>
+        <li><strong>Klimatologie NASA POWER (1991–2020):</strong> Odchylky teploty a srážek vůči 30letému klimatickému normálu.</li>
+        <li><strong>Kvalita ovzduší (AQI a AQHI):</strong> Evropský index AQI a kanadský AQHI z bezklíčových zdrojů MET Norway a ECCC GeoMet (volitelně OpenAQ v3 přes bránu).</li>
+        <li><strong>Kompletní jednotky a předvolby:</strong> °C/°F, vítr (km/h, mph, kn, m/s, Beaufort), tlak (hPa, mbar, inHg, mmHg), srážky (mm, in), vzdálenost (km, mi), 24h/12h a DMY/MDY.</li>
+        <li><strong>Widgety a 4 motivy:</strong> Nativní widgety domovské obrazovky (WidgetKit / AppWidgetProvider) a motivy Světlý, Tmavý, OLED Černý a Auto Den/Noc.</li>
+      </ul>
+      <nav class="section-links">
+        <a href="privacy/">Zásady ochrany soukromí</a> <a href="terms/">Podmínky služby</a> <a href="support/">Podpora a FAQ</a>
+      </nav>
+      <div class="support-block">
+        <p>Potřebujete pomoc s AtmoWay? Napište na <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a></p>
+      </div>
+      <div class="back-top-wrap">
+        <a class="back-top-pill" href="#top">↑ Nahoru / Jazyky</a>
+      </div>
+    </section>
+
+    <section class="lang-section" id="tr" lang="tr">
+      <h2>Türkçe — Mekânsal Hava Telemetrisi ve Rota Yardımcı Pilotu</h2>
+      <div class="card"><strong>AtmoWay</strong>; doğrulanmış yer gözlemlerini, yüksek çözünürlüklü yağış radarını, resmî CAP uyarılarını ve eller serbest çalışan <strong>Hava Durumu Rota Yardımcı Pilotunu</strong> hesap veya reklam izleyicisi olmadan tek uygulamada birleştirir.</div>
+      <h3>4 Seviyeli Meteorolojik Doğruluk Hiyerarşisi</h3>
+      <div class="grid-2">
+        <div class="feature-box">
+          <h4><span class="badge">Seviye 1</span> Yer İstasyonları ve METAR</h4>
+          <p>Güncellik (<code>&le; 45 dk</code>) ve rakım farkına (<code>|&Delta;elev| &le; 300 m</code>) göre filtrelenmiş gerçek yüzey gözlemleri ve havacılık METAR verileri (NOAA AWC, NWS, Bright Sky / DWD, ECCC GeoMet).</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Seviye 2</span> Canlı Radar ve Nowcast (0–90 dk)</h4>
+          <p>Gerçek zamanlı yağış radarı (IEM NEXRAD / AWS NODD, DWD RADOLAN, ECCC GeoMet WMS, MET Norway Nowcast 2.0) ile animasyonlu küresel NWP ızgarası ve şeffaf kapsama rozeti (<em>Yüksek çözünürlüklü radar</em> veya <em>Küresel NWP yağış</em>).</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Seviye 3</span> Resmî CAP Uyarıları</h4>
+          <p>Kayıtlı konumlar ve aktif rota koridorları için MeteoAlarm (Avrupa), NWS CAP (ABD) ve ECCC CAP (Kanada) resmî poligonlarıyla tam GeoJSON kesişimi.</p>
+        </div>
+        <div class="feature-box">
+          <h4><span class="badge">Seviye 4</span> Çoklu Model NWP Konsensüsü</h4>
+          <p>90 dakikadan 10 güne kadar birden çok hava durumu modelini birleştirerek tahmin güvenini yüzde olarak sunan uzlaşı skoru.</p>
+        </div>
+      </div>
+      <h3>120 fps Canlı Gökyüzü ve 48 Saatlik Zaman Çizelgesi</h3>
+      <p>Ana ekran, sistemin hareket azaltma tercihlerine saygılı <strong>120 fps Canlı Gökyüzü</strong> (&lt; 8,3 ms kare bütçesi) sunar ve her koordinatın tam IANA saat diliminde (23 ve 25 saatlik yaz/kış saati geçişleri dâhil) hesaplanan etkileşimli <strong>48 saatlik zaman çizelgesi</strong> ile güneş/ay olaylarını gösterir.</p>
+      <h3>Hava Durumu Rota Yardımcı Pilotu</h3>
+      <ul>
+        <li><strong>5 seyahat modu:</strong> Otomobil, Motosiklet, Karavan/Camper, Bisiklet ve Yürüyüş; en fazla <strong>5 ara durak (waypoint)</strong> desteği.</li>
+        <li><strong>Koridor riskleri ve en iyi çıkış saati:</strong> Bölüm bazlı yağış, yan rüzgâr ve gizli buzlanma riski analizi ile <strong>+0 sa .. +24 sa</strong> kalkış optimizasyonu.</li>
+        <li><strong>Eller serbest TTS sesli uyarılar:</strong> Tüm <strong>13 dilde</strong> yerel medya sesi kısma (<em>audio ducking</em>), ses profili seçimi (Sistem, Kadın, Erkek), konuşma hızı ayarı ve anlık <em>Sesi Test Et</em> özelliği.</li>
+        <li><strong>Tünel ve kapsama dışı alanlar için çevrimdışı önbellek:</strong> Yolculuk başlatıldığında AtmoWay rota çizgisini, hava düğümlerini (&plusmn;2 sa payı) ve CAP poligonlarını yerel SQLite veritabanına kaydeder; HUD ve sesli uyarılar çevrimdışı sürer.</li>
+        <li><strong>Tek dokunuşla aktarım:</strong> Adım adım navigasyonu doğrudan Apple Harita, Google Haritalar veya Waze’de açın.</li>
+      </ul>
+      <h3>Etkinlik Pencereleri, Klimatoloji, Hava Kalitesi ve Widget’lar</h3>
+      <ul>
+        <li><strong>6 etkinlik penceresi:</strong> Motosiklet ve Otomobil, Bisiklet ve Koşu, Fotoğrafçılık, Astronomi, Sağlık ve Biyometeo, Ev ve Araç Bakımı.</li>
+        <li><strong>NASA POWER 1991–2020 klimatolojisi:</strong> 30 yıllık iklim normallerine göre sıcaklık ve yağış anomalileri.</li>
+        <li><strong>Hava kalitesi (AQI ve AQHI):</strong> Anahtarsız MET Norway Airqualityforecast ve ECCC GeoMet AQHI kaynaklarıyla Avrupa AQI ve Kanada AQHI (isteğe bağlı OpenAQ v3 geçidi).</li>
+        <li><strong>Tam birim özelleştirme:</strong> °C/°F, rüzgâr (km/h, mph, kn, m/s, Beaufort), basınç (hPa, mbar, inHg, mmHg), yağış (mm, in), mesafe (km, mi), 24sa/12sa ve GAY/AGY.</li>
+        <li><strong>Widget’lar ve 4 tema:</strong> Yerel ana ekran widget’ları (iOS WidgetKit ve Android AppWidgetProvider) ile Açık, Koyu, OLED Siyah ve Otomatik Gündüz/Gece temaları.</li>
+      </ul>
+      <nav class="section-links">
+        <a href="privacy/">Gizlilik Politikası</a> <a href="terms/">Hizmet Koşulları</a> <a href="support/">Destek ve SSS</a>
+      </nav>
+      <div class="support-block">
+        <p>AtmoWay ile ilgili yardıma mı ihtiyacınız var? Yazın: <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a></p>
+      </div>
+      <div class="back-top-wrap">
+        <a class="back-top-pill" href="#top">↑ Yukarı / Diller</a>
+      </div>
+    </section>
+
   </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="./">Overview</a>
+      <a href="privacy/">Privacy</a>
+      <a href="terms/">Terms</a>
+      <a href="support/">Support</a>
+    </div>
+    <div>Castellano Software &middot; AtmoWay (<code>com.castellanosoftware.atmoway</code>) &middot; <a href="mailto:castellanosoftware@outlook.com">castellanosoftware@outlook.com</a></div>
+  </footer>
 </body>
 </html>
