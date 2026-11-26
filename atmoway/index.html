@@ -21,7 +21,7 @@
   </header>
 
   <main>
-    <span class="meta-line">13 Languages · iOS &amp; Android · Last update: 2026-11-25</span>
+    <span class="meta-line">13 Languages · iOS &amp; Android · Last update: 2026-11-26</span>
     <div class="hero-card">
       <strong>AtmoWay</strong> (<code>com.castellanosoftware.atmoway</code>) combines a 4-level meteorological truth hierarchy, 120 fps Living Sky visualization, and a hands-free <strong>Weather Route Copilot</strong> — with zero user accounts, zero ads, and zero tracking SDKs. Explore full documentation below in all <strong>13 supported languages</strong>.
     </div>
@@ -69,6 +69,7 @@
       <p>La pantalla principal renderiza un cielo atmosférico dinámico a <strong>120 fps</strong> (presupuesto &lt; 8,3 ms/fotograma, respetando la reducción de movimiento del sistema) sincronizado con una línea temporal interactiva de <strong>48 horas</strong>, límites diarios y efemérides solares y lunares calculadas en la zona horaria IANA exacta de cada coordenada (incluidos días DST de 23 h y 25 h).</p>
       <h3>Copiloto Meteorológico de Ruta</h3>
       <ul>
+        <li><strong>Mapa interactivo y HUD en vivo:</strong> Mapa vectorial interactivo OpenFreeMap de la ruta junto al HUD GPS en primer plano y durante el Viaje Activo.</li>
         <li><strong>5 modos de desplazamiento:</strong> Coche, Moto, Camper, Bicicleta y Senderismo, con soporte para hasta <strong>5 paradas intermedias (waypoints)</strong>.</li>
         <li><strong>Riesgos del corredor y mejor hora de salida:</strong> Análisis tramo a tramo de precipitación, viento lateral y riesgo de hielo negro, con optimizador de salida <strong>+0 h a +24 h</strong>.</li>
         <li><strong>Avisos de voz TTS manos libres:</strong> Alertas habladas en los <strong>13 idiomas</strong> con atenuación nativa del audio multimedia (<em>audio ducking</em>), perfiles de voz (Sistema, Femenina, Masculina), ajuste de velocidad y prueba inmediata con <em>Probar voz</em>.</li>
@@ -82,6 +83,11 @@
         <li><strong>Calidad del aire global:</strong> Índice europeo AQI y canadiense AQHI (MET Norway Airqualityforecast y ECCC GeoMet AQHI; OpenAQ v3 opcional vía gateway).</li>
         <li><strong>Unidades completas y presets:</strong> Temperaturas (°C/°F), viento (km/h, mph, kn, m/s, Beaufort), presión (hPa, mbar, inHg, mmHg), precipitación (mm, in), distancia (km, mi), reloj (24h/12h) y fecha (DMY/MDY).</li>
         <li><strong>Widgets y 4 temas:</strong> Widgets nativos de pantalla de inicio (WidgetKit en iOS y AppWidgetProvider en Android) y temas Claro, Oscuro, Negro OLED y Día/Noche automático.</li>
+      </ul>
+      <h3>Gratis frente a AtmoWay Pro</h3>
+      <ul>
+        <li><strong>Gratis para siempre:</strong> Telemetría en 4 niveles, línea temporal 48 h, previsión 7–10 días, 6 ventanas de actividad, anomalía climática de hoy (NASA POWER 1991–2020), puntuación de consenso, widgets nativos, <strong>alertas oficiales CAP 100 % gratuitas y horario silencioso</strong> (incendios forestales, inundaciones, aludes, tsunamis, calor/frío extremo, polvo/calima y tormentas), temas Claro y Oscuro, vista previa de voz TTS, capas de precipitación y CAP en radar con control manual, <strong>2 ciudades en comparativa</strong> y ruta en Coche con <strong>1 parada intermedia</strong>, salidas (+0/+1/+3/+6 h) y salto a Apple Maps, Google Maps o Waze.</li>
+        <li><strong>AtmoWay Pro:</strong> <strong>Copiloto de Ruta Activa en vivo con mapa interactivo</strong> (HUD GPS, avisos TTS manos libres, recálculo fuera de ruta y caché offline para túneles), <strong>modos Moto, Camper, Bici y Senderismo</strong>, hasta <strong>5 paradas</strong>, mejores ventanas de salida <strong>+24 h</strong>, capas de <strong>viento y nubes + bucle animado</strong> en radar, <strong>comparativa de 5 ciudades</strong>, curvas de consenso multiagencia, planificador climático <strong>NASA POWER de 12 meses</strong>, alertas proactivas y <strong>Voice Studio</strong>, más temas <strong>Negro OLED y Cielo Dinámico</strong>.</li>
       </ul>
       <nav class="section-links">
         <a href="privacy/">Política de privacidad</a> <a href="terms/">Términos de servicio</a> <a href="support/">Soporte y FAQ</a>
@@ -120,6 +126,7 @@
       <p>The primary screen renders a procedural <strong>120 fps Living Sky</strong> hero (&lt; 8.3 ms frame budget, automatically honoring system reduced-motion preferences) coupled with an interactive <strong>48-hour timeline scrub</strong>, daily boundaries, and astronomical sun/moon events computed in each coordinate’s exact IANA timezone (including 23 h and 25 h DST transitions).</p>
       <h3>Weather Route Copilot</h3>
       <ul>
+        <li><strong>Interactive map &amp; Live HUD:</strong> Interactive OpenFreeMap route map paired with the live GPS HUD strictly during user-started Active Trips.</li>
         <li><strong>5 travel modes:</strong> Car, Motorcycle, Camper/RV, Bicycle, and Hiking, with support for up to <strong>5 intermediate waypoints</strong>.</li>
         <li><strong>Corridor hazards &amp; Best Departure Time:</strong> Segment-by-segment precipitation, crosswind, and black-ice risk scoring, plus a <strong>+0 h to +24 h</strong> departure optimizer.</li>
         <li><strong>Hands-free TTS voice alerts:</strong> Spoken warnings in all <strong>13 languages</strong> with native media audio ducking, selectable voice profiles (System, Female, Male), speech-rate slider, and instant <em>Test Voice</em> preview.</li>
@@ -133,6 +140,11 @@
         <li><strong>Air Quality (AQI &amp; AQHI):</strong> European AQI and Canadian AQHI via keyless MET Norway Airqualityforecast and ECCC GeoMet AQHI (plus optional gateway OpenAQ v3).</li>
         <li><strong>Full Unit Customization:</strong> Independent toggles and presets for °C/°F, wind (km/h, mph, kn, m/s, Beaufort), pressure (hPa, mbar, inHg, mmHg), rain (mm, in), distance (km, mi), 24h/12h clock, and DMY/MDY date.</li>
         <li><strong>Widgets &amp; 4 Themes:</strong> Native Home Screen widgets (iOS WidgetKit &amp; Android AppWidgetProvider) and Light, Dark, OLED Black, and Auto Day/Night themes.</li>
+      </ul>
+      <h3>Free vs. AtmoWay Pro</h3>
+      <ul>
+        <li><strong>Free forever:</strong> Full 4-level weather, 48h timeline scrub, 7–10d forecast, 6 activity windows, today’s 30-year NASA POWER anomaly, consensus score, native widgets, <strong>100% free official CAP severe alerts &amp; Quiet Hours</strong> (covering wildfires, floods, avalanches, tsunamis, extreme heat/cold, dust &amp; storms), Light &amp; Dark themes, TTS voice preview, precipitation &amp; CAP radar layers with manual scrub, <strong>2 compare cities</strong>, and Car-mode A→B route planning with <strong>1 intermediate stop</strong>, basic departure offsets (+0/+1/+3/+6 h), and one-tap handoff to Apple Maps, Google Maps, or Waze.</li>
+        <li><strong>AtmoWay Pro:</strong> <strong>Live Route Copilot with interactive map</strong> (GPS HUD, hands-free TTS alerts, off-route recalculation, offline tunnel cache), <strong>Moto, Bike, Camper &amp; Walk modes</strong>, up to <strong>5 stops</strong>, <strong>+24h Best Departure Windows</strong>, <strong>Wind &amp; Cloud radar layers + animated loop</strong>, <strong>5-city compare</strong>, multi-agency consensus curves, <strong>12-month NASA POWER planner</strong>, proactive alerts &amp; <strong>Voice Studio</strong>, plus <strong>OLED Black &amp; Dynamic Sky</strong> themes.</li>
       </ul>
       <nav class="section-links">
         <a href="privacy/">Privacy Policy</a> <a href="terms/">Terms of Service</a> <a href="support/">Support &amp; FAQ</a>
@@ -171,6 +183,7 @@
       <p>Der Hauptbildschirm rendert einen prozeduralen <strong>Living Sky mit 120 fps</strong> (Budget &lt; 8,3 ms/Frame, unter Beachtung reduzierter Bewegung im System) samt interaktiver <strong>48-Stunden-Zeitleiste</strong>, Tagesgrenzen sowie Sonnen- und Monddaten in der exakten IANA-Zeitzone der Koordinate (inkl. 23-h- und 25-h-Zeitumstellungstagen).</p>
       <h3>Wetter-Routen-Copilot</h3>
       <ul>
+        <li><strong>Interaktive Karte &amp; Live-HUD:</strong> Interaktive OpenFreeMap-Routenkarte samt Live-GPS-HUD ausschließlich während einer gestarteten Aktiven Fahrt.</li>
         <li><strong>5 Reisemodi:</strong> Auto, Motorrad, Wohnmobil/Camper, Fahrrad und Wandern — mit bis zu <strong>5 Zwischenzielen (Waypoints)</strong>.</li>
         <li><strong>Korridor-Risiken &amp; Beste Abfahrtszeit:</strong> Abschnittsweise Bewertung von Niederschlag, Seitenwind und Glatteisrisiko sowie Abfahrtsoptimierung von <strong>+0 h bis +24 h</strong>.</li>
         <li><strong>Freihändige TTS-Sprachwarnungen:</strong> Gesprochene Hinweise in allen <strong>13 Sprachen</strong> mit nativem Audio-Ducking, wählbarem Stimmprofil (System, Weiblich, Männlich), Geschwindigkeitsregler und direktem <em>Stimme testen</em>.</li>
@@ -184,6 +197,11 @@
         <li><strong>Luftqualität (AQI &amp; AQHI):</strong> Europäischer AQI und kanadischer AQHI über schlüssellose Quellen von MET Norway und ECCC GeoMet (optional OpenAQ v3 über Gateway).</li>
         <li><strong>Vollständige Einheiten &amp; Voreinstellungen:</strong> °C/°F, Wind (km/h, mph, kn, m/s, Beaufort), Luftdruck (hPa, mbar, inHg, mmHg), Niederschlag (mm, in), Distanz (km, mi), 24h/12h und TT.MM./MM.TT.</li>
         <li><strong>Widgets &amp; 4 Designs:</strong> Native Startbildschirm-Widgets (WidgetKit / AppWidgetProvider) sowie die Themes Hell, Dunkel, OLED-Schwarz und Auto Tag/Nacht.</li>
+      </ul>
+      <h3>Kostenlos vs. AtmoWay Pro</h3>
+      <ul>
+        <li><strong>Dauerhaft kostenlos:</strong> 4-Stufen-Wetterdaten, 48-h-Zeitleiste, 7–10-Tage-Prognose, 6 Aktivitätsfenster, heutige NASA-POWER-Klimaanomalie (1991–2020), Konsenswert, native Widgets, <strong>100 % kostenlose offizielle CAP-Warnungen &amp; Ruhezeiten</strong> (Waldbrände, Überschwemmungen, Lawinen, Tsunamis, extreme Hitze/Kälte, Staub &amp; Stürme), Hell- &amp; Dunkel-Design, TTS-Vorschau, Niederschlags- &amp; CAP-Radar mit manuellem Regler, <strong>2 Vergleichsstädte</strong> sowie Auto-Routenplanung mit <strong>1 Zwischenstopp</strong> (+0/+1/+3/+6 h) und Übergabe an Apple Karten, Google Maps oder Waze.</li>
+        <li><strong>AtmoWay Pro:</strong> <strong>Live-Routen-Copilot mit interaktiver Karte</strong> (GPS-HUD, freihändige TTS-Warnungen, Off-Route-Neuberechnung &amp; Tunnel-Offline-Cache), <strong>Moto-, Fahrrad-, Camper- &amp; Wandermodi</strong>, bis zu <strong>5 Stopps</strong>, <strong>+24-h-Abfahrtsfenster</strong>, <strong>Wind-/Wolken-Radar &amp; animierter Loop</strong>, <strong>5-Städte-Vergleich</strong>, Agentur-Konsenskurven, <strong>12-Monats-NASA-POWER-Planer</strong>, proaktive Alarme &amp; <strong>Voice Studio</strong> sowie <strong>OLED-Schwarz &amp; Dynamischer Himmel</strong>.</li>
       </ul>
       <nav class="section-links">
         <a href="privacy/">Datenschutzerklärung</a> <a href="terms/">Nutzungsbedingungen</a> <a href="support/">Support &amp; FAQ</a>
@@ -222,6 +240,7 @@
       <p>L’écran principal anime un ciel atmosphérique à <strong>120 ips</strong> (budget &lt; 8,3 ms/image, respectant la réduction des animations système) relié à une barre temporelle interactive de <strong>48 heures</strong> et aux éphémérides solaires et lunaires calculées dans le fuseau horaire IANA exact du lieu (y compris les journées de changement d’heure de 23 h et 25 h).</p>
       <h3>Copilote Météo de Route</h3>
       <ul>
+        <li><strong>Carte interactive et HUD en direct :</strong> Carte vectorielle OpenFreeMap interactive de l’itinéraire associée au HUD GPS en direct durant un Trajet Actif.</li>
         <li><strong>5 modes de trajet :</strong> Voiture, Moto, Camping-car, Vélo et Randonnée, avec jusqu’à <strong>5 étapes intermédiaires (waypoints)</strong>.</li>
         <li><strong>Risques du corridor et heure de départ idéale :</strong> Analyse des précipitations, vents latéraux et risques de verglas, avec optimiseur de départ de <strong>+0 h à +24 h</strong>.</li>
         <li><strong>Alertes vocales TTS mains libres :</strong> Annonces dans les <strong>13 langues</strong> avec atténuation audio native (<em>audio ducking</em>), choix de voix (Système, Féminine, Masculine), réglage de vitesse et bouton <em>Tester la voix</em>.</li>
@@ -235,6 +254,11 @@
         <li><strong>Qualité de l’air (IQA / CAS) :</strong> Indice européen AQI et canadien AQHI (MET Norway Airqualityforecast et ECCC GeoMet AQHI ; OpenAQ v3 optionnel via passerelle).</li>
         <li><strong>Unités complètes et préréglages :</strong> °C/°F, vent (km/h, mph, kn, m/s, Beaufort), pression (hPa, mbar, inHg, mmHg), pluie (mm, in), distance (km, mi), 24h/12h et JMA/MJA.</li>
         <li><strong>Widgets et 4 thèmes :</strong> Widgets natifs (WidgetKit iOS et AppWidgetProvider Android) et thèmes Clair, Sombre, Noir OLED et Jour/Nuit automatique.</li>
+      </ul>
+      <h3>Gratuit vs AtmoWay Pro</h3>
+      <ul>
+        <li><strong>Gratuit pour toujours :</strong> Météo à 4 niveaux, chronologie 48 h, prévisions 7–10 j, 6 fenêtres d’activité, anomalie climatique du jour (NASA POWER 1991–2020), score de consensus, widgets natifs, <strong>alertes officielles CAP 100 % gratuites &amp; heures silencieuses</strong> (feux de forêt, inondations, avalanches, tsunamis, chaleur/froid extrêmes, poussière et tempêtes), thèmes Clair/Sombre, aperçu TTS, radar précipitations &amp; CAP manuel, <strong>2 villes comparées</strong> et trajet Voiture avec <strong>1 étape</strong> (+0/+1/+3/+6 h) plus transfert vers Apple Plans, Google Maps ou Waze.</li>
+        <li><strong>AtmoWay Pro :</strong> <strong>Copilote de Route actif avec carte interactive</strong> (HUD GPS, alertes vocales TTS, recalcul hors route et cache tunnel hors ligne), <strong>modes Moto, Vélo, Van et Marche</strong>, jusqu’à <strong>5 étapes</strong>, <strong>meilleures fenêtres de départ +24 h</strong>, <strong>couches vent/nuages &amp; boucle radar animée</strong>, <strong>comparatif 5 villes</strong>, courbes de consensus multi-agences, <strong>planificateur NASA POWER 12 mois</strong>, alertes proactives &amp; <strong>Voice Studio</strong>, et thèmes <strong>Noir OLED &amp; Ciel Dynamique</strong>.</li>
       </ul>
       <nav class="section-links">
         <a href="privacy/">Politique de confidentialité</a> <a href="terms/">Conditions d’utilisation</a> <a href="support/">Assistance &amp; FAQ</a>
@@ -273,6 +297,7 @@
       <p>La schermata principale renderizza un cielo dinamico a <strong>120 fps</strong> (budget &lt; 8,3 ms/fotogramma, rispettando la riduzione dei movimenti di sistema) collegato a una timeline interattiva di <strong>48 ore</strong>, ai confini giornalieri e agli eventi solari e lunari calcolati nel fuso orario IANA esatto della coordinata (inclusi i giorni DST da 23 e 25 ore).</p>
       <h3>Copilota Meteo di Percorso</h3>
       <ul>
+        <li><strong>Mappa interattiva e HUD Live:</strong> Mappa interattiva OpenFreeMap del percorso abbinata all’HUD GPS dal vivo durante il Viaggio Attivo.</li>
         <li><strong>5 modalità di viaggio:</strong> Auto, Moto, Camper, Bici e Trekking, fino a <strong>5 tappe intermedie (waypoint)</strong>.</li>
         <li><strong>Rischi lungo la tratta e orario migliore di partenza:</strong> Analisi di pioggia, vento laterale e rischio ghiaccio nero con ottimizzatore di partenza <strong>+0 h .. +24 h</strong>.</li>
         <li><strong>Avvisi vocali TTS a mani libere:</strong> Indicazioni in tutte le <strong>13 lingue</strong> con attenuazione audio nativa (<em>audio ducking</em>), profilo vocale (Sistema, Femminile, Maschile), velocità regolabile e pulsante <em>Prova voce</em>.</li>
@@ -286,6 +311,11 @@
         <li><strong>Qualità dell’aria (AQI e AQHI):</strong> Indice europeo AQI e canadese AQHI tramite MET Norway Airqualityforecast ed ECCC GeoMet AQHI (OpenAQ v3 opzionale via gateway).</li>
         <li><strong>Unità complete e preset:</strong> °C/°F, vento (km/h, mph, kn, m/s, Beaufort), pressione (hPa, mbar, inHg, mmHg), pioggia (mm, in), distanza (km, mi), 24h/12h e GMA/MGA.</li>
         <li><strong>Widget e 4 temi:</strong> Widget nativi (WidgetKit su iOS e AppWidgetProvider su Android) e temi Chiaro, Scuro, Nero OLED e Giorno/Notte automatico.</li>
+      </ul>
+      <h3>Gratuito vs AtmoWay Pro</h3>
+      <ul>
+        <li><strong>Gratuito per sempre:</strong> Meteo a 4 livelli, timeline 48 h, previsioni 7–10 gg, 6 finestre di attività, anomalia climatica odierna (NASA POWER 1991–2020), punteggio di consenso, widget nativi, <strong>allerte ufficiali CAP 100 % gratuite e ore silenziose</strong> (incendi boschivi, alluvioni, valanghe, tsunami, caldo/freddo estremo, polvere e tempeste), temi Chiaro/Scuro, anteprima TTS, radar precipitazioni e CAP manuale, <strong>2 città a confronto</strong> e percorso Auto con <strong>1 tappa</strong> (+0/+1/+3/+6 h) più invio ad Apple Mappe, Google Maps o Waze.</li>
+        <li><strong>AtmoWay Pro:</strong> <strong>Copilota di Percorso Live con mappa interattiva</strong> (HUD GPS, avvisi TTS, ricalcolo fuori percorso e cache offline in galleria), <strong>modalità Moto, Bici, Camper e Trekking</strong>, fino a <strong>5 tappe</strong>, <strong>migliori finestre di partenza +24 h</strong>, <strong>layer vento/nubi e loop radar animato</strong>, <strong>confronto 5 città</strong>, curve di consenso multi-agenzia, <strong>planner NASA POWER 12 mesi</strong>, avvisi proattivi e <strong>Voice Studio</strong>, più temi <strong>Nero OLED e Cielo Dinamico</strong>.</li>
       </ul>
       <nav class="section-links">
         <a href="privacy/">Informativa sulla privacy</a> <a href="terms/">Termini di servizio</a> <a href="support/">Supporto &amp; FAQ</a>
@@ -324,6 +354,7 @@
       <p>O ecrã principal apresenta um céu atmosférico procedural a <strong>120 fps</strong> (orçamento &lt; 8,3 ms/fotograma, respeitando a redução de movimento do sistema) ligado a uma linha temporal interativa de <strong>48 horas</strong> e eventos solares e lunares calculados no fuso horário IANA exato de cada coordenada (incluindo dias de 23 h e 25 h na mudança de hora).</p>
       <h3>Copiloto Meteorológico de Rota</h3>
       <ul>
+        <li><strong>Mapa interativo e HUD ao vivo:</strong> Mapa vetorial interativo OpenFreeMap da rota aliado ao HUD GPS em direto durante a Viagem Ativa.</li>
         <li><strong>5 modos de viagem:</strong> Carro, Moto, Autocaravana/Camper, Bicicleta e Caminhada, até <strong>5 pontos intermédios (waypoints)</strong>.</li>
         <li><strong>Riscos no corredor e melhor hora de partida:</strong> Análise de chuva, vento lateral e risco de gelo negro, com otimizador de partida de <strong>+0 h a +24 h</strong>.</li>
         <li><strong>Alertas por voz TTS mãos-livres:</strong> Avisos falados nos <strong>13 idiomas</strong> com atenuação nativa de áudio (<em>audio ducking</em>), perfis de voz (Sistema, Feminina, Masculina), velocidade ajustável e botão <em>Testar voz</em>.</li>
@@ -337,6 +368,11 @@
         <li><strong>Qualidade do ar (AQI e AQHI):</strong> Índices europeu AQI e canadiano AQHI (MET Norway Airqualityforecast e ECCC GeoMet AQHI; OpenAQ v3 opcional via gateway).</li>
         <li><strong>Unidades completas e predefinições:</strong> °C/°F, vento (km/h, mph, kn, m/s, Beaufort), pressão (hPa, mbar, inHg, mmHg), chuva (mm, in), distância (km, mi), 24h/12h e DMA/MDA.</li>
         <li><strong>Widgets e 4 temas:</strong> Widgets nativos (WidgetKit no iOS e AppWidgetProvider no Android) e temas Claro, Escuro, Preto OLED e Dia/Noite automático.</li>
+      </ul>
+      <h3>Gratuito vs. AtmoWay Pro</h3>
+      <ul>
+        <li><strong>Gratuito para sempre:</strong> Meteorologia 4 níveis, linha temporal 48 h, previsão 7–10 dias, 6 janelas de atividade, anomalia climática de hoje (NASA POWER 1991–2020), consenso, widgets nativos, <strong>alertas oficiais CAP 100 % gratuitos e horas de silêncio</strong> (incêndios florestais, cheias, avalanches, tsunamis, calor/frio extremos, poeiras e tempestades), temas Claro/Escuro, pré-visualização TTS, radar precipitação e CAP manual, <strong>2 cidades</strong> e rota Carro com <strong>1 paragem</strong> (+0/+1/+3/+6 h) mais transferência para Apple Maps, Google Maps ou Waze.</li>
+        <li><strong>AtmoWay Pro:</strong> <strong>Copiloto de Rota ao vivo com mapa interativo</strong> (HUD GPS, voz TTS, recálculo e cache offline em túneis), <strong>modos Moto, Bicicleta, Camper e Caminhada</strong>, até <strong>5 paragens</strong>, <strong>melhores janelas de partida +24 h</strong>, <strong>camadas vento/nuvens e loop radar animado</strong>, <strong>comparação 5 cidades</strong>, curvas de consenso por agência, <strong>planeador NASA POWER 12 meses</strong>, alertas proativos e <strong>Voice Studio</strong>, mais temas <strong>Preto OLED e Céu Dinâmico</strong>.</li>
       </ul>
       <nav class="section-links">
         <a href="privacy/">Política de privacidade</a> <a href="terms/">Termos de serviço</a> <a href="support/">Suporte &amp; FAQ</a>
@@ -375,6 +411,7 @@
       <p>Het hoofdscherm tekent een dynamische <strong>Living Sky op 120 fps</strong> (&lt; 8,3 ms/frame, met respect voor minder beweging in het systeem), gekoppeld aan een interactieve <strong>48-uurstijdlijn</strong> en zon-/maantijden in de exacte IANA-tijdzone van de coördinaat (inclusief 23- en 25-uurs zomertijdovergangen).</p>
       <h3>Weer-Routecopiloot</h3>
       <ul>
+        <li><strong>Interactieve kaart &amp; Live HUD:</strong> Interactieve OpenFreeMap-routekaart gekoppeld aan de live GPS-HUD tijdens een gestarte Actieve Rit.</li>
         <li><strong>5 reismodi:</strong> Auto, Motor, Camper, Fiets en Wandelen, met maximaal <strong>5 tussenstops (waypoints)</strong>.</li>
         <li><strong>Corridorrisico’s &amp; beste vertrektijd:</strong> Analyse van neerslag, zijwind en kans op ijzel per segment, plus vertrekoptimalisatie van <strong>+0 u tot +24 u</strong>.</li>
         <li><strong>Handsfree TTS-spraakmeldingen:</strong> Gesproken waarschuwingen in alle <strong>13 talen</strong> met native audio ducking, stemprofielen (Systeem, Vrouwelijk, Mannelijk), spreeksnelheid en directe knop <em>Stem testen</em>.</li>
@@ -388,6 +425,11 @@
         <li><strong>Luchtkwaliteit (AQI &amp; AQHI):</strong> Europese AQI en Canadese AQHI via sleutelvrije MET Norway Airqualityforecast en ECCC GeoMet AQHI (optioneel OpenAQ v3 via gateway).</li>
         <li><strong>Volledige eenheden &amp; voorinstellingen:</strong> °C/°F, wind (km/h, mph, kn, m/s, Beaufort), luchtdruk (hPa, mbar, inHg, mmHg), neerslag (mm, in), afstand (km, mi), 24u/12u en DMJ/MDJ.</li>
         <li><strong>Widgets &amp; 4 thema’s:</strong> Native startschermwidgets (WidgetKit / AppWidgetProvider) en thema’s Licht, Donker, OLED Zwart en Auto Dag/Nacht.</li>
+      </ul>
+      <h3>Gratis vs. AtmoWay Pro</h3>
+      <ul>
+        <li><strong>Altijd gratis:</strong> 4-laags weer, 48-uurs tijdlijn, 7–10 daagse verwachting, 6 activiteitsvensters, klimaatafwijking van vandaag (NASA POWER 1991–2020), consensusscore, native widgets, <strong>100 % gratis officiële CAP-waarschuwingen &amp; stille uren</strong> (natuurbranden, overstromingen, lawines, tsunami’s, extreme hitte/kou, stof &amp; stormen), Licht &amp; Donker, TTS-voorbeeld, neerslag- &amp; CAP-radar met handmatige schuifbalk, <strong>2 steden vergelijken</strong> en Auto-route met <strong>1 tussenstop</strong> (+0/+1/+3/+6 u) plus overdracht naar Apple Kaarten, Google Maps of Waze.</li>
+        <li><strong>AtmoWay Pro:</strong> <strong>Live Routecopiloot met interactieve kaart</strong> (GPS-HUD, handsfree TTS, herberekening &amp; offline tunnelcache), <strong>Motor-, Fiets-, Camper- &amp; Wandelmodi</strong>, tot <strong>5 stops</strong>, <strong>+24u beste vertrekvensters</strong>, <strong>wind-/wolkenlagen &amp; geanimeerde radarloop</strong>, <strong>5 steden vergelijken</strong>, bureau-consensuscurves, <strong>12-maanden NASA POWER-planner</strong>, proactieve meldingen &amp; <strong>Voice Studio</strong> en thema’s <strong>OLED Zwart &amp; Dynamische Lucht</strong>.</li>
       </ul>
       <nav class="section-links">
         <a href="privacy/">Privacybeleid</a> <a href="terms/">Servicevoorwaarden</a> <a href="support/">Ondersteuning &amp; FAQ</a>
@@ -426,6 +468,7 @@
       <p>Główny ekran renderuje proceduralne <strong>Żywe Niebo w 120 kl./s</strong> (budżet &lt; 8,3 ms/klatkę, z poszanowaniem ustawień ograniczenia ruchu) sprzężone z interaktywną <strong>osią 48 godzin</strong>, granicami dni i zjawiskami słoneczno-księżycowymi w dokładnej strefie czasowej IANA danej lokalizacji (w tym dni zmiany czasu 23 h i 25 h).</p>
       <h3>Pogodowy Pilot Trasy</h3>
       <ul>
+        <li><strong>Interaktywna mapa i HUD na żywo:</strong> Interaktywna mapa trasy OpenFreeMap połączona z GPS HUD na żywo podczas Aktywnej Trasy.</li>
         <li><strong>5 trybów podróży:</strong> Samochód, Motocykl, Kamper, Rower i Piesza wędrówka, z obsługą do <strong>5 punktów pośrednich (waypoints)</strong>.</li>
         <li><strong>Zagrożenia na trasie i najlepszy czas wyjazdu:</strong> Analiza opadów, wiatru bocznego i ryzyka gołoledzi odcinek po odcinku oraz optymalizator wyjazdu <strong>+0 h .. +24 h</strong>.</li>
         <li><strong>Głosowe alerty TTS bez użycia rąk:</strong> Komunikaty we wszystkich <strong>13 językach</strong> z natywnym ściszaniem multimediów (<em>audio ducking</em>), wyborem głosu (Systemowy, Żeński, Męski), regulacją tempa i przyciskiem <em>Testuj głos</em>.</li>
@@ -439,6 +482,11 @@
         <li><strong>Jakość powietrza (AQI i AQHI):</strong> Europejski AQI oraz kanadyjski AQHI z bezkluczowych źródeł MET Norway i ECCC GeoMet (opcjonalnie OpenAQ v3 przez bramkę).</li>
         <li><strong>Pełna konfiguracja jednostek:</strong> °C/°F, wiatr (km/h, mph, kn, m/s, Beaufort), ciśnienie (hPa, mbar, inHg, mmHg), opady (mm, in), dystans (km, mi), zegar 24h/12h i format daty DMY/MDY.</li>
         <li><strong>Widżety i 4 motywy:</strong> Natywne widżety ekranu głównego (WidgetKit / AppWidgetProvider) oraz motywy Jasny, Ciemny, Czerń OLED i Automatyczny Dzień/Noc.</li>
+      </ul>
+      <h3>Wersja darmowa vs. AtmoWay Pro</h3>
+      <ul>
+        <li><strong>Zawsze za darmo:</strong> 4-poziomowa pogoda, oś 48 h, prognoza 7–10 dni, 6 okien aktywności, dzisiejsza anomalia klimatyczna (NASA POWER 1991–2020), wskaźnik konsensusu, natywne widżety, <strong>w 100 % darmowe oficjalne alerty CAP i godziny ciszy</strong> (pożary lasów, powodzie, lawiny, tsunami, skrajne upały/mrozy, pył i burze), motywy Jasny/Ciemny, podgląd TTS, radar opadów i CAP z ręcznym suwakiem, <strong>2 miasta</strong> oraz trasa Autem z <strong>1 przystankiem</strong> (+0/+1/+3/+6 h) i przekazaniem do Apple Maps, Google Maps lub Waze.</li>
+        <li><strong>AtmoWay Pro:</strong> <strong>Pilot Aktywnej Trasy na żywo z interaktywną mapą</strong> (GPS HUD, komunikaty TTS, przeliczanie po zjeździe i bufor tunelowy offline), <strong>tryby Moto, Rower, Kamper i Pieszo</strong>, do <strong>5 przystanków</strong>, <strong>najlepsze okna wyjazdu +24 h</strong>, <strong>warstwy wiatru/chmur i animowana pętla radaru</strong>, <strong>porównanie 5 miast</strong>, krzywe zgodności agencji, <strong>12-miesięczny planer NASA POWER</strong>, proaktywne alerty i <strong>Voice Studio</strong> oraz motywy <strong>Czerń OLED i Dynamiczne Niebo</strong>.</li>
       </ul>
       <nav class="section-links">
         <a href="privacy/">Polityka prywatności</a> <a href="terms/">Warunki korzystania</a> <a href="support/">Wsparcie i FAQ</a>
@@ -477,6 +525,7 @@
       <p>Huvudskärmen renderar en dynamisk <strong>Living Sky i 120 fps</strong> (&lt; 8,3 ms bildbudget, med respekt för systemets inställning för minskad rörelse) kopplad till en interaktiv <strong>48-timmars tidslinje</strong> och sol-/måndata beräknade i platsens exakta IANA-tidszon (inklusive 23- och 25-timmars sommartidsdygn).</p>
       <h3>Väder-Ruttcopilot</h3>
       <ul>
+        <li><strong>Interaktiv karta &amp; Live-HUD:</strong> Interaktiv OpenFreeMap-ruttkarta kopplad till live GPS-HUD under en startad Aktiv Resa.</li>
         <li><strong>5 färdlägen:</strong> Bil, Motorcykel, Husbil/Camper, Cykel och Vandring, med upp till <strong>5 delmål (waypoints)</strong>.</li>
         <li><strong>Korridorrisker &amp; bästa avresetid:</strong> Sträckvis bedömning av nederbörd, sidvind och halka samt avgångsoptimering för <strong>+0 h till +24 h</strong>.</li>
         <li><strong>Handsfree TTS-röstvarningar:</strong> Talade varningar på alla <strong>13 språk</strong> med inbyggd ljuddämpning (<em>audio ducking</em>), röstprofil (System, Kvinna, Man), hastighetsreglage och <em>Testa röst</em>.</li>
@@ -490,6 +539,11 @@
         <li><strong>Luftkvalitet (AQI &amp; AQHI):</strong> Europeiskt AQI och kanadensiskt AQHI via nyckelfria MET Norway Airqualityforecast och ECCC GeoMet AQHI (valfritt OpenAQ v3 via gateway).</li>
         <li><strong>Fullständiga enheter &amp; förval:</strong> °C/°F, vind (km/h, mph, kn, m/s, Beaufort), tryck (hPa, mbar, inHg, mmHg), regn (mm, in), avstånd (km, mi), 24h/12h och DMY/MDY.</li>
         <li><strong>Widgetar &amp; 4 teman:</strong> Inbyggda hemskärmswidgetar (WidgetKit / AppWidgetProvider) och temana Ljust, Mörkt, OLED Svart och Auto Dag/Natt.</li>
+      </ul>
+      <h3>Gratis vs. AtmoWay Pro</h3>
+      <ul>
+        <li><strong>Alltid gratis:</strong> 4-nivåers väder, 48 h tidslinje, 7–10 dygns prognos, 6 aktivitetsfönster, dagens 30-års klimatanomali (NASA POWER 1991–2020), konsensuspoäng, inbyggda widgetar, <strong>100 % gratis officiella CAP-varningar &amp; tysta timmar</strong> (skogsbränder, översvämningar, laviner, tsunamier, extrem hetta/kyla, stoft &amp; stormar), Ljust &amp; Mörkt tema, TTS-förhandsvisning, nederbörds- &amp; CAP-radar med manuell reglage, <strong>2 jämförelsestäder</strong> och Bil-rutt med <strong>1 stopp</strong> (+0/+1/+3/+6 h) samt överlämning till Apple Maps, Google Maps eller Waze.</li>
+        <li><strong>AtmoWay Pro:</strong> <strong>Live Ruttkopilot med interaktiv karta</strong> (GPS-HUD, handsfree TTS-varningar, omberäkning &amp; offline tunnelcache), <strong>MC-, Cykel-, Husbils- &amp; Gånglägen</strong>, upp till <strong>5 stopp</strong>, <strong>+24 h bästa avgångsfönster</strong>, <strong>vind-/molnlager &amp; animerad radarloop</strong>, <strong>5 städers jämförelse</strong>, byrå-konsensuskurvor, <strong>12-månaders NASA POWER-planerare</strong>, proaktiva varningar &amp; <strong>Voice Studio</strong> samt temana <strong>OLED Svart &amp; Dynamisk Himmel</strong>.</li>
       </ul>
       <nav class="section-links">
         <a href="privacy/">Integritetspolicy</a> <a href="terms/">Användarvillkor</a> <a href="support/">Support &amp; FAQ</a>
@@ -528,6 +582,7 @@
       <p>Hovedskærmen gengiver en dynamisk <strong>Living Sky ved 120 fps</strong> (&lt; 8,3 ms frame-budget, med respekt for systemets reducerede bevægelse) forbundet til en interaktiv <strong>48-timers tidslinje</strong> og sol-/månetider i koordinatens nøjagtige IANA-tidszone (inklusive 23- og 25-timers sommertidsskift).</p>
       <h3>Vejr-Rutecopilot</h3>
       <ul>
+        <li><strong>Interaktivt kort &amp; Live-HUD:</strong> Interaktivt OpenFreeMap-rutekort kombineret med live GPS-HUD under en startet Aktiv Tur.</li>
         <li><strong>5 rejsetilstande:</strong> Bil, Motorcykel, Camper, Cykel og Vandring med op til <strong>5 delmål (waypoints)</strong>.</li>
         <li><strong>Korridorrisici &amp; bedste afgangstid:</strong> Analyse af nedbør, sidevind og isslag pr. strækning samt afgangsoptimering fra <strong>+0 t til +24 t</strong>.</li>
         <li><strong>Håndfri TTS-stemmeadvarsler:</strong> Indtalte advarsler på alle <strong>13 sprog</strong> med indbygget lyddæmpning (<em>audio ducking</em>), stemmeprofil (System, Kvinde, Mand), talehastighed og øjeblikkelig knap til <em>Test stemme</em>.</li>
@@ -541,6 +596,11 @@
         <li><strong>Luftkvalitet (AQI &amp; AQHI):</strong> Europæisk AQI og canadisk AQHI fra nøglefri MET Norway Airqualityforecast og ECCC GeoMet AQHI (valgfri OpenAQ v3 via gateway).</li>
         <li><strong>Fuld enhedstilpasning:</strong> °C/°F, vind (km/h, mph, kn, m/s, Beaufort), tryk (hPa, mbar, inHg, mmHg), regn (mm, in), afstand (km, mi), 24t/12t og DMY/MDY.</li>
         <li><strong>Widgets &amp; 4 temaer:</strong> Indbyggede hjemmeskærmwidgets (WidgetKit / AppWidgetProvider) samt temaerne Lys, Mørk, OLED Sort og Auto Dag/Nat.</li>
+      </ul>
+      <h3>Gratis vs. AtmoWay Pro</h3>
+      <ul>
+        <li><strong>Altid gratis:</strong> 4-niveaus vejr, 48 t tidslinje, 7–10 dages prognose, 6 aktivitetsvinduer, dagens 30-års klimaanomali (NASA POWER 1991–2020), konsensusscore, indbyggede widgets, <strong>100 % gratis officielle CAP-varsler &amp; stilletimer</strong> (skovbrande, oversvømmelser, laviner, tsunamier, ekstrem varme/kulde, støv &amp; storme), Lyst/Mørkt tema, TTS-eksempel, nedbørs- &amp; CAP-radar med manuel slider, <strong>2 byer</strong> og Bil-rute med <strong>1 stop</strong> (+0/+1/+3/+6 t) samt overdragelse til Apple Kort, Google Maps eller Waze.</li>
+        <li><strong>AtmoWay Pro:</strong> <strong>Live Rutecopilot med interaktivt kort</strong> (GPS-HUD, håndfri TTS, genberegning &amp; offline tunnelcache), <strong>MC-, Cykel-, Camper- &amp; Gå-tilstande</strong>, op til <strong>5 stop</strong>, <strong>+24 t bedste afgangsvinduer</strong>, <strong>vind-/skylag &amp; animeret radar-loop</strong>, <strong>5-byers sammenligning</strong>, bureau-konsensuskurver, <strong>12-måneders NASA POWER-planlægger</strong>, proaktive alarmer &amp; <strong>Voice Studio</strong> samt <strong>OLED Sort &amp; Dynamisk Himmel</strong>.</li>
       </ul>
       <nav class="section-links">
         <a href="privacy/">Privatlivspolitik</a> <a href="terms/">Servicevilkår</a> <a href="support/">Support &amp; FAQ</a>
@@ -579,6 +639,7 @@
       <p>Hovedskjermen tegner en prosedyrebasert <strong>Living Sky i 120 fps</strong> (&lt; 8,3 ms bildebudsjett, som respekterer redusert bevegelse i systemet) koblet til en interaktiv <strong>48-timers tidslinje</strong> samt sol- og månetider i koordinatens eksakte IANA-tidssone (inkludert 23- og 25-timers sommertidsdøgn).</p>
       <h3>Vær-Rutecopilot</h3>
       <ul>
+        <li><strong>Interaktivt kart og Live-HUD:</strong> Interaktivt OpenFreeMap-rutekart kombinert med live GPS-HUD under en startet Aktiv Tur.</li>
         <li><strong>5 reisemoduser:</strong> Bil, Motorsykkel, Bobil/Camper, Sykkel og Fottur, med opptil <strong>5 delmål (waypoints)</strong>.</li>
         <li><strong>Korridorfarer &amp; beste avreisetid:</strong> Etappevis vurdering av nedbør, sidevind og underkjølt regn/is, pluss avreiseoptimalisering <strong>+0 t til +24 t</strong>.</li>
         <li><strong>Håndfrie TTS-talevarsler:</strong> Talte varsler på alle <strong>13 språk</strong> med innebygd lyddemping (<em>audio ducking</em>), stemmeprofil (System, Kvinne, Mann), talehastighet og knappen <em>Test stemme</em>.</li>
@@ -592,6 +653,11 @@
         <li><strong>Luftkvalitet (AQI &amp; AQHI):</strong> Europeisk AQI og kanadisk AQHI via nøkkelfrie MET Norway Airqualityforecast og ECCC GeoMet AQHI (valgfritt OpenAQ v3 via gateway).</li>
         <li><strong>Full enhetstilpasning:</strong> °C/°F, vind (km/h, mph, kn, m/s, Beaufort), trykk (hPa, mbar, inHg, mmHg), nedbør (mm, in), avstand (km, mi), 24t/12t og DMY/MDY.</li>
         <li><strong>Widgeter &amp; 4 temaer:</strong> Innebygde hjemskjermwidgeter (WidgetKit / AppWidgetProvider) og temaene Lys, Mørk, OLED Svart og Auto Dag/Natt.</li>
+      </ul>
+      <h3>Gratis vs. AtmoWay Pro</h3>
+      <ul>
+        <li><strong>Alltid gratis:</strong> 4-nivå vær, 48 t tidslinje, 7–10 dagers varsel, 6 aktivitetsvinduer, dagens 30-års klimaanomali (NASA POWER 1991–2020), konsensusscore, innebygde widgeter, <strong>100 % gratis offisielle CAP-varsler &amp; stilletid</strong> (skogbranner, flom, snøskred, tsunamier, ekstrem varme/kulde, støv &amp; stormer), Lyst/Mørkt tema, TTS-test, nedbørs- &amp; CAP-radar med manuell skyveknapp, <strong>2 byer</strong> og Bil-rute med <strong>1 stopp</strong> (+0/+1/+3/+6 t) samt overføring til Apple Kart, Google Maps eller Waze.</li>
+        <li><strong>AtmoWay Pro:</strong> <strong>Live Rutekopilot med interaktivt kart</strong> (GPS-HUD, håndfri TTS, ny beregning &amp; frakoblet tunnelbuffer), <strong>MC-, Sykkel-, Bobil- &amp; Gåmoduser</strong>, opptil <strong>5 stopp</strong>, <strong>+24 t beste avreisevinduer</strong>, <strong>vind-/skylag &amp; animert radarloop</strong>, <strong>5-byers sammenligning</strong>, byrå-konsensuskurver, <strong>12-måneders NASA POWER-planlegger</strong>, proaktive varsler &amp; <strong>Voice Studio</strong> samt <strong>OLED Svart &amp; Dynamisk Himmel</strong>.</li>
       </ul>
       <nav class="section-links">
         <a href="privacy/">Personvernerklæring</a> <a href="terms/">Vilkår for bruk</a> <a href="support/">Brukerstøtte &amp; FAQ</a>
@@ -630,6 +696,7 @@
       <p>Hlavní obrazovka vykresluje procedurální <strong>Živé nebe při 120 fps</strong> (rozpočet &lt; 8,3 ms/snímek, s respektem k omezení pohybu v systému) propojené s interaktivní <strong>48hodinovou osou</strong> a astronomickými údaji Slunce a Měsíce v přesném IANA časovém pásmu souřadnice (včetně 23h a 25h dnů změny času).</p>
       <h3>Meteo kopilot trasy</h3>
       <ul>
+        <li><strong>Interaktivní mapa a živý HUD:</strong> Interaktivní vektorová mapa trasy OpenFreeMap propojená s živým GPS HUD během Aktivní cesty.</li>
         <li><strong>5 režimů cesty:</strong> Auto, Motocykl, Obytný vůz / Camper, Kolo a Pěší turistika, s podporou až <strong>5 průjezdních bodů (waypoints)</strong>.</li>
         <li><strong>Rizika koridoru a nejlepší čas odjezdu:</strong> Úsekové vyhodnocení srážek, bočního větru a náledí s optimalizací odjezdu <strong>+0 h až +24 h</strong>.</li>
         <li><strong>Hlasová upozornění TTS bez použití rukou:</strong> Hlášení ve všech <strong>13 jazycích</strong> s nativním ztlumením médií (<em>audio ducking</em>), výběrem hlasu (Systémový, Ženský, Mužský), rychlostí řeči a tlačítkem <em>Otestovat hlas</em>.</li>
@@ -643,6 +710,11 @@
         <li><strong>Kvalita ovzduší (AQI a AQHI):</strong> Evropský index AQI a kanadský AQHI z bezklíčových zdrojů MET Norway a ECCC GeoMet (volitelně OpenAQ v3 přes bránu).</li>
         <li><strong>Kompletní jednotky a předvolby:</strong> °C/°F, vítr (km/h, mph, kn, m/s, Beaufort), tlak (hPa, mbar, inHg, mmHg), srážky (mm, in), vzdálenost (km, mi), 24h/12h a DMY/MDY.</li>
         <li><strong>Widgety a 4 motivy:</strong> Nativní widgety domovské obrazovky (WidgetKit / AppWidgetProvider) a motivy Světlý, Tmavý, OLED Černý a Auto Den/Noc.</li>
+      </ul>
+      <h3>Zdarma vs. AtmoWay Pro</h3>
+      <ul>
+        <li><strong>Navždy zdarma:</strong> 4úrovňové počasí, 48h osa, předpověď 7–10 dní, 6 oken aktivit, dnešní klimatická anomálie (NASA POWER 1991–2020), skóre shody, nativní widgety, <strong>100% bezplatné oficiální výstrahy CAP a noční klid</strong> (lesní požáry, povodně, laviny, tsunami, extrémní horko/mráz, prach a bouře), Světlý/Tmavý motiv, ukázka TTS, srážkový a CAP radar s ručním posuvníkem, <strong>2 města</strong> a trasa Autem s <strong>1 zastávkou</strong> (+0/+1/+3/+6 h) plus předání do Apple Map, Google Map nebo Waze.</li>
+        <li><strong>AtmoWay Pro:</strong> <strong>Živý kopilot trasy s interaktivní mapou</strong> (GPS HUD, hlasové výstrahy TTS, přepočet mimo trasu a offline mezipaměť do tunelů), <strong>režimy Moto, Kolo, Karavan a Chůze</strong>, až <strong>5 zastávek</strong>, <strong>nejlepší okna odjezdu +24 h</strong>, <strong>vrstvy větru/oblačnosti a animovaná smyčka radaru</strong>, <strong>srovnání 5 měst</strong>, křivky shody agentur, <strong>12měsíční plánovač NASA POWER</strong>, proaktivní varování a <strong>Hlasové studio</strong> i motivy <strong>OLED černá a Dynamická obloha</strong>.</li>
       </ul>
       <nav class="section-links">
         <a href="privacy/">Zásady ochrany soukromí</a> <a href="terms/">Podmínky služby</a> <a href="support/">Podpora a FAQ</a>
@@ -681,6 +753,7 @@
       <p>Ana ekran, sistemin hareket azaltma tercihlerine saygılı <strong>120 fps Canlı Gökyüzü</strong> (&lt; 8,3 ms kare bütçesi) sunar ve her koordinatın tam IANA saat diliminde (23 ve 25 saatlik yaz/kış saati geçişleri dâhil) hesaplanan etkileşimli <strong>48 saatlik zaman çizelgesi</strong> ile güneş/ay olaylarını gösterir.</p>
       <h3>Hava Durumu Rota Yardımcı Pilotu</h3>
       <ul>
+        <li><strong>Etkileşimli harita ve Canlı HUD:</strong> Başlatılan Aktif Yolculuk sırasında canlı GPS HUD ile eşleşen etkileşimli OpenFreeMap rota haritası.</li>
         <li><strong>5 seyahat modu:</strong> Otomobil, Motosiklet, Karavan/Camper, Bisiklet ve Yürüyüş; en fazla <strong>5 ara durak (waypoint)</strong> desteği.</li>
         <li><strong>Koridor riskleri ve en iyi çıkış saati:</strong> Bölüm bazlı yağış, yan rüzgâr ve gizli buzlanma riski analizi ile <strong>+0 sa .. +24 sa</strong> kalkış optimizasyonu.</li>
         <li><strong>Eller serbest TTS sesli uyarılar:</strong> Tüm <strong>13 dilde</strong> yerel medya sesi kısma (<em>audio ducking</em>), ses profili seçimi (Sistem, Kadın, Erkek), konuşma hızı ayarı ve anlık <em>Sesi Test Et</em> özelliği.</li>
@@ -694,6 +767,11 @@
         <li><strong>Hava kalitesi (AQI ve AQHI):</strong> Anahtarsız MET Norway Airqualityforecast ve ECCC GeoMet AQHI kaynaklarıyla Avrupa AQI ve Kanada AQHI (isteğe bağlı OpenAQ v3 geçidi).</li>
         <li><strong>Tam birim özelleştirme:</strong> °C/°F, rüzgâr (km/h, mph, kn, m/s, Beaufort), basınç (hPa, mbar, inHg, mmHg), yağış (mm, in), mesafe (km, mi), 24sa/12sa ve GAY/AGY.</li>
         <li><strong>Widget’lar ve 4 tema:</strong> Yerel ana ekran widget’ları (iOS WidgetKit ve Android AppWidgetProvider) ile Açık, Koyu, OLED Siyah ve Otomatik Gündüz/Gece temaları.</li>
+      </ul>
+      <h3>Ücretsiz ve AtmoWay Pro Karşılaştırması</h3>
+      <ul>
+        <li><strong>Sonsuza dek ücretsiz:</strong> 4 seviyeli hava durumu, 48 saatlik zaman çizelgesi, 7–10 günlük tahmin, 6 etkinlik penceresi, bugünün iklim anomalisi (NASA POWER 1991–2020), uzlaşı skoru, yerel widget’lar, <strong>%100 ücretsiz resmî CAP uyarıları ve Sessiz Saatler</strong> (orman yangınları, seller, çığ, tsunami, aşırı sıcak/soğuk, toz ve fırtınalar), Açık/Koyu tema, TTS önizlemesi, manuel yağış ve CAP radarı, <strong>2 şehir karşılaştırması</strong> ve <strong>1 duraklı</strong> Otomobil rotası (+0/+1/+3/+6 sa) ile Apple Harita, Google Haritalar veya Waze aktarımı.</li>
+        <li><strong>AtmoWay Pro:</strong> <strong>Etkileşimli haritalı Canlı Rota Yardımcı Pilotu</strong> (GPS HUD, eller serbest TTS uyarıları, rota dışı yeniden hesaplama ve çevrimdışı tünel önbelleği), <strong>Moto, Bisiklet, Karavan ve Yürüyüş modları</strong>, en fazla <strong>5 durak</strong>, <strong>+24 saat en iyi çıkış pencereleri</strong>, <strong>rüzgar/bulut katmanları ve animasyonlu radar döngüsü</strong>, <strong>5 şehir karşılaştırması</strong>, ajans uzlaşı eğrileri, <strong>12 aylık NASA POWER planlayıcı</strong>, proaktif uyarılar ve <strong>Ses Stüdyosu</strong> ile <strong>OLED Siyah ve Dinamik Gökyüzü</strong> temaları.</li>
       </ul>
       <nav class="section-links">
         <a href="privacy/">Gizlilik Politikası</a> <a href="terms/">Hizmet Koşulları</a> <a href="support/">Destek ve SSS</a>
